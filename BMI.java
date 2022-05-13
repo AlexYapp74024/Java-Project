@@ -1,12 +1,11 @@
 public class BMI {
-    public final float value;
 
-    private final float healthyValue = 25.f;
-    private final float overweightValue = 30.5f;
-    private final float obeseValue = 18.5f;
+    public BMI(float bmi) {
+        this.value = bmi;
+    }
 
-    public BMI(float value) {
-        this.value = value;
+    public BMI(float height, float weight) {
+        this.value = weight / height / height / 100 / 100;
     }
 
     public Boolean IsUnderWeight() {
@@ -24,4 +23,10 @@ public class BMI {
     public Boolean IsObese() {
         return obeseValue <= value;
     }
+
+    public final float value;
+
+    private final float healthyValue = 25.f;
+    private final float overweightValue = 30.5f;
+    private final float obeseValue = 18.5f;
 }
