@@ -2,7 +2,7 @@ import java.time.LocalDateTime;
 import java.util.*;
 
 public class Database {
-    public List<Record> GetAllRecords() {
+    public static ArrayList<Record> GetAllRecords() {
         Record out[] = {
                 new Record(163.f, 65.7f, 36.8f, LocalDateTime.of(2022, 1, 13, 11, 19)),
                 new Record(164.f, 66.2f, 36.9f, LocalDateTime.of(2022, 1, 17, 17, 25)),
@@ -18,6 +18,6 @@ public class Database {
                 new Record(161.f, 69.2f, 36.9f, LocalDateTime.of(2022, 3, 23, 13, 56)),
         };
 
-        return Arrays.asList(out);
+        return new ArrayList<Record>( Arrays.asList(out) );
     }
 }

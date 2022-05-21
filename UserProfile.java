@@ -3,7 +3,7 @@
 
 public class UserProfile {
     private String name;
-    private String bloodtype;
+    private String bloodtype;//use enum
     private String medical_hist;
     private float height;
 
