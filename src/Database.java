@@ -1,4 +1,5 @@
-import java.time.LocalDateTime;
+import java.text.DecimalFormat;
+import java.time.*;
 import java.util.*;
 
 public class Database {
@@ -18,6 +19,53 @@ public class Database {
                 new Record(161.f, 69.2f, 36.9f, LocalDateTime.of(2022, 3, 23, 13, 56)),
         };
 
-        return new ArrayList<Record>( Arrays.asList(out) );
+        return new ArrayList<Record>(Arrays.asList(out));
+    }
+
+    public static ArrayList<Record> GenerateRandomRecords(int count) {
+
+        var random = new Random();
+
+        ArrayList<Record> out = new ArrayList<Record>();
+
+        for (int i = 0; i < count; i++) {
+            out.add(
+                new Record(Randheight(random), Randweight(random), RandBodyTemperature(random), RandDateTime(random)));
+        }
+
+        Collections.sort(out, new DateComparator());
+
+        return out;
+    }
+
+    private static float Randheight(Random random) {
+        return (float) random.nextDouble(160.f, 170.f);
+    }
+
+    private static float Randweight(Random random) {
+        return (float) random.nextDouble(60.f, 70.f);
+    }
+
+    private static float RandBodyTemperature(Random random) {
+        return (float) random.nextDouble(35.5f, 37.f);
+    }
+
+    private static LocalDateTime RandDateTime(Random random) {
+        final LocalDateTime minDate = LocalDateTime.of(2022, 1, 1, 0, 0);
+        final LocalDateTime maxDate = LocalDateTime.now();
+
+        final long minEpochSecond = minDate.atZone(ZoneId.systemDefault()).toEpochSecond();
+        final long maxEpochSecond = maxDate.atZone(ZoneId.systemDefault()).toEpochSecond();
+
+        long epochSecond = random.nextLong(minEpochSecond, maxEpochSecond);
+        return LocalDateTime.ofInstant(Instant.ofEpochSecond(epochSecond), ZoneId.systemDefault());
+    }
+
+    private static class DateComparator implements Comparator<Record> {
+
+        // Function to compare
+        public int compare(Record c1, Record c2) {
+            return c1.date.compareTo(c2.date);
+        }
     }
 }
