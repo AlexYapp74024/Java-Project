@@ -3,7 +3,14 @@ import java.time.*;
 
 public class Record {
 
-    Record(float height, float weight, float bodyTemp, LocalDateTime date) {
+    public Record() {
+        this.height = 0.f;
+        this.weight = 0.f;
+        this.bodyTemp = 0.f;
+        this.date = LocalDateTime.now();
+    }
+
+    public Record(float height, float weight, float bodyTemp, LocalDateTime date) {
         this.height = height;
         this.weight = weight;
         this.bodyTemp = bodyTemp;
