@@ -5,11 +5,11 @@ import java.util.*;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 
-public class Database {
+public class RecordDatastore {
 
     private static File RecordsFile = new File("Records.json");
 
-    public static ArrayList<Record> GetAllRecords() {
+    public static ArrayList<Record> Retrieve() {
         try {
             return Json.ReadFromFile(RecordsFile, new TypeReference<ArrayList<Record>>() {});
         } catch (Exception e) {
@@ -18,7 +18,7 @@ public class Database {
         }
     }
 
-    public static void SaveRecords(ArrayList<Record> records) {
+    public static void Save(ArrayList<Record> records) {
         try {
             Json.SaveToFile(RecordsFile, records);
         } catch (Exception e) {

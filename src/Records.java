@@ -4,7 +4,7 @@ public class Records {
     Record data[];
 
     public static void sortbyWeight() {
-        var list = Database.GetAllRecords();
+        var list = RecordDatastore.Retrieve();
         Collections.sort(list, new WeightComparator());
         // Collections.sort( list , (r1,r2) -> (CompareWeight(r1,r2)));
     }
