@@ -1,17 +1,45 @@
-//do we need to import?
-//scan in main.java or scan in this class?
 
 public class UserProfile {
     private String name;
-    private String bloodtype;// use enum
     private String medical_hist;
     private float height;
+    private Bloodtype bloodtype;
+    private enum Bloodtype { 
+        A_MINUS("A+", 1), 
+        B_PLUS("B+", 2), 
+        B_MINUS("B-", 3), 
+        O_PLUS("AO", 4), 
+        O_MINUS("O-", 5), 
+        AB_PLUS("AB+", 6), 
+        AB_MINUS("AB-", 7);
+
+        private Bloodtype(String value, int code) {
+            this.value = value;
+            this.code = code;
+        }
+
+        String value;
+        int code;
+
+        // switch case example for bloodtypes
+        // public static void getBloodInformation(Bloodtype type) {
+        //     switch (type) {
+        //     case A_MINUS:
+        //         // do something ...
+        //         break;
+        //     case O_MINUS:
+        //         // do other things
+        //         break;
+        //     default:
+        //         // default behavior if you didn't define all cases above
+        //     }
+    }
 
     // Default Constructor needed by Jackson library
     UserProfile() {};
 
     // Store name, blood type, and medical history (allergies, ilnesses) of user
-    UserProfile(String name, String bloodtype, String medical_hist, float height) {
+    UserProfile(String name, Bloodtype bloodtype, String medical_hist, float height) {
         this.name = name;
         this.bloodtype = bloodtype;
         this.medical_hist = medical_hist;
@@ -23,7 +51,7 @@ public class UserProfile {
         return name;
     }
 
-    public String getBloodType() {
+    public Bloodtype getBloodType() {
         return bloodtype;
     }
 
@@ -43,7 +71,7 @@ public class UserProfile {
         this.name = name;
     }
 
-    public void setBloodType(String bloodtype) {
+    public void setBloodType(Bloodtype bloodtype) {
         this.bloodtype = bloodtype;
     }
 
