@@ -15,16 +15,16 @@ import javax.swing.*;
 
 public class updateRecord {
 
-    updateRecord() {
+    JFrame frame = new JFrame("Edit The Record");
+    JTable table = new JTable();
 
-        // create JFrame and JTable
-        JFrame frame = new JFrame("Edit The Record");
-        JTable table = new JTable();
+    DefaultTableModel model = new DefaultTableModel();
+
+    JTable getDefaultTable() {
 
         // create a table model and set a Column Identifiers to this model
         Object[] columns = { "Date", "Weight", "Height", "BMI", "Body Temperature" };
 
-        DefaultTableModel model = new DefaultTableModel();
         model.setColumnIdentifiers(columns);
 
         // set the model to the table
@@ -37,18 +37,28 @@ public class updateRecord {
         table.setFont(font);
         table.setRowHeight(30);
 
+        return table;
+    }
+
+    // create JTextFields
+    JTextField dateNew = new JTextField();
+    JTextField weightNew = new JTextField();
+    JTextField bodyTempNew = new JTextField();
+
+    // create JButtons
+    JButton btnEdit = new JButton("Edit");
+    JButton btnCancel = new JButton("Cancel");
+
+    // create an array of objects to set the row data
+    Object[] row = new Object[5];
+
+    updateRecord() {
+
+        getDefaultTable();
+
         JLabel dateLabel = new JLabel("Date : ");
         JLabel weightLabel = new JLabel("Weight : ");
         JLabel bodyTempLabel = new JLabel("Body Tempearture : ");
-
-        // create JTextFields
-        JTextField dateNew = new JTextField();
-        JTextField weightNew = new JTextField();
-        JTextField bodyTempNew = new JTextField();
-
-        // create JButtons
-        JButton btnEdit = new JButton("Edit");
-        JButton btnCancel = new JButton("Cancel");
 
         dateLabel.setBounds(20, 220, 120, 25);
         weightLabel.setBounds(20, 250, 120, 25);
@@ -80,9 +90,6 @@ public class updateRecord {
         // add JButtons to the jframe
         frame.add(btnEdit);
         frame.add(btnCancel);
-
-        // create an array of objects to set the row data
-        Object[] row = new Object[5];
 
         // get selected row data From table to textfields
         table.addMouseListener(new MouseAdapter() {
@@ -121,7 +128,7 @@ public class updateRecord {
         btnCancel.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent evt) {
-                System.exit(0);
+                frame.dispose();
             }
         });
 
@@ -129,6 +136,5 @@ public class updateRecord {
         frame.setLocationRelativeTo(null);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
-
     }
 }

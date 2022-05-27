@@ -166,8 +166,8 @@ public class GraphPanel extends JPanel {
             // scores.add((double) i);
         }
         MainPanel mainPanel = new MainPanel(scores);
-        mainPanel.setPreferredSize(new Dimension(800, 600));
-        JFrame frame = new JFrame("BMI Graph");
+        mainPanel.setPreferredSize(new Dimension(600, 300));
+        JFrame frame = new JFrame();
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.getContentPane().add(mainPanel);
         frame.pack();

@@ -1,7 +1,7 @@
 import java.util.*;
 
 public class Records {
-    ArrayList<Record> list = RecordDatastore.Retrieve();
+    public ArrayList<Record> list = RecordDatastore.Retrieve();
 
     //(Ascending)Sort by BMI function
     public void sortbyWeightAsc() {

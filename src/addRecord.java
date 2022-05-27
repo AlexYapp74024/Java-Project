@@ -73,7 +73,6 @@ public class addRecord {
         frame.add(weightNew);
         frame.add(bodyTempLabel);
         frame.add(bodyTempNew);
-
         // add JButtons to the jframe
         frame.add(btnAdd);
         frame.add(btnCancel);
