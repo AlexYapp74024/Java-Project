@@ -32,8 +32,6 @@ public class GraphPanel extends JPanel {
     private int numberYDivisions = 10;
     private List<Double> scores;
 
-
-    
     public GraphPanel(List<Double> scores) {
         this.scores = scores;
 
@@ -177,15 +175,7 @@ public class GraphPanel extends JPanel {
         frame.setVisible(true);
     }
 
-    public static void main(String[] args) {
-        SwingUtilities.invokeLater(new Runnable() {
-            public void run() {
-                createAndShowGui();
-            }
-        });
-    }
-
-    //Main changes underneath
+    // Main changes underneath
 
     static class MainPanel extends JPanel {
 
