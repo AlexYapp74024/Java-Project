@@ -175,19 +175,7 @@ public class GraphPanel extends JPanel {
         frame.setVisible(true);
     }
 
-<<<<<<< HEAD
     // Main changes underneath
-=======
-    public static void main(String[] args)  {
-        SwingUtilities.invokeLater(new Runnable() {
-            public void run() {
-                createAndShowGui();
-            }
-        });
-    }
-
-    //Main changes underneath
->>>>>>> 23dd3a43bb9213133629659655f8393818513b3f
 
     static class MainPanel extends JPanel {
 

@@ -15,8 +15,8 @@ import javax.swing.*;
 
 public class updateRecord {
 
-    JFrame frame = new JFrame("Edit The Record");<<<<<<<
-    HEAD JTable table=new JTable();
+    JFrame frame = new JFrame("Edit The Record");
+    JTable table = new JTable();
 
     DefaultTableModel model = new DefaultTableModel();
 
@@ -37,29 +37,6 @@ public class updateRecord {
         table.setFont(font);
         table.setRowHeight(30);
 
-=======
-    JTable table = new JTable(); 
-
-    DefaultTableModel model = new DefaultTableModel();
-
-    JTable getDefaultTable() {
-        
-                // create a table model and set a Column Identifiers to this model 
-            Object[] columns = {"Date","Weight","Height","BMI","Body Temperature"};
-
-            model.setColumnIdentifiers(columns);
-
-            // set the model to the table
-            table.setModel(model);
-            
-            // Change A JTable Background Color, Font Size, Font Color, Row Height
-            table.setBackground(Color.LIGHT_GRAY);
-            table.setForeground(Color.black);
-            Font font = new Font("",1,15);
-            table.setFont(font);
-            table.setRowHeight(30);
-
->>>>>>> 23dd3a43bb9213133629659655f8393818513b3f
         return table;
     }
 
@@ -75,20 +52,10 @@ public class updateRecord {
     // create an array of objects to set the row data
     Object[] row = new Object[5];
 
-    <<<<<<<
-
-    HEAD
     updateRecord() {
 
         getDefaultTable();
 
-=======
-
-    updateRecord(){
-
-        getDefaultTable();
-        
->>>>>>> 23dd3a43bb9213133629659655f8393818513b3f
         JLabel dateLabel = new JLabel("Date : ");
         JLabel weightLabel = new JLabel("Weight : ");
         JLabel bodyTempLabel = new JLabel("Body Tempearture : ");
@@ -124,7 +91,6 @@ public class updateRecord {
         frame.add(btnEdit);
         frame.add(btnCancel);
 
-<<<<<<< HEAD
         // get selected row data From table to textfields
         table.addMouseListener(new MouseAdapter() {
 
@@ -134,24 +100,12 @@ public class updateRecord {
                 // i = the index of the selected row
                 int i = table.getSelectedRow();
 
-=======
-        // get selected row data From table to textfields 
-        table.addMouseListener(new MouseAdapter(){
-            
-            @Override
-            public void mouseClicked(MouseEvent e){
-                
-                // i = the index of the selected row
-                int i = table.getSelectedRow();
-                
->>>>>>> 23dd3a43bb9213133629659655f8393818513b3f
                 dateNew.setText(model.getValueAt(i, 0).toString());
                 weightNew.setText(model.getValueAt(i, 1).toString());
                 bodyTempNew.setText(model.getValueAt(i, 4).toString());
             }
         });
 
-<<<<<<< HEAD
         // button update row
         btnEdit.addActionListener(new ActionListener() {
 
@@ -165,22 +119,6 @@ public class updateRecord {
                     model.setValueAt(dateNew.getText(), i, 0);
                     model.setValueAt(weightNew.getText(), i, 1);
                     model.setValueAt(bodyTempNew.getText(), i, 4);
-=======
-                // button update row
-        btnEdit.addActionListener(new ActionListener(){
-
-            @Override
-            public void actionPerformed(ActionEvent e) {
-            
-                // i = the index of the selected row
-                int i = table.getSelectedRow();
-                
-                if(i >= 0) 
-                {
-                model.setValueAt(dateNew.getText(), i, 0);
-                model.setValueAt(weightNew.getText(), i, 1);
-                model.setValueAt(bodyTempNew.getText(), i, 4);
->>>>>>> 23dd3a43bb9213133629659655f8393818513b3f
                 }
                 JOptionPane.showMessageDialog(frame, "Successfully updated.", "Update successfully!",
                         JOptionPane.WARNING_MESSAGE);
