@@ -103,51 +103,24 @@ public class MainPanel extends JFrame {
         c.gridy = 0;
         btnPanel.add(userBttn, c);
 
-        // adding mainPageBttn in the ActionListener
-        mainPageBttn.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent ae) {
-                // value of currCard is 1
-                currCard = 1;
-
-                cardLayout.show(cPanel, "" + (currCard));
-                mainPageBttn.addActionListener(this);
-            }
+        mainPageBttn.addActionListener(e -> {
+            currCard = 1;
+            cardLayout.show(cPanel, "" + (currCard));
         });
 
-        // adding reportBttn in the ActionListener
-        reportBttn.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent ae) {
-                // value of currCard is 2
-                currCard = 2;
-
-                cardLayout.show(cPanel, "" + (currCard));
-                reportBttn.addActionListener(this);
-            }
+        reportBttn.addActionListener(e -> {
+            currCard = 2;
+            cardLayout.show(cPanel, "" + (currCard));
         });
 
-        // add recordBttn in ActionListener
-        recordBttn.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent ae) {
-                // value of currCard is 3
-                currCard = 3;
-
-                cardLayout.show(cPanel, "" + (currCard));
-                recordBttn.addActionListener(this);
-            }
+        recordBttn.addActionListener(e -> {
+            currCard = 3;
+            cardLayout.show(cPanel, "" + (currCard));
         });
 
-        // add userBttn in ActionListener
-        userBttn.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent ae) {
-                // value of currCard is 4
-                currCard = 4;
-                cardLayout.show(cPanel, "" + (currCard));
-                userBttn.addActionListener(this);
-            }
+        userBttn.addActionListener(e -> {
+            currCard = 4;
+            cardLayout.show(cPanel, "" + (currCard));
         });
 
         setVisible(true);
