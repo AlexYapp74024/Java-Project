@@ -34,7 +34,8 @@ public class MainPanel extends JFrame {
         cPanel.setLayout(cardLayout);
 
         cPanel.add(new MainPagePanel(), "1");
-        cPanel.add(new SummaryPanel(), "2");
+        //Use 2nd Version of SummaryPanel
+        cPanel.add(new SummaryPanel_v2(), "2");
         cPanel.add(new EditRecordsPanel(), "3");
         cPanel.add(new UserDataPanel(), "4");
 
