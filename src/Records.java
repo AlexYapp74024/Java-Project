@@ -1,41 +1,67 @@
+import java.time.LocalDateTime;
 import java.util.*;
 
 public class Records {
-    public ArrayList<Record> list = RecordDatastore.Retrieve();
+    private static ArrayList<Record> list = RecordDatastore.Retrieve();
 
-    //(Ascending)Sort by BMI function
-    public void sortbyWeightAsc() {
+    public static ArrayList<Float> GetWeightList() {
+        ArrayList<Float> out = new ArrayList<>();
+        for (var r : list) {
+            out.add(r.weight);
+        }
+        return out;
+    }
+
+    public static ArrayList<Float> GetHeightList() {
+        ArrayList<Float> out = new ArrayList<>();
+        for (var r : list) {
+            out.add(r.height);
+        }
+        return out;
+    }
+
+    public static ArrayList<Float> GetBodyTempList() {
+        ArrayList<Float> out = new ArrayList<>();
+        for (var r : list) {
+            out.add(r.bodyTemp);
+        }
+        return out;
+    }
+
+    public static ArrayList<LocalDateTime> GetTimeList() {
+        ArrayList<LocalDateTime> out = new ArrayList<>();
+        for (var r : list) {
+            out.add(r.dateTime);
+        }
+        return out;
+    }
+
+    public static void sortbyWeightAsc() {
         Collections.sort(list, new WeightComparatorAsc());
     }
 
-    //(Descending)Sort by BMI function
-    public void sortbyWeightDesc() {
+    public static void sortbyWeightDesc() {
         Collections.sort(list, new WeightComparatorDesc());
     }
 
-    //(Ascending)Sort by date function
-    public void sortbyDateAsc() {
+    public static void sortbyDateAsc() {
         Collections.sort(list, new DateComparatorAsc());
     }
 
-    //(Descending)Sort by date function
-    public void sortbyDateDesc() {
+    public static void sortbyDateDesc() {
         Collections.sort(list, new DateComparatorDesc());
     }
 
-    //(Ascending)Sort by BMI function
-    public void sortbyBMIAsc() {        
+    public static void sortbyBMIAsc() {
         Collections.sort(list, new BMIComparatorAsc());
     }
 
-    //(Descending)Sort by BMI function
-    public void sortbyBMIDesc() {      
+    public static void sortbyBMIDesc() {
         Collections.sort(list, new BMIComparatorDesc());
     }
 
 }
 
-//(Ascending)Custom class with function to compare BMI
 class WeightComparatorAsc implements Comparator<Record> {
     @Override
     public int compare(Record c1, Record c2) {
@@ -47,7 +73,7 @@ class WeightComparatorAsc implements Comparator<Record> {
             return -1;
     }
 }
-//(Descending)Custom class with function to compare BMI
+
 class WeightComparatorDesc implements Comparator<Record> {
     @Override
     public int compare(Record c1, Record c2) {
@@ -60,28 +86,25 @@ class WeightComparatorDesc implements Comparator<Record> {
     }
 }
 
-//(Ascending)Custom class with function to compare date
 class DateComparatorAsc implements Comparator<Record> {
     @Override
     public int compare(Record c1, Record c2) {
-        int result = c1.date.compareTo(c2.date);
+        int result = c1.dateTime.compareTo(c2.dateTime);
         return result;
     }
 
 }
 
-//(Descending)Custom class with function to compare date
 class DateComparatorDesc implements Comparator<Record> {
     @Override
     public int compare(Record c1, Record c2) {
-        int result = c1.date.compareTo(c2.date);
-        result = ( (-1) * result );
+        int result = c1.dateTime.compareTo(c2.dateTime);
+        result = ((-1) * result);
         return result;
     }
 
 }
 
-//(Ascending)Custom class with function to compare BMI
 class BMIComparatorAsc implements Comparator<Record> {
     @Override
     public int compare(Record c1, Record c2) {
@@ -94,7 +117,6 @@ class BMIComparatorAsc implements Comparator<Record> {
     }
 }
 
-//(Descending)Custom class with function to compare BMI
 class BMIComparatorDesc implements Comparator<Record> {
     @Override
     public int compare(Record c1, Record c2) {

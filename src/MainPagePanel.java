@@ -8,7 +8,6 @@ public class MainPagePanel extends JLabel {
         setBackground(Color.LIGHT_GRAY);
         setOpaque(true);
 
-        // Initializing the object "jl1" of the JLabel class.
         JLabel jLabel1 = new JLabel("HEALTH CARE", SwingConstants.CENTER);
         jLabel1.setFont(new Font("Serif", Font.BOLD, 35));
 
@@ -29,11 +28,7 @@ public class MainPagePanel extends JLabel {
         bmiStatus.setBorder(BorderFactory.createLineBorder(Color.black, 1));
         jPanel1.setBorder(BorderFactory.createEmptyBorder(10, 70, 20, 70));
 
-        JPanel bmiGraph = new JPanel();
-        JLabel bmi = new JLabel("BMI Graph here");
-
-        bmiGraph.add(bmi);
-        bmiGraph.setBorder(BorderFactory.createEmptyBorder(30, 150, 10, 150));
+        JPanel bmiGraph = new GraphPanel(Records.GetTimeList(), Records.GetHeightList());
 
         // Adding JLabel "jLabel1" to the JPanel "jPanel1".
         add(jLabel1);

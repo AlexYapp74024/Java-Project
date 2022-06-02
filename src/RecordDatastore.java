@@ -65,7 +65,7 @@ public class RecordDatastore {
 
     private static class DateComparator implements Comparator<Record> {
         public int compare(Record c1, Record c2) {
-            return c1.date.compareTo(c2.date);
+            return c1.dateTime.compareTo(c2.dateTime);
         }
     }
 }

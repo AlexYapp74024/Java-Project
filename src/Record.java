@@ -7,14 +7,14 @@ public class Record {
         this.height = 0.f;
         this.weight = 0.f;
         this.bodyTemp = 0.f;
-        this.date = LocalDateTime.now();
+        this.dateTime = LocalDateTime.now();
     }
 
     public Record(float height, float weight, float bodyTemp, LocalDateTime date) {
         this.height = height;
         this.weight = weight;
         this.bodyTemp = bodyTemp;
-        this.date = date;
+        this.dateTime = date;
     }
 
     public BMI Bmi() {
@@ -24,5 +24,5 @@ public class Record {
     public final float height;
     public final float weight;
     public final float bodyTemp;
-    public final LocalDateTime date;
+    public final LocalDateTime dateTime;
 }
