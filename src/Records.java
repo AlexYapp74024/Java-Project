@@ -2,9 +2,18 @@ import java.time.LocalDateTime;
 import java.util.*;
 
 public class Records {
-    private static ArrayList<Record> list = RecordDatastore.Retrieve();
+    private ArrayList<Record> list = RecordDatastore.Retrieve();
 
-    public static ArrayList<Float> GetWeightList() {
+    public void SetByDateRange(LocalDateTime startTime, LocalDateTime endTime) {
+        var out = RecordDatastore.Retrieve();
+        list.clear();
+        for (var record : out) {
+            if (record.dateTime.isAfter(startTime) && record.dateTime.isBefore(endTime))
+                list.add(record);
+        }
+    }
+
+    public ArrayList<Float> GetWeightList() {
         ArrayList<Float> out = new ArrayList<>();
         for (var r : list) {
             out.add(r.weight);
@@ -12,7 +21,7 @@ public class Records {
         return out;
     }
 
-    public static ArrayList<Float> GetHeightList() {
+    public ArrayList<Float> GetHeightList() {
         ArrayList<Float> out = new ArrayList<>();
         for (var r : list) {
             out.add(r.height);
@@ -20,7 +29,7 @@ public class Records {
         return out;
     }
 
-    public static ArrayList<Float> GetBodyTempList() {
+    public ArrayList<Float> GetBodyTempList() {
         ArrayList<Float> out = new ArrayList<>();
         for (var r : list) {
             out.add(r.bodyTemp);
@@ -28,7 +37,7 @@ public class Records {
         return out;
     }
 
-    public static ArrayList<LocalDateTime> GetTimeList() {
+    public ArrayList<LocalDateTime> GetTimeList() {
         ArrayList<LocalDateTime> out = new ArrayList<>();
         for (var r : list) {
             out.add(r.dateTime);
@@ -36,27 +45,39 @@ public class Records {
         return out;
     }
 
-    public static void sortbyWeightAsc() {
+    public ArrayList<BMI> GetBMIList() {
+        ArrayList<BMI> out = new ArrayList<>();
+        for (var r : list) {
+            out.add(r.Bmi());
+        }
+        return out;
+    }
+
+    public int size() {
+        return list.size();
+    }
+
+    public void sortbyWeightAsc() {
         Collections.sort(list, new WeightComparatorAsc());
     }
 
-    public static void sortbyWeightDesc() {
+    public void sortbyWeightDesc() {
         Collections.sort(list, new WeightComparatorDesc());
     }
 
-    public static void sortbyDateAsc() {
+    public void sortbyDateAsc() {
         Collections.sort(list, new DateComparatorAsc());
     }
 
-    public static void sortbyDateDesc() {
+    public void sortbyDateDesc() {
         Collections.sort(list, new DateComparatorDesc());
     }
 
-    public static void sortbyBMIAsc() {
+    public void sortbyBMIAsc() {
         Collections.sort(list, new BMIComparatorAsc());
     }
 
-    public static void sortbyBMIDesc() {
+    public void sortbyBMIDesc() {
         Collections.sort(list, new BMIComparatorDesc());
     }
 

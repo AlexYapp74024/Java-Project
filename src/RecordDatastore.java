@@ -53,8 +53,8 @@ public class RecordDatastore {
     }
 
     private static LocalDateTime RandDateTime(Random random) {
-        final LocalDateTime minDate = LocalDateTime.of(2022, 1, 1, 0, 0);
         final LocalDateTime maxDate = LocalDateTime.now();
+        final LocalDateTime minDate = maxDate.withMonth(maxDate.getMonthValue() - 3);
 
         final long minEpochSecond = minDate.atZone(ZoneId.systemDefault()).toEpochSecond();
         final long maxEpochSecond = maxDate.atZone(ZoneId.systemDefault()).toEpochSecond();

@@ -5,7 +5,7 @@ public class BMI {
     }
 
     public BMI(float height, float weight) {
-        this.value = weight / height / height / 100 / 100;
+        this.value = weight / height / height * 100 * 100;
     }
 
     public Boolean IsUnderWeight() {

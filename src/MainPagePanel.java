@@ -1,39 +1,94 @@
 import javax.swing.*;
 import java.awt.*;
+import java.time.*;
+import java.time.format.*;
+import java.util.ArrayList;
 
-public class MainPagePanel extends JLabel {
+public class MainPagePanel extends JPanel {
+
+    Records records = new Records();
+    DateTimeFormatter dateTimeFormat = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+
+    LocalDateTime startTime;
+    LocalDateTime endTime;
+
+    JLabel titleMain = new JLabel("RECORDS FROM 13/01/2022 TO 23/03/2022");
+    JLabel bmiMain = new JLabel("BMI 22.5");
+    JLabel bmiStatus = new JLabel();
+
+    GraphPanel graphPanel = new GraphPanel(records.GetTimeList(), records.GetWeightList());
+
+    ArrayList<LocalDateTime> timeList;
+    ArrayList<Float> valueList;
+
     MainPagePanel() {
 
-        setLayout(new GridLayout(4, 1));
+        setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
         setBackground(Color.LIGHT_GRAY);
         setOpaque(true);
 
-        JLabel jLabel1 = new JLabel("HEALTH CARE", SwingConstants.CENTER);
-        jLabel1.setFont(new Font("Serif", Font.BOLD, 35));
-
-        JPanel jPanel1 = new JPanel();
-        jPanel1.setBackground(Color.LIGHT_GRAY);
-        jPanel1.setLayout(new GridLayout(3, 1));
-
-        JLabel titleMain = new JLabel("AVERAGE OF ALL RECORDS (13/01/2022 - 23/03/2022)", SwingConstants.CENTER);
         titleMain.setFont(new Font("Serif", Font.BOLD, 15));
-        JLabel bmiMain = new JLabel("BMI             22.5", SwingConstants.CENTER);
         bmiMain.setFont(new Font("Serif", Font.BOLD, 30));
-        JLabel bmiStatus = new JLabel("HEALTHY", SwingConstants.CENTER);
         bmiStatus.setFont(new Font("Serif", Font.BOLD, 25));
 
-        jPanel1.add(titleMain);
-        jPanel1.add(bmiMain);
-        jPanel1.add(bmiStatus);
+        titleMain.setAlignmentX(Component.CENTER_ALIGNMENT);
+        bmiMain.setAlignmentX(Component.CENTER_ALIGNMENT);
+        bmiStatus.setAlignmentX(Component.CENTER_ALIGNMENT);
+
+        add(titleMain);
+        add(bmiMain);
+        add(bmiStatus);
+        // JSpinner monthsSpinner = new JSpinner();
+        // add(monthsSpinner);
+        add(graphPanel);
+
         bmiStatus.setBorder(BorderFactory.createLineBorder(Color.black, 1));
-        jPanel1.setBorder(BorderFactory.createEmptyBorder(10, 70, 20, 70));
 
-        JPanel bmiGraph = new GraphPanel(Records.GetTimeList(), Records.GetHeightList());
+        setThisMonth();
+        graphPanel = new GraphPanel(records.GetTimeList(), records.GetHeightList());
+    }
 
-        // Adding JLabel "jLabel1" to the JPanel "jPanel1".
-        add(jLabel1);
-        add(jPanel1);
-        add(bmiGraph);
-        setBorder(BorderFactory.createEmptyBorder(0, 90, 10, 90));
+    public void setThisMonth() {
+        endTime = LocalDateTime.now();
+        startTime = endTime.minusDays(30);
+        UpdateDateRange();
+    }
+
+    public void setMonth(int month, int year) {
+        LocalDateTime initial = LocalDateTime.now();
+        startTime = initial.withMonth(month);
+        startTime = startTime.withYear(year);
+        endTime = initial.withMonth(month);
+        endTime = endTime.withYear(year);
+        UpdateDateRange();
+    }
+
+    private void UpdateDateRange() {
+        records.SetByDateRange(startTime, endTime);
+        titleMain.setText("RECORDS FROM " + dateTimeFormat.format(startTime) + " TO " + dateTimeFormat.format(endTime));
+
+        graphPanel.SetXData(records.GetTimeList());
+        graphPanel.SetYData(records.GetWeightList());
+        SetStatus();
+    }
+
+    private void SetStatus() {
+
+        float sum = 0f;
+        for (var bmi : records.GetBMIList()) {
+            sum += bmi.value;
+        }
+        BMI averageBmi = new BMI(sum / records.size());
+
+        if (averageBmi.IsUnderWeight()) {
+            bmiStatus.setText("Underweight");
+        } else if (averageBmi.IsHealthy()) {
+            bmiStatus.setText("Helthy");
+        } else if (averageBmi.IsOverweight()) {
+            bmiStatus.setText("Overweight");
+        } else {
+            bmiStatus.setText("Obese");
+        }
+        bmiMain.setText("BMI " + averageBmi.value);
     }
 }

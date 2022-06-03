@@ -10,7 +10,7 @@ import javax.swing.*;
 
 public class GraphPanel extends JPanel implements MouseMotionListener {
 
-    private static final int padding = 10;
+    private static final int padding = 14;
     private static final int labelPadding = 25;
     private static final int hatchmarkLength = 4;
 
@@ -31,6 +31,10 @@ public class GraphPanel extends JPanel implements MouseMotionListener {
     private ArrayList<Point> graphPoints = new ArrayList<>();
     private HoverPanel hoverPanel = new HoverPanel();
 
+    private List<LocalDateTime> x_value;
+    private List<Float> y_value;
+    private Graphics2D g2;
+
     private final int maxX() {
         return minX + xAxisLength();
     };
@@ -48,11 +52,11 @@ public class GraphPanel extends JPanel implements MouseMotionListener {
     };
 
     private double Y_value_division() {
-        return (getMin_Y_Value() - getMax_Y_Value()) / YDivisions;
+        return (getMax_Y_Value() - getMin_Y_Value()) / YDivisions;
     }
 
     private long X_value_division() {
-        return TimeDifference(getMin_X_Value(), getMax_X_Value()) / XDivisions;
+        return TimeDifference(getMax_X_Value(), getMin_X_Value()) / XDivisions;
     }
 
     private long TimeDifference(Temporal t1, Temporal t2) {
@@ -74,10 +78,6 @@ public class GraphPanel extends JPanel implements MouseMotionListener {
     private double getMax_Y_Value() {
         return Collections.max(y_value);
     }
-
-    private List<LocalDateTime> x_value;
-    private List<Float> y_value;
-    private Graphics2D g2;
 
     public GraphPanel(List<LocalDateTime> X_value, List<Float> Y_value) {
         this.x_value = X_value;
@@ -153,7 +153,7 @@ public class GraphPanel extends JPanel implements MouseMotionListener {
                 g2.drawLine(minX, y, maxX(), y);
                 g2.setColor(Color.BLACK);
 
-                String yLabel = df.format(getMin_Y_Value() + Y_value_division() * i / YDivisions).toString();
+                String yLabel = df.format(getMin_Y_Value() + Y_value_division() * i).toString();
                 FontMetrics metrics = g2.getFontMetrics();
                 int labelWidth = metrics.stringWidth(yLabel);
                 g2.drawString(yLabel, minX - labelWidth - 5, y + (metrics.getHeight() / 2) - 3);
@@ -192,7 +192,6 @@ public class GraphPanel extends JPanel implements MouseMotionListener {
     }
 
     private void PlotPoints() {
-
         // cache old stroke to switch back later
         final Stroke oldStroke = g2.getStroke();
 
@@ -216,6 +215,14 @@ public class GraphPanel extends JPanel implements MouseMotionListener {
             int ovalH = pointWidth;
             g2.fillOval(x, y, ovalW, ovalH);
         }
+    }
+
+    public void SetXData(List<LocalDateTime> xdata) {
+        x_value = xdata;
+    }
+
+    public void SetYData(List<Float> ydata) {
+        y_value = ydata;
     }
 
     @Override

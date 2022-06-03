@@ -4,13 +4,9 @@ public class UserProfile {
     private String medical_hist;
     private float height;
     private Bloodtype bloodtype;
-    private enum Bloodtype { 
-        A_MINUS("A+", 1), 
-        B_PLUS("B+", 2), 
-        B_MINUS("B-", 3), 
-        O_PLUS("AO", 4), 
-        O_MINUS("O-", 5), 
-        AB_PLUS("AB+", 6), 
+
+    private enum Bloodtype {
+        A_MINUS("A+", 1), B_PLUS("B+", 2), B_MINUS("B-", 3), O_PLUS("AO", 4), O_MINUS("O-", 5), AB_PLUS("AB+", 6),
         AB_MINUS("AB-", 7);
 
         private Bloodtype(String value, int code) {
@@ -23,16 +19,16 @@ public class UserProfile {
 
         // switch case example for bloodtypes
         // public static void getBloodInformation(Bloodtype type) {
-        //     switch (type) {
-        //     case A_MINUS:
-        //         // do something ...
-        //         break;
-        //     case O_MINUS:
-        //         // do other things
-        //         break;
-        //     default:
-        //         // default behavior if you didn't define all cases above
-        //     }
+        // switch (type) {
+        // case A_MINUS:
+        // // do something ...
+        // break;
+        // case O_MINUS:
+        // // do other things
+        // break;
+        // default:
+        // // default behavior if you didn't define all cases above
+        // }
     }
 
     // Default Constructor needed by Jackson library
