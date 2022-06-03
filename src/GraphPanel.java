@@ -83,8 +83,15 @@ public class GraphPanel extends JPanel implements MouseMotionListener {
         this.x_value = X_value;
         this.y_value = Y_value;
 
-        this.XDivisions = X_value.size() < maxXDivisions ? X_value.size() : maxXDivisions;
-        this.YDivisions = Y_value.size() < maxYDivisions ? Y_value.size() : maxYDivisions;
+        if (x_value.size() == 1) {
+            this.x_value.add(x_value.get(0));
+        }
+        if (y_value.size() == 1) {
+            this.y_value.add(y_value.get(0));
+        }
+
+        this.XDivisions = this.x_value.size() < maxXDivisions ? this.x_value.size() : maxXDivisions;
+        this.YDivisions = this.y_value.size() < maxYDivisions ? this.y_value.size() : maxYDivisions;
 
         addMouseMotionListener(this);
         add(hoverPanel);
@@ -215,14 +222,6 @@ public class GraphPanel extends JPanel implements MouseMotionListener {
             int ovalH = pointWidth;
             g2.fillOval(x, y, ovalW, ovalH);
         }
-    }
-
-    public void SetXData(List<LocalDateTime> xdata) {
-        x_value = xdata;
-    }
-
-    public void SetYData(List<Float> ydata) {
-        y_value = ydata;
     }
 
     @Override

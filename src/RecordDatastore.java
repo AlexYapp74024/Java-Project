@@ -14,7 +14,7 @@ public class RecordDatastore {
             return Json.ReadFromFile(RecordsFile, new TypeReference<ArrayList<Record>>() {});
         } catch (Exception e) {
             e.printStackTrace();
-            return GenerateRandomRecords(30);
+            return GenerateRandomRecords(100);
         }
     }
 
@@ -54,7 +54,7 @@ public class RecordDatastore {
 
     private static LocalDateTime RandDateTime(Random random) {
         final LocalDateTime maxDate = LocalDateTime.now();
-        final LocalDateTime minDate = maxDate.withMonth(maxDate.getMonthValue() - 3);
+        final LocalDateTime minDate = maxDate.minusMonths(6);
 
         final long minEpochSecond = minDate.atZone(ZoneId.systemDefault()).toEpochSecond();
         final long maxEpochSecond = maxDate.atZone(ZoneId.systemDefault()).toEpochSecond();

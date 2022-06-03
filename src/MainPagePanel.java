@@ -16,10 +16,61 @@ public class MainPagePanel extends JPanel {
     JLabel bmiMain = new JLabel("BMI 22.5");
     JLabel bmiStatus = new JLabel();
 
-    GraphPanel graphPanel = new GraphPanel(records.GetTimeList(), records.GetWeightList());
+    GraphPanel graphPanel;
 
     ArrayList<LocalDateTime> timeList;
     ArrayList<Float> valueList;
+
+    JSpinner monthSpinner = new JSpinner();
+    JSpinner yearSpinner = new JSpinner();
+    boolean changingSpinner = false;
+
+    public JPanel AddSpinnerPanel() {
+        JPanel panel = new JPanel();
+        panel.setLayout(new BoxLayout(panel, BoxLayout.X_AXIS));
+
+        monthSpinner.setValue(1);
+        yearSpinner.setValue(2022);
+
+        monthSpinner.addChangeListener(e -> {
+            if (changingSpinner)
+                return;
+
+            changingSpinner = true;
+
+            if ((Integer) monthSpinner.getValue() < 1) {
+                monthSpinner.setValue(12);
+                yearSpinner.setValue(((Integer) yearSpinner.getValue()) - 1);
+            } else if ((Integer) monthSpinner.getValue() > 12) {
+                monthSpinner.setValue(1);
+                yearSpinner.setValue(((Integer) yearSpinner.getValue()) + 1);
+            }
+
+            setMonth((Integer) monthSpinner.getValue(), (Integer) yearSpinner.getValue());
+        });
+
+        yearSpinner.addChangeListener(e -> {
+            if (changingSpinner)
+                return;
+
+            changingSpinner = true;
+
+            setMonth((Integer) monthSpinner.getValue(), (Integer) yearSpinner.getValue());
+        });
+
+        final int SizePadding = 50;
+        panel.add(Box.createRigidArea(new Dimension(SizePadding, 0)));
+
+        panel.add(new JLabel("Month : "));
+        panel.add(monthSpinner);
+        panel.add(new JLabel("Year : "));
+        panel.add(yearSpinner);
+
+        panel.add(Box.createRigidArea(new Dimension(SizePadding, 0)));
+
+        panel.setMaximumSize(new Dimension(10000, 500));
+        return panel;
+    }
 
     MainPagePanel() {
 
@@ -38,14 +89,14 @@ public class MainPagePanel extends JPanel {
         add(titleMain);
         add(bmiMain);
         add(bmiStatus);
-        // JSpinner monthsSpinner = new JSpinner();
-        // add(monthsSpinner);
-        add(graphPanel);
+        add(AddSpinnerPanel());
 
         bmiStatus.setBorder(BorderFactory.createLineBorder(Color.black, 1));
 
-        setThisMonth();
         graphPanel = new GraphPanel(records.GetTimeList(), records.GetHeightList());
+        add(graphPanel);
+
+        setThisMonth();
     }
 
     public void setThisMonth() {
@@ -55,20 +106,38 @@ public class MainPagePanel extends JPanel {
     }
 
     public void setMonth(int month, int year) {
-        LocalDateTime initial = LocalDateTime.now();
-        startTime = initial.withMonth(month);
-        startTime = startTime.withYear(year);
-        endTime = initial.withMonth(month);
-        endTime = endTime.withYear(year);
+
+        startTime = LocalDateTime.of(year, month, 1, 0, 0, 0);
+        endTime = startTime.withDayOfMonth(startTime.getMonth().length(startTime.getYear() % 4 == 0));
+
+        // Revert if there is no data in the time span chosen
+        if (endTime.isBefore(records.getMinDateTime())) {
+            startTime = startTime.plusMonths(1);
+            endTime = endTime.plusMonths(1);
+
+            monthSpinner.setValue(startTime.getMonthValue());
+            yearSpinner.setValue(startTime.getYear());
+        } else if (startTime.isAfter(records.getMaxDateTime())) {
+            startTime = startTime.minusMonths(1);
+            endTime = endTime.minusMonths(1);
+
+            monthSpinner.setValue(startTime.getMonthValue());
+            yearSpinner.setValue(startTime.getYear());
+        }
+
         UpdateDateRange();
+
+        changingSpinner = false;
     }
 
     private void UpdateDateRange() {
         records.SetByDateRange(startTime, endTime);
         titleMain.setText("RECORDS FROM " + dateTimeFormat.format(startTime) + " TO " + dateTimeFormat.format(endTime));
 
-        graphPanel.SetXData(records.GetTimeList());
-        graphPanel.SetYData(records.GetWeightList());
+        remove(graphPanel);
+        graphPanel = new GraphPanel(records.GetTimeList(), records.GetHeightList());
+        add(graphPanel);
+
         SetStatus();
     }
 

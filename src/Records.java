@@ -1,16 +1,34 @@
-import java.time.LocalDateTime;
+import java.time.*;
+import java.time.temporal.ChronoUnit;
 import java.util.*;
 
 public class Records {
-    private ArrayList<Record> list = RecordDatastore.Retrieve();
+    private ArrayList<Record> fullList = RecordDatastore.Retrieve();
+    private ArrayList<Record> list = CloneFullList();
+
+    private ArrayList<Record> CloneFullList() {
+        ArrayList<Record> out = new ArrayList<>();
+        out.addAll(fullList);
+        return out;
+    }
 
     public void SetByDateRange(LocalDateTime startTime, LocalDateTime endTime) {
-        var out = RecordDatastore.Retrieve();
+        var out = fullList;
         list.clear();
         for (var record : out) {
             if (record.dateTime.isAfter(startTime) && record.dateTime.isBefore(endTime))
                 list.add(record);
         }
+    }
+
+    public LocalDateTime getMinDateTime() {
+        return fullList.stream().min((r1, r2) -> (int) (ChronoUnit.SECONDS.between(r2.dateTime, r1.dateTime)))
+                .get().dateTime;
+    }
+
+    public LocalDateTime getMaxDateTime() {
+        return fullList.stream().max((r1, r2) -> (int) (ChronoUnit.SECONDS.between(r2.dateTime, r1.dateTime)))
+                .get().dateTime;
     }
 
     public ArrayList<Float> GetWeightList() {
