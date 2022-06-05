@@ -121,7 +121,7 @@ public class MainPanel extends JFrame {
         gbc.weightx = 2.0;
         gbc.weighty = 2.0;
         gbc.anchor = GridBagConstraints.PAGE_END;
-        gbc.insets = new Insets(10, 0, 10, 10);
+        gbc.insets = new Insets(10, 0, 20, 10);
         gbc.gridx = 3;
         gbc.gridy = 0;
         btnPanel.add(userBttn, gbc);
@@ -130,5 +130,22 @@ public class MainPanel extends JFrame {
             currCard = 4;
             cardLayout.show(cPanel, "" + (currCard));
         });
-    }
+        setVisible(true);
+        setLocationRelativeTo(null); 
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        // using to get the content pane
+        getContentPane().add(cPanel, BorderLayout.CENTER);
+        getContentPane().add(btnPanel, BorderLayout.SOUTH);
+
+        // addWindowListener(new WindowAdapter(){
+        //     public void windowClosed(WindowEvent e) {
+        //         RecordDatastore.Save(Records.fullList);
+        //     }
+
+        //     public void windowClosing(WindowEvent e) {
+        //         RecordDatastore.Save(Records.list);
+        //     }
+        // });
+    } // End of constructor appLayout()
 }

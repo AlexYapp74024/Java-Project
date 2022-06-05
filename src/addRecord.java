@@ -1,115 +1,102 @@
-import java.awt.Color;
-import java.awt.Font;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JScrollPane;
-import javax.swing.JTable;
-import javax.swing.JLabel;
-import javax.swing.JTextField;
-import javax.swing.table.DefaultTableModel;
+import java.awt.*;
+import java.time.*;
 import javax.swing.*;
+import javax.swing.JLabel;
+import javax.swing.JFrame;
+import javax.swing.JButton;
 
-public class addRecord {
+   public class addRecord extends JDialog {
 
-    addRecord() {
+        GridBagConstraints gbc = new GridBagConstraints();
+        public static LocalDateTime dateTime = LocalDateTime.now();
 
-        // create JFrame and JTable
-        JFrame frame = new JFrame("Add The Record");
-        JTable table = new JTable();
+        static boolean cancel = true;
 
-        // create a table model and set a Column Identifiers to this model
-        Object[] columns = { "Date", "Weight", "Height", "BMI", "Body Temperature" };
-        DefaultTableModel model = new DefaultTableModel();
-        model.setColumnIdentifiers(columns);
-
-        // set the model to the table
-        table.setModel(model);
-
-        // Change A JTable Background Color, Font Size, Font Color, Row Height
-        table.setBackground(Color.LIGHT_GRAY);
-        table.setForeground(Color.black);
-        Font font = new Font("", 1, 15);
-        table.setFont(font);
-        table.setRowHeight(30);
-
-        JLabel dateLabel = new JLabel("Date : ");
+        // initialize the value of JSpinner
+        private final static float initialWeight =  45;
+        private final static float initialBodyTemp = 36;
+    
+        // create JLabel
         JLabel weightLabel = new JLabel("Weight : ");
         JLabel bodyTempLabel = new JLabel("Body Tempearture : ");
+    
+        // create JSpinner
+        static JSpinner weight = new JSpinner(new SpinnerNumberModel(initialWeight, 20,300, 0.1));
+        static JSpinner bodyTemp = new JSpinner(new SpinnerNumberModel(initialBodyTemp, 25, 45, 0.1));
+    
+        // create JButton
+        JButton addButton = new JButton("Add");
+        JButton cancelButton = new JButton("Cancel");
 
-        // create JTextFields
-        JTextField dateNew = new JTextField();
-        JTextField weightNew = new JTextField();
-        JTextField bodyTempNew = new JTextField();
 
-        // create JButtons
-        JButton btnAdd = new JButton("Add");
-        JButton btnCancel = new JButton("Cancel");
+        addRecord(JFrame parent){
+        
+            super(parent, "Add New Record",true);
+            setLayout(new GridBagLayout());
+    
+            Dimension preferredSize = new Dimension(200, 30);
+            gbc.insets = new Insets(5, 5, 30, 5);
+            
+            // Set location and size of weight
+            weightLabel.setPreferredSize(preferredSize);
+            gbc.gridx = 1;
+            gbc.gridy = 1;
+            add(weightLabel, gbc);
+    
+            weight.setPreferredSize(preferredSize);
+            gbc.gridx = 2;
+            gbc.gridy = 1;
+            add(weight, gbc);
 
-        dateLabel.setBounds(20, 220, 120, 25);
-        weightLabel.setBounds(20, 250, 120, 25);
-        bodyTempLabel.setBounds(20, 280, 120, 25);
+            // Set location and size of body temperature
+            bodyTempLabel.setPreferredSize(preferredSize);
+            gbc.gridx = 1;
+            gbc.gridy = 2;
+            add(bodyTempLabel, gbc);
+    
+            bodyTemp.setPreferredSize(preferredSize);
+            gbc.gridx = 2;
+            gbc.gridy = 2;
+            add(bodyTemp, gbc);
 
-        dateNew.setBounds(180, 220, 100, 25);
-        weightNew.setBounds(180, 250, 100, 25);
-        bodyTempNew.setBounds(180, 280, 100, 25);
+    
+            // show a dialog box when the record is added
+            // close the JDialog when addButton is selected
+            addButton.addActionListener(event -> {
+                cancel = false;
 
-        btnAdd.setBounds(400, 220, 100, 25);
-        btnCancel.setBounds(400, 265, 100, 25);
+                JOptionPane.showMessageDialog(null,"Successfully added.", "Add successfully!",
+                JOptionPane.INFORMATION_MESSAGE);
 
-        // create JScrollPane
-        JScrollPane pane = new JScrollPane(table);
-        pane.setBounds(0, 0, 880, 200);
+                dispose();
+                
+            });
 
-        frame.setLayout(null);
+            cancel=true;
 
-        frame.add(pane);
+             // Set location and size of addButton
+            gbc.gridx = 1;
+            gbc.gridy = 5;
+            gbc.ipadx = 100;
+            add(addButton, gbc);
+    
+            // close the JDialog when cancelButton is selected
+            cancelButton.addActionListener(event -> {
+                dispose();
+            });
 
-        // add JTextFields to the jframe
-        frame.add(dateLabel);
-        frame.add(dateNew);
-        frame.add(weightLabel);
-        frame.add(weightNew);
-        frame.add(bodyTempLabel);
-        frame.add(bodyTempNew);
-        // add JButtons to the jframe
-        frame.add(btnAdd);
-        frame.add(btnCancel);
+            // Set location and size of cancelButton
+            gbc.gridx = 2;
+            gbc.gridy = 5;
+            gbc.ipadx = 100;
+            add(cancelButton, gbc);
 
-        // create an array of objects to set the row data
-        Object[] row = new Object[5];
 
-        // button add row
-        btnAdd.addActionListener(new ActionListener() {
+        setSize(580, 400);
 
-            @Override
-            public void actionPerformed(ActionEvent e) {
-
-                row[0] = dateNew.getText();
-                row[1] = weightNew.getText();
-                row[2] = bodyTempNew.getText();
-                row[3] = "";
-                row[4] = "";
-
-                // add row to the model
-                model.addRow(row);
-                JOptionPane.showMessageDialog(frame, "Successfully added.", "Add successfully!",
-                        JOptionPane.WARNING_MESSAGE);
-            }
-        });
-
-        btnCancel.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent evt) {
-                System.exit(0);
-            }
-        });
-
-        frame.setSize(900, 400);
-        frame.setLocationRelativeTo(null);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setVisible(true);
-
+        // center JDialog on the screen
+        setLocationRelativeTo(null);
+        
+        setVisible(true);
     }
-}
+   }
