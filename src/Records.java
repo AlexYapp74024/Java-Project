@@ -3,16 +3,16 @@ import java.time.temporal.ChronoUnit;
 import java.util.*;
 
 public class Records {
-    private ArrayList<Record> fullList = RecordDatastore.Retrieve();
-    private ArrayList<Record> list = CloneFullList();
+    public static ArrayList<Record> fullList = RecordDatastore.Retrieve();
+    private static ArrayList<Record> list = CloneFullList();
 
-    private ArrayList<Record> CloneFullList() {
+    private static ArrayList<Record> CloneFullList() {
         ArrayList<Record> out = new ArrayList<>();
         out.addAll(fullList);
         return out;
     }
 
-    public void SetByDateRange(LocalDateTime startTime, LocalDateTime endTime) {
+    public static void SetByDateRange(LocalDateTime startTime, LocalDateTime endTime) {
         var out = fullList;
         list.clear();
         for (var record : out) {
@@ -21,17 +21,17 @@ public class Records {
         }
     }
 
-    public LocalDateTime getMinDateTime() {
+    public static LocalDateTime getMinDateTime() {
         return fullList.stream().min((r1, r2) -> (int) (ChronoUnit.SECONDS.between(r2.dateTime, r1.dateTime)))
                 .get().dateTime;
     }
 
-    public LocalDateTime getMaxDateTime() {
+    public static LocalDateTime getMaxDateTime() {
         return fullList.stream().max((r1, r2) -> (int) (ChronoUnit.SECONDS.between(r2.dateTime, r1.dateTime)))
                 .get().dateTime;
     }
 
-    public ArrayList<Float> GetWeightList() {
+    public static ArrayList<Float> GetWeightList() {
         ArrayList<Float> out = new ArrayList<>();
         for (var r : list) {
             out.add(r.weight);
@@ -39,7 +39,7 @@ public class Records {
         return out;
     }
 
-    public ArrayList<Float> GetHeightList() {
+    public static ArrayList<Float> GetHeightList() {
         ArrayList<Float> out = new ArrayList<>();
         for (var r : list) {
             out.add(r.height);
@@ -47,7 +47,7 @@ public class Records {
         return out;
     }
 
-    public ArrayList<Float> GetBodyTempList() {
+    public static ArrayList<Float> GetBodyTempList() {
         ArrayList<Float> out = new ArrayList<>();
         for (var r : list) {
             out.add(r.bodyTemp);
@@ -55,7 +55,7 @@ public class Records {
         return out;
     }
 
-    public ArrayList<LocalDateTime> GetTimeList() {
+    public static ArrayList<LocalDateTime> GetTimeList() {
         ArrayList<LocalDateTime> out = new ArrayList<>();
         for (var r : list) {
             out.add(r.dateTime);
@@ -63,7 +63,7 @@ public class Records {
         return out;
     }
 
-    public ArrayList<BMI> GetBMIList() {
+    public static ArrayList<BMI> GetBMIList() {
         ArrayList<BMI> out = new ArrayList<>();
         for (var r : list) {
             out.add(r.Bmi());
@@ -71,99 +71,19 @@ public class Records {
         return out;
     }
 
-    public int size() {
+    public static ArrayList<Float> GetBMIValueList() {
+        ArrayList<Float> out = new ArrayList<>();
+        for (var r : list) {
+            out.add(r.Bmi().value);
+        }
+        return out;
+    }
+
+    public static int size() {
         return list.size();
     }
 
-    public void sortbyWeightAsc() {
-        Collections.sort(list, new WeightComparatorAsc());
-    }
-
-    public void sortbyWeightDesc() {
-        Collections.sort(list, new WeightComparatorDesc());
-    }
-
-    public void sortbyDateAsc() {
-        Collections.sort(list, new DateComparatorAsc());
-    }
-
-    public void sortbyDateDesc() {
-        Collections.sort(list, new DateComparatorDesc());
-    }
-
-    public void sortbyBMIAsc() {
-        Collections.sort(list, new BMIComparatorAsc());
-    }
-
-    public void sortbyBMIDesc() {
-        Collections.sort(list, new BMIComparatorDesc());
-    }
-
-}
-
-class WeightComparatorAsc implements Comparator<Record> {
-    @Override
-    public int compare(Record c1, Record c2) {
-        if (c1.weight == c2.weight)
-            return 0;
-        else if (c1.weight > c2.weight)
-            return 1;
-        else
-            return -1;
-    }
-}
-
-class WeightComparatorDesc implements Comparator<Record> {
-    @Override
-    public int compare(Record c1, Record c2) {
-        if (c1.weight == c2.weight)
-            return 0;
-        else if (c1.weight > c2.weight)
-            return -1;
-        else
-            return 1;
-    }
-}
-
-class DateComparatorAsc implements Comparator<Record> {
-    @Override
-    public int compare(Record c1, Record c2) {
-        int result = c1.dateTime.compareTo(c2.dateTime);
-        return result;
-    }
-
-}
-
-class DateComparatorDesc implements Comparator<Record> {
-    @Override
-    public int compare(Record c1, Record c2) {
-        int result = c1.dateTime.compareTo(c2.dateTime);
-        result = ((-1) * result);
-        return result;
-    }
-
-}
-
-class BMIComparatorAsc implements Comparator<Record> {
-    @Override
-    public int compare(Record c1, Record c2) {
-        if (c1.Bmi().value == c2.Bmi().value)
-            return 0;
-        else if (c1.Bmi().value > c2.Bmi().value)
-            return 1;
-        else
-            return -1;
-    }
-}
-
-class BMIComparatorDesc implements Comparator<Record> {
-    @Override
-    public int compare(Record c1, Record c2) {
-        if (c1.Bmi().value == c2.Bmi().value)
-            return 0;
-        else if (c1.Bmi().value > c2.Bmi().value)
-            return -1;
-        else
-            return 1;
+    public static void SaveData() {
+        RecordDatastore.Save(Records.fullList);
     }
 }

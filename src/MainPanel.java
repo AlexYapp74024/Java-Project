@@ -131,21 +131,22 @@ public class MainPanel extends JFrame {
             cardLayout.show(cPanel, "" + (currCard));
         });
         setVisible(true);
-        setLocationRelativeTo(null); 
+        setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         // using to get the content pane
         getContentPane().add(cPanel, BorderLayout.CENTER);
         getContentPane().add(btnPanel, BorderLayout.SOUTH);
 
-        // addWindowListener(new WindowAdapter(){
-        //     public void windowClosed(WindowEvent e) {
-        //         RecordDatastore.Save(Records.fullList);
-        //     }
+        addWindowListener(new WindowAdapter() {
+            public void windowClosed(WindowEvent e) {
+                Records.SaveData();
+            }
 
-        //     public void windowClosing(WindowEvent e) {
-        //         RecordDatastore.Save(Records.list);
-        //     }
-        // });
+            public void windowClosing(WindowEvent e) {
+                Records.SaveData();
+            }
+        });
+
     } // End of constructor appLayout()
 }

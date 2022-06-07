@@ -5,15 +5,13 @@ import java.time.format.*;
 import java.util.ArrayList;
 
 public class MainPagePanel extends JPanel {
-
-    Records records = new Records();
     DateTimeFormatter dateTimeFormat = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 
     LocalDateTime startTime;
     LocalDateTime endTime;
 
-    JLabel titleMain = new JLabel("RECORDS FROM 13/01/2022 TO 23/03/2022");
-    JLabel bmiMain = new JLabel("BMI 22.5");
+    JLabel titleMain = new JLabel();
+    JLabel bmiMain = new JLabel();
     JLabel bmiStatus = new JLabel();
 
     GraphPanel graphPanel;
@@ -21,11 +19,15 @@ public class MainPagePanel extends JPanel {
     ArrayList<LocalDateTime> timeList;
     ArrayList<Float> valueList;
 
+    String types[] = { "BMI", "Height", "Weight", "Body Temp" };
+
     JSpinner monthSpinner = new JSpinner();
     JSpinner yearSpinner = new JSpinner();
-    boolean changingSpinner = false;
+    JComboBox<String> typeComboBox = new JComboBox<>(types);
 
-    public JPanel AddSpinnerPanel() {
+    boolean changing = false;
+
+    public JPanel AddInputPanel() {
         JPanel panel = new JPanel();
         panel.setLayout(new BoxLayout(panel, BoxLayout.X_AXIS));
 
@@ -33,10 +35,11 @@ public class MainPagePanel extends JPanel {
         yearSpinner.setValue(2022);
 
         monthSpinner.addChangeListener(e -> {
-            if (changingSpinner)
+            // Setting spinners via functions also trigger actionlisteners
+            // Which is undesireable
+            if (changing)
                 return;
-
-            changingSpinner = true;
+            changing = true;
 
             if ((Integer) monthSpinner.getValue() < 1) {
                 monthSpinner.setValue(12);
@@ -50,23 +53,31 @@ public class MainPagePanel extends JPanel {
         });
 
         yearSpinner.addChangeListener(e -> {
-            if (changingSpinner)
+            if (changing)
                 return;
 
-            changingSpinner = true;
+            changing = true;
 
             setMonth((Integer) monthSpinner.getValue(), (Integer) yearSpinner.getValue());
         });
 
-        final int SizePadding = 50;
-        panel.add(Box.createRigidArea(new Dimension(SizePadding, 0)));
+        typeComboBox.addActionListener(e -> {
+            UpdateData();
+        });
 
+        final int sizePadding = 50;
+        panel.add(Box.createRigidArea(new Dimension(sizePadding, 0)));
+
+        final int sizeSpacing = 5;
         panel.add(new JLabel("Month : "));
         panel.add(monthSpinner);
+        panel.add(Box.createRigidArea(new Dimension(sizeSpacing, 0)));
         panel.add(new JLabel("Year : "));
         panel.add(yearSpinner);
+        panel.add(Box.createRigidArea(new Dimension(sizeSpacing, 0)));
+        panel.add(typeComboBox);
 
-        panel.add(Box.createRigidArea(new Dimension(SizePadding, 0)));
+        panel.add(Box.createRigidArea(new Dimension(sizePadding, 0)));
 
         panel.setMaximumSize(new Dimension(10000, 500));
         return panel;
@@ -89,11 +100,11 @@ public class MainPagePanel extends JPanel {
         add(titleMain);
         add(bmiMain);
         add(bmiStatus);
-        add(AddSpinnerPanel());
+        add(AddInputPanel());
 
         bmiStatus.setBorder(BorderFactory.createLineBorder(Color.black, 1));
 
-        graphPanel = new GraphPanel(records.GetTimeList(), records.GetHeightList());
+        graphPanel = new GraphPanel(Records.GetTimeList(), Records.GetHeightList());
         add(graphPanel);
 
         setThisMonth();
@@ -102,7 +113,7 @@ public class MainPagePanel extends JPanel {
     public void setThisMonth() {
         endTime = LocalDateTime.now();
         startTime = endTime.minusDays(30);
-        UpdateDateRange();
+        UpdateData();
     }
 
     public void setMonth(int month, int year) {
@@ -111,13 +122,13 @@ public class MainPagePanel extends JPanel {
         endTime = startTime.withDayOfMonth(startTime.getMonth().length(startTime.getYear() % 4 == 0));
 
         // Revert if there is no data in the time span chosen
-        if (endTime.isBefore(records.getMinDateTime())) {
+        if (endTime.isBefore(Records.getMinDateTime())) {
             startTime = startTime.plusMonths(1);
             endTime = endTime.plusMonths(1);
 
             monthSpinner.setValue(startTime.getMonthValue());
             yearSpinner.setValue(startTime.getYear());
-        } else if (startTime.isAfter(records.getMaxDateTime())) {
+        } else if (startTime.isAfter(Records.getMaxDateTime())) {
             startTime = startTime.minusMonths(1);
             endTime = endTime.minusMonths(1);
 
@@ -125,29 +136,42 @@ public class MainPagePanel extends JPanel {
             yearSpinner.setValue(startTime.getYear());
         }
 
-        UpdateDateRange();
-
-        changingSpinner = false;
+        UpdateData();
     }
 
-    private void UpdateDateRange() {
-        records.SetByDateRange(startTime, endTime);
+    private void UpdateData() {
+        Records.SetByDateRange(startTime, endTime);
         titleMain.setText("RECORDS FROM " + dateTimeFormat.format(startTime) + " TO " + dateTimeFormat.format(endTime));
 
         remove(graphPanel);
-        graphPanel = new GraphPanel(records.GetTimeList(), records.GetHeightList());
+        graphPanel = new GraphPanel(Records.GetTimeList(), SelectData());
         add(graphPanel);
 
         SetStatus();
+        changing = false;
+
+        // repaint() doesn't work here
+        revalidate();
+    }
+
+    private ArrayList<Float> SelectData() {
+        switch ((String) typeComboBox.getSelectedItem()) {
+        case "Weight":
+            return Records.GetWeightList();
+        case "Height":
+            return Records.GetHeightList();
+        case "Body Temp":
+            return Records.GetBodyTempList();
+        }
+        return Records.GetBMIValueList();
     }
 
     private void SetStatus() {
-
         float sum = 0f;
-        for (var bmi : records.GetBMIList()) {
+        for (var bmi : Records.GetBMIList()) {
             sum += bmi.value;
         }
-        BMI averageBmi = new BMI(sum / records.size());
+        BMI averageBmi = new BMI(sum / Records.size());
 
         if (averageBmi.IsUnderWeight()) {
             bmiStatus.setText("Underweight");
