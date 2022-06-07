@@ -12,6 +12,21 @@ public class Records {
         return out;
     }
 
+    // return false if r already exists
+    public static boolean Add(Record r) {
+        return true;
+    }
+
+    // return true if r exists
+    public static boolean Delete(Record r) {
+        return true;
+    }
+
+    // return true if r exists
+    public static boolean Update(Record from, Record to) {
+        return true;
+    }
+
     public static void SetByDateRange(LocalDateTime startTime, LocalDateTime endTime) {
         var out = fullList;
         list.clear();
