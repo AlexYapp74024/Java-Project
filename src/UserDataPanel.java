@@ -3,7 +3,7 @@ import java.awt.*;
 
 public class UserDataPanel extends JPanel {
 
-    GridBagConstraints c = new GridBagConstraints();
+    GridBagConstraints gbc = new GridBagConstraints();
 
     UserDataPanel() {
         setLayout(new BorderLayout());
@@ -39,69 +39,69 @@ public class UserDataPanel extends JPanel {
         jPanel4.setOpaque(true);
         jPanel4.setBorder(BorderFactory.createEmptyBorder(40, 200, 90, 200));
 
-        c.weighty = 0.1;
-        c.gridx = 0;
-        c.gridy = 0;
-        c.anchor = GridBagConstraints.CENTER; // center of space
-        c.insets = new Insets(40, 0, 20, 50); // top padding
-        jPanel4.add(userName, c);
+        gbc.weighty = 0.1;
+        gbc.gridx = 0;
+        gbc.gridy = 0;
+        gbc.anchor = GridBagConstraints.CENTER; // center of space
+        gbc.insets = new Insets(40, 0, 20, 50); // top padding
+        jPanel4.add(userName, gbc);
 
-        c.gridx = 1;
-        c.gridy = 0;
-        c.anchor = GridBagConstraints.CENTER; // center of space
-        c.insets = new Insets(60, 10, 20, 0); // top padding
-        jPanel4.add(text1, c);
+        gbc.gridx = 1;
+        gbc.gridy = 0;
+        gbc.anchor = GridBagConstraints.CENTER; // center of space
+        gbc.insets = new Insets(60, 10, 20, 0); // top padding
+        jPanel4.add(text1, gbc);
 
-        c.weighty = 0.1;
-        c.gridx = 0;
-        c.gridy = 1;
-        c.anchor = GridBagConstraints.CENTER; // center of space
-        c.insets = new Insets(10, 0, 20, 50); // top padding
-        jPanel4.add(bloodType, c);
+        gbc.weighty = 0.1;
+        gbc.gridx = 0;
+        gbc.gridy = 1;
+        gbc.anchor = GridBagConstraints.CENTER; // center of space
+        gbc.insets = new Insets(10, 0, 20, 50); // top padding
+        jPanel4.add(bloodType, gbc);
 
-        c.gridx = 1;
-        c.gridy = 1;
-        c.anchor = GridBagConstraints.CENTER; // center of space
-        c.insets = new Insets(10, 10, 20, 0); // top padding
-        jPanel4.add(text2, c);
+        gbc.gridx = 1;
+        gbc.gridy = 1;
+        gbc.anchor = GridBagConstraints.CENTER; // center of space
+        gbc.insets = new Insets(10, 10, 20, 0); // top padding
+        jPanel4.add(text2, gbc);
 
-        c.weighty = 0.1;
-        c.gridx = 0;
-        c.gridy = 2;
-        c.anchor = GridBagConstraints.CENTER; // center of space
-        c.insets = new Insets(10, 10, 20, 40); // top padding
-        jPanel4.add(height, c);
+        gbc.weighty = 0.1;
+        gbc.gridx = 0;
+        gbc.gridy = 2;
+        gbc.anchor = GridBagConstraints.CENTER; // center of space
+        gbc.insets = new Insets(10, 10, 20, 40); // top padding
+        jPanel4.add(height, gbc);
 
-        c.gridx = 1;
-        c.gridy = 2;
-        c.anchor = GridBagConstraints.CENTER; // center of space
-        c.insets = new Insets(10, 10, 20, 0); // top padding
-        jPanel4.add(text3, c);
+        gbc.gridx = 1;
+        gbc.gridy = 2;
+        gbc.anchor = GridBagConstraints.CENTER; // center of space
+        gbc.insets = new Insets(10, 10, 20, 0); // top padding
+        jPanel4.add(text3, gbc);
 
-        c.weighty = 0.1;
-        c.gridx = 0;
-        c.gridy = 3;
-        c.anchor = GridBagConstraints.CENTER; // center of space
-        c.insets = new Insets(10, 0, 10, 40); // top padding
-        jPanel4.add(healthHistory, c);
+        gbc.weighty = 0.1;
+        gbc.gridx = 0;
+        gbc.gridy = 3;
+        gbc.anchor = GridBagConstraints.CENTER; // center of space
+        gbc.insets = new Insets(10, 0, 10, 40); // top padding
+        jPanel4.add(healthHistory, gbc);
 
-        c.gridx = 1;
-        c.gridy = 3;
-        c.anchor = GridBagConstraints.CENTER; // center of space
-        c.insets = new Insets(10, 10, 20, 0); // top padding
-        jPanel4.add(text4, c);
+        gbc.gridx = 1;
+        gbc.gridy = 3;
+        gbc.anchor = GridBagConstraints.CENTER; // center of space
+        gbc.insets = new Insets(10, 10, 20, 0); // top padding
+        jPanel4.add(text4, gbc);
 
-        c.gridx = 1;
-        c.gridy = 4;
-        c.anchor = GridBagConstraints.CENTER; // center of space
-        c.insets = new Insets(0, 10, 10, 0); // top padding
-        jPanel4.add(text5, c);
+        gbc.gridx = 1;
+        gbc.gridy = 4;
+        gbc.anchor = GridBagConstraints.CENTER; // center of space
+        gbc.insets = new Insets(0, 10, 10, 0); // top padding
+        jPanel4.add(text5, gbc);
 
-        c.gridx = 1;
-        c.gridy = 5;
-        c.anchor = GridBagConstraints.CENTER; // center of space
-        c.insets = new Insets(50, 0, 70, 80); // top padding
-        jPanel4.add(editUser, c);
+        gbc.gridx = 1;
+        gbc.gridy = 5;
+        gbc.anchor = GridBagConstraints.CENTER; // center of space
+        gbc.insets = new Insets(50, 0, 70, 80); // top padding
+        jPanel4.add(editUser, gbc);
 
         add(jPanel4, BorderLayout.CENTER);
     }
