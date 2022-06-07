@@ -4,7 +4,7 @@ import java.awt.event.*;
 
 public class SummaryPanel extends JPanel {
 
-    GridBagConstraints c = new GridBagConstraints();
+    GridBagConstraints gbc = new GridBagConstraints();
 
     SummaryPanel() {
         setLayout(new GridLayout(3, 1));
@@ -40,34 +40,34 @@ public class SummaryPanel extends JPanel {
             }
         });
 
-        c.fill = GridBagConstraints.HORIZONTAL;
-        c.ipady = 30; // make this component tall
-        c.weightx = 1.0;
-        c.anchor = GridBagConstraints.CENTER; // bottom of space
-        c.insets = new Insets(10, 80, 10, 30); // top padding
-        jLabelResult.add(jLabelView, c);
+        gbc.fill = GridBagConstraints.HORIZONTAL;
+        gbc.ipady = 30; // make this component tall
+        gbc.weightx = 1.0;
+        gbc.anchor = GridBagConstraints.CENTER; // bottom of space
+        gbc.insets = new Insets(10, 80, 10, 30); // top padding
+        jLabelResult.add(jLabelView, gbc);
 
-        c.fill = GridBagConstraints.HORIZONTAL;
-        c.ipady = 30; // make this component tall
-        c.weightx = 1.0;
-        c.anchor = GridBagConstraints.CENTER; // bottom of space
-        c.insets = new Insets(10, 20, 10, 20); // top padding
-        jLabelResult.add(jComboBox1, c);
+        gbc.fill = GridBagConstraints.HORIZONTAL;
+        gbc.ipady = 30; // make this component tall
+        gbc.weightx = 1.0;
+        gbc.anchor = GridBagConstraints.CENTER; // bottom of space
+        gbc.insets = new Insets(10, 20, 10, 20); // top padding
+        jLabelResult.add(jComboBox1, gbc);
 
-        c.fill = GridBagConstraints.HORIZONTAL;
-        c.ipady = 30; // make this component tall
-        c.weightx = 1.0;
-        c.weighty = 0.0;
-        c.anchor = GridBagConstraints.CENTER; // bottom of space
-        c.insets = new Insets(10, 20, 10, 20); // top padding
-        jLabelResult.add(jComboBox2, c);
+        gbc.fill = GridBagConstraints.HORIZONTAL;
+        gbc.ipady = 30; // make this component tall
+        gbc.weightx = 1.0;
+        gbc.weighty = 0.0;
+        gbc.anchor = GridBagConstraints.CENTER; // bottom of space
+        gbc.insets = new Insets(10, 20, 10, 20); // top padding
+        jLabelResult.add(jComboBox2, gbc);
 
-        c.fill = GridBagConstraints.HORIZONTAL;
-        c.ipady = 30; // make this component tall
-        c.weightx = 1.0;
-        c.anchor = GridBagConstraints.CENTER; // bottom of space
-        c.insets = new Insets(10, 20, 10, 80); // top padding
-        jLabelResult.add(generatedBttn, c);
+        gbc.fill = GridBagConstraints.HORIZONTAL;
+        gbc.ipady = 30; // make this component tall
+        gbc.weightx = 1.0;
+        gbc.anchor = GridBagConstraints.CENTER; // bottom of space
+        gbc.insets = new Insets(10, 20, 10, 80); // top padding
+        jLabelResult.add(generatedBttn, gbc);
 
         String data[][] = { { "18/2/2022", "56", "160", "22.8", "36.5" }, { "27/2/2022", "78", "168", "24.3", "36.6" },
                 { "14/3/2022", "42", "153", "20.2", "36.4" } };
@@ -91,12 +91,12 @@ public class SummaryPanel extends JPanel {
         reportPanel.setBackground(Color.LIGHT_GRAY);
         reportPanel.setOpaque(true);
         reportPanel.setLayout(new GridBagLayout());
-        c.fill = GridBagConstraints.HORIZONTAL;
-        c.ipady = 80; // make this component tall
-        c.weightx = 2.0;
-        c.anchor = GridBagConstraints.CENTER; // bottom of space
-        c.insets = new Insets(10, 80, 10, 80); // top padding
-        reportPanel.add(reportD, c);
+        gbc.fill = GridBagConstraints.HORIZONTAL;
+        gbc.ipady = 80; // make this component tall
+        gbc.weightx = 2.0;
+        gbc.anchor = GridBagConstraints.CENTER; // bottom of space
+        gbc.insets = new Insets(10, 80, 10, 80); // top padding
+        reportPanel.add(reportD, gbc);
 
         add(jLabelResult);
         add(reportPanel);
