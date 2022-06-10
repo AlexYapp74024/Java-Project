@@ -122,15 +122,17 @@ public class MainPagePanel extends JPanel {
         endTime = startTime.withDayOfMonth(startTime.getMonth().length(startTime.getYear() % 4 == 0));
 
         // Revert if there is no data in the time span chosen
-        if (endTime.isBefore(Records.getMinDateTime())) {
-            startTime = startTime.plusMonths(1);
-            endTime = endTime.plusMonths(1);
+        var minTime = Records.getMinDateTime();
+        var maxTime = Records.getMaxDateTime();
+        if (endTime.isBefore(minTime)) {
+            startTime = minTime.withDayOfMonth(1);
+            endTime = minTime.withDayOfMonth(minTime.getMonth().length(minTime.getYear() % 4 == 0));
 
             monthSpinner.setValue(startTime.getMonthValue());
             yearSpinner.setValue(startTime.getYear());
-        } else if (startTime.isAfter(Records.getMaxDateTime())) {
-            startTime = startTime.minusMonths(1);
-            endTime = endTime.minusMonths(1);
+        } else if (startTime.isAfter(maxTime)) {
+            startTime = maxTime.withDayOfMonth(1);
+            endTime = maxTime.withDayOfMonth(maxTime.getMonth().length(maxTime.getYear() % 4 == 0));
 
             monthSpinner.setValue(startTime.getMonthValue());
             yearSpinner.setValue(startTime.getYear());

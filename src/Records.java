@@ -3,7 +3,7 @@ import java.time.temporal.ChronoUnit;
 import java.util.*;
 
 public class Records {
-    public static ArrayList<Record> fullList = RecordDatastore.Retrieve();
+    private static ArrayList<Record> fullList = RecordDatastore.Retrieve();
     private static ArrayList<Record> list = CloneFullList();
 
     private static ArrayList<Record> CloneFullList() {
@@ -12,28 +12,55 @@ public class Records {
         return out;
     }
 
+    private static boolean HasRecord(Record r) {
+        return fullList.contains(r);
+    }
+
     // return false if r already exists
     public static boolean Add(Record r) {
+        if (HasRecord(r)) {
+            return false;
+        }
+
+        fullList.add(r);
+        UpdateList();
         return true;
     }
 
     // return true if r exists
     public static boolean Delete(Record r) {
-        return true;
+        boolean result = fullList.remove(r);
+        UpdateList();
+        return result;
     }
 
     // return true if r exists
     public static boolean Update(Record from, Record to) {
-        return true;
+        if (!HasRecord(to) && HasRecord(from)) {
+            fullList.remove(from);
+            fullList.add(to);
+            UpdateList();
+            return true;
+        }
+        return false;
     }
 
-    public static void SetByDateRange(LocalDateTime startTime, LocalDateTime endTime) {
+    static LocalDateTime startTime = getMinDateTime();
+    static LocalDateTime endTime = getMaxDateTime();
+
+    public static void UpdateList() {
         var out = fullList;
         list.clear();
         for (var record : out) {
             if (record.dateTime.isAfter(startTime) && record.dateTime.isBefore(endTime))
                 list.add(record);
         }
+    }
+
+    public static void SetByDateRange(LocalDateTime in_startTime, LocalDateTime in_endTime) {
+        startTime = in_startTime;
+        endTime = in_endTime;
+        UpdateList();
     }
 
     public static LocalDateTime getMinDateTime() {
@@ -90,6 +117,14 @@ public class Records {
         ArrayList<Float> out = new ArrayList<>();
         for (var r : list) {
             out.add(r.Bmi().value);
+        }
+        return out;
+    }
+
+    public static ArrayList<Record> GetRecordList() {
+        ArrayList<Record> out = new ArrayList<>();
+        for (var r : list) {
+            out.add(r);
         }
         return out;
     }
