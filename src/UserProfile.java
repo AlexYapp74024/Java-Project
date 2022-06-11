@@ -2,6 +2,10 @@
 public class UserProfile {
     public static UserProfile profile = UserDatastore.Retrieve();
 
+    public static void SaveData() {
+        UserDatastore.Save(profile);
+    }
+
     private String name;
     private String medical_hist;
     private float height;
@@ -23,8 +27,8 @@ public class UserProfile {
         return name;
     }
 
-    public BloodType getBloodType() {
-        return bloodtype;
+    public String getBloodType() {
+        return bloodtype.toString();
     }
 
     public String getMedicalHistory() {
@@ -39,8 +43,8 @@ public class UserProfile {
         this.name = name;
     }
 
-    public void setBloodType(BloodType bloodType) {
-        this.bloodtype = bloodType;
+    public void setBloodType(String bloodType) {
+        this.bloodtype = new BloodType(bloodType);
     }
 
     public void setMedicalHistory(String medical_hist) {

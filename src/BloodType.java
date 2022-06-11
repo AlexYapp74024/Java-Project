@@ -34,12 +34,12 @@ public class BloodType {
         return group.toString() + rh.toString();
     }
 
-    public static String[] values() {
+    public static ArrayList<String> values() {
         ArrayList<String> out = new ArrayList<>();
         for (BloodType.Group g : BloodType.Group.values())
             for (BloodType.Rh rh : BloodType.Rh.values())
                 out.add(g.toString() + rh.toString());
-        return (String[]) out.toArray();
+        return out;
     }
 
     public Group group;

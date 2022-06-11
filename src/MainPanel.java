@@ -141,10 +141,12 @@ public class MainPanel extends JFrame {
         addWindowListener(new WindowAdapter() {
             public void windowClosed(WindowEvent e) {
                 Records.SaveData();
+                UserProfile.SaveData();
             }
 
             public void windowClosing(WindowEvent e) {
                 Records.SaveData();
+                UserProfile.SaveData();
             }
         });
 

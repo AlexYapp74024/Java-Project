@@ -37,8 +37,6 @@ public class MainPagePanel extends JPanel {
         yearSpinner.setValue(2022);
 
         monthSpinner.addChangeListener(e -> {
-            // Setting spinners via functions also trigger actionlisteners
-            // Which is undesireable
             if (changing)
                 return;
             changing = true;
