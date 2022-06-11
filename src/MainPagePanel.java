@@ -1,4 +1,6 @@
 import javax.swing.*;
+import javax.swing.border.EmptyBorder;
+
 import java.awt.*;
 import java.time.*;
 import java.time.format.*;
@@ -10,7 +12,7 @@ public class MainPagePanel extends JPanel {
     LocalDateTime startTime;
     LocalDateTime endTime;
 
-    JLabel titleMain = new JLabel();
+    JLabel title = new JLabel();
     JLabel bmiMain = new JLabel();
     JLabel bmiStatus = new JLabel();
 
@@ -85,19 +87,21 @@ public class MainPagePanel extends JPanel {
 
     MainPagePanel() {
 
+        setBorder(new EmptyBorder(10, 10, 10, 10));
         setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
         setBackground(Color.LIGHT_GRAY);
         setOpaque(true);
 
-        titleMain.setFont(new Font("Serif", Font.BOLD, 15));
+        title.setFont(new Font("Serif", Font.BOLD, 15));
         bmiMain.setFont(new Font("Serif", Font.BOLD, 30));
         bmiStatus.setFont(new Font("Serif", Font.BOLD, 25));
 
-        titleMain.setAlignmentX(Component.CENTER_ALIGNMENT);
+        title.setAlignmentX(Component.CENTER_ALIGNMENT);
         bmiMain.setAlignmentX(Component.CENTER_ALIGNMENT);
         bmiStatus.setAlignmentX(Component.CENTER_ALIGNMENT);
 
-        add(titleMain);
+        add(title);
+        add(Box.createRigidArea(new Dimension(20, 0)));
         add(bmiMain);
         add(bmiStatus);
         add(AddInputPanel());
@@ -143,7 +147,7 @@ public class MainPagePanel extends JPanel {
 
     private void UpdateData() {
         Records.SetByDateRange(startTime, endTime);
-        titleMain.setText("RECORDS FROM " + dateTimeFormat.format(startTime) + " TO " + dateTimeFormat.format(endTime));
+        title.setText("RECORDS FROM " + dateTimeFormat.format(startTime) + " TO " + dateTimeFormat.format(endTime));
 
         remove(graphPanel);
         graphPanel = new GraphPanel(Records.GetTimeList(), SelectData());

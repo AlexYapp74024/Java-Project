@@ -18,9 +18,7 @@ public class Records {
 
     // return false if r already exists
     public static boolean Add(Record r) {
-        if (HasRecord(r)) {
-            return false;
-        }
+        if (HasRecord(r)) return false;
 
         fullList.add(r);
         UpdateList();
