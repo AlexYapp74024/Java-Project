@@ -24,6 +24,7 @@ public class UserDataPanel extends JPanel {
     UserDataPanel() {
         setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
         setBorder(new EmptyBorder(50, 50, 50, 50));
+        setBackground(Color.LIGHT_GRAY);
 
         title.setFont(new Font("Serif", Font.BOLD, 30));
         title.setAlignmentX(Component.CENTER_ALIGNMENT);
@@ -40,6 +41,8 @@ public class UserDataPanel extends JPanel {
 
         contentPanel.add(labelPanel);
         contentPanel.add(inputPanel);
+        labelPanel.setBackground(Color.LIGHT_GRAY);
+        inputPanel.setBackground(Color.LIGHT_GRAY);
 
         var gridLayout = new GridLayout(5, 1); // Last row is left empty for spacing
         gridLayout.setVgap(20);
