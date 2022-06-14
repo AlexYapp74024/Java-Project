@@ -25,4 +25,21 @@ public class Record {
     public final float weight;
     public final float bodyTemp;
     public final LocalDateTime dateTime;
+
+    public float getHeight() {
+        return height;
+    }
+
+    public float getWeight() {
+        return weight;
+    }
+
+    public float getBodyTemp() {
+        return bodyTemp;
+    }
+    
+    public LocalDateTime getDateTime() {
+        return dateTime;
+    }
+
 }

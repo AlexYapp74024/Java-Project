@@ -6,7 +6,7 @@ public class Records {
     private static ArrayList<Record> fullList = RecordDatastore.Retrieve();
     private static ArrayList<Record> list = CloneFullList();
 
-    private static ArrayList<Record> CloneFullList() {
+    public static ArrayList<Record> CloneFullList() {
         ArrayList<Record> out = new ArrayList<>();
         out.addAll(fullList);
         return out;
