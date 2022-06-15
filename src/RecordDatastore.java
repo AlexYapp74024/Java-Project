@@ -46,16 +46,16 @@ public class RecordDatastore {
         return out;
     }
 
-    private static float Randheight(Random random) {
-        return (float) random.nextDouble(160.f, 170.f);
+    private static Height Randheight(Random random) {
+        return new Height((float) random.nextDouble(160.f, 170.f));
     }
 
-    private static float Randweight(Random random) {
-        return (float) random.nextDouble(60.f, 70.f);
+    private static Weight Randweight(Random random) {
+        return new Weight((float) random.nextDouble(60.f, 70.f));
     }
 
-    private static float RandBodyTemperature(Random random) {
-        return (float) random.nextDouble(35.5f, 37.f);
+    private static Temperature RandBodyTemperature(Random random) {
+        return new Temperature((float) random.nextDouble(35.5f, 37.f));
     }
 
     private static LocalDateTime RandDateTime(Random random) {

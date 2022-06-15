@@ -8,9 +8,9 @@ import java.util.*;
 import java.util.List;
 import javax.swing.*;
 
-public class GraphPanel extends JPanel implements MouseMotionListener {
+public class GraphPanel<M extends Measurement> extends JPanel implements MouseMotionListener {
 
-    public GraphPanel(List<LocalDateTime> X_value, List<Float> Y_value) {
+    public GraphPanel(List<LocalDateTime> X_value, List<M> Y_value) {
         this.x_value = X_value;
         this.y_value = Y_value;
 
@@ -50,7 +50,7 @@ public class GraphPanel extends JPanel implements MouseMotionListener {
     private HoverPanel hoverPanel = new HoverPanel();
 
     private List<LocalDateTime> x_value;
-    private List<Float> y_value;
+    private List<M> y_value;
     private Graphics2D g2;
 
     private final int MAX_X() {
@@ -89,12 +89,12 @@ public class GraphPanel extends JPanel implements MouseMotionListener {
         return Collections.max(x_value);
     }
 
-    private double getMin_Y_Value() {
-        return Collections.min(y_value);
+    private float getMin_Y_Value() {
+        return Collections.min(y_value).value;
     }
 
-    private double getMax_Y_Value() {
-        return Collections.max(y_value);
+    private float getMax_Y_Value() {
+        return Collections.max(y_value).value;
     }
 
     private void draw_white_background() {
@@ -185,7 +185,7 @@ public class GraphPanel extends JPanel implements MouseMotionListener {
             final var xDistance = (double) t / tspan;
 
             final int x = (int) (xDistance * X_AXIS_LENGTH() + MIN_X);
-            final int y = (int) ((getMax_Y_Value() - y_value.get(i)) * yScale + MIN_Y);
+            final int y = (int) ((getMax_Y_Value() - y_value.get(i).value) * yScale + MIN_Y);
             graphPoints.add(new Point(x, y));
         }
 
@@ -239,7 +239,7 @@ public class GraphPanel extends JPanel implements MouseMotionListener {
         if (pointIndex >= 0) {
             hoverPanel.setPos(point);
             hoverPanel.setXLabel(x_value.get(pointIndex).format(DateTimeFormatter.ofPattern("dd/MM/yyyy")));
-            hoverPanel.setYLabel(new DecimalFormat("0.00").format(y_value.get(pointIndex)));
+            hoverPanel.setYLabel(y_value.get(pointIndex).withUnit());
             hoverPanel.setVisible(true);
             return;
         }

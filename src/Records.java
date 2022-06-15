@@ -58,24 +58,24 @@ public class Records {
                 .get().dateTime;
     }
 
-    public static ArrayList<Float> GetWeightList() {
-        ArrayList<Float> out = new ArrayList<>();
+    public static ArrayList<Weight> GetWeightList() {
+        ArrayList<Weight> out = new ArrayList<>();
         for (var r : list) {
             out.add(r.weight);
         }
         return out;
     }
 
-    public static ArrayList<Float> GetHeightList() {
-        ArrayList<Float> out = new ArrayList<>();
+    public static ArrayList<Height> GetHeightList() {
+        ArrayList<Height> out = new ArrayList<>();
         for (var r : list) {
             out.add(r.height);
         }
         return out;
     }
 
-    public static ArrayList<Float> GetBodyTempList() {
-        ArrayList<Float> out = new ArrayList<>();
+    public static ArrayList<Temperature> GetBodyTempList() {
+        ArrayList<Temperature> out = new ArrayList<>();
         for (var r : list) {
             out.add(r.bodyTemp);
         }

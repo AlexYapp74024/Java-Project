@@ -51,9 +51,10 @@ public class EditRecordsPanel extends JPanel {
             var addRecordDialog = new AddRecord(null);
 
             if (!addRecordDialog.cancel) {
-                Records.Add(
-                        new Record(UserProfile.profile.getHeight(), ((Double) AddRecord.weight.getValue()).floatValue(),
-                                ((Double) AddRecord.bodyTemp.getValue()).floatValue(), addRecordDialog.dateTime));
+                Records.Add(new Record(new Height(UserProfile.profile.getHeight()),
+                        new Weight(((Double) AddRecord.weight.getValue()).floatValue()),
+                        new Temperature(((Double) AddRecord.bodyTemp.getValue()).floatValue()),
+                        addRecordDialog.dateTime));
                 ResetTableModel();
             }
 
@@ -76,11 +77,13 @@ public class EditRecordsPanel extends JPanel {
                 LocalDateTime datetime = LocalDateTime.parse(text, formatter);
 
                 Records.Update(
-                        new Record(((float) table.getValueAt(row, 2)), ((float) table.getValueAt(row, 1)),
-                                ((float) table.getValueAt(row, 4)), datetime),
-                        new Record((UserProfile.profile.getHeight()),
-                                ((Double) UpdateRecord.weight.getValue()).floatValue(),
-                                ((Double) UpdateRecord.bodyTemp.getValue()).floatValue(), updateRecordDialog.dateTime));
+                        new Record(new Height((float) table.getValueAt(row, 2)),
+                                new Weight((float) table.getValueAt(row, 1)),
+                                new Temperature((float) table.getValueAt(row, 4)), datetime),
+                        new Record(new Height(UserProfile.profile.getHeight()),
+                                new Weight((Float) UpdateRecord.weight.getValue()),
+                                new Temperature((Float) UpdateRecord.bodyTemp.getValue()),
+                                updateRecordDialog.dateTime));
 
                 ResetTableModel();
 
@@ -102,8 +105,9 @@ public class EditRecordsPanel extends JPanel {
                 String text = table.getValueAt(row, 0).toString();
                 LocalDateTime datetime = LocalDateTime.parse(text, formatter);
 
-                Records.Delete(new Record(((float) table.getValueAt(row, 2)), ((float) table.getValueAt(row, 1)),
-                        ((float) table.getValueAt(row, 4)), datetime));
+                Records.Delete(new Record(new Height((float) table.getValueAt(row, 2)),
+                        new Weight((float) table.getValueAt(row, 1)), new Temperature((float) table.getValueAt(row, 4)),
+                        datetime));
 
                 ResetTableModel();
             }

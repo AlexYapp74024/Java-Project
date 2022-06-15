@@ -127,7 +127,7 @@ public class MainPagePanel extends JPanel {
         revalidate();
     }
 
-    private ArrayList<Float> SelectData() {
+    private ArrayList<? extends Measurement> SelectData() {
         switch ((String) typeComboBox.getSelectedItem()) {
         case "Weight":
             return Records.GetWeightList();
@@ -136,7 +136,7 @@ public class MainPagePanel extends JPanel {
         case "Body Temp":
             return Records.GetBodyTempList();
         }
-        return Records.GetBMIValueList();
+        return Records.GetBMIList();
     }
 
     private void SetStatus() {

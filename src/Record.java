@@ -3,14 +3,9 @@ import java.time.*;
 
 public class Record {
 
-    public Record() {
-        this.height = 0.f;
-        this.weight = 0.f;
-        this.bodyTemp = 0.f;
-        this.dateTime = LocalDateTime.now().withSecond(0).withNano(0);
-    }
+    public Record() {}
 
-    public Record(float height, float weight, float bodyTemp, LocalDateTime date) {
+    public Record(Height height, Weight weight, Temperature bodyTemp, LocalDateTime date) {
         this.height = height;
         this.weight = weight;
         this.bodyTemp = bodyTemp;
@@ -29,20 +24,20 @@ public class Record {
         return new BMI(height, weight);
     }
 
-    public float height;
-    public float weight;
-    public float bodyTemp;
-    public LocalDateTime dateTime;
+    public Height height = new Height(0f);
+    public Weight weight = new Weight(0f);
+    public Temperature bodyTemp = new Temperature(0f);
+    public LocalDateTime dateTime = LocalDateTime.now().withSecond(0).withNano(0);;
 
-    public float getHeight() {
+    public Height getHeight() {
         return height;
     }
 
-    public float getWeight() {
+    public Weight getWeight() {
         return weight;
     }
 
-    public float getBodyTemp() {
+    public Temperature getBodyTemp() {
         return bodyTemp;
     }
 
