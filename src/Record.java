@@ -17,14 +17,25 @@ public class Record {
         this.dateTime = date;
     }
 
+    @Override
+    public boolean equals(Object r){
+        Record record = (Record) r;
+
+        return
+            this.height   == record.height &&
+            this.weight   == record.weight &&
+            this.bodyTemp == record.bodyTemp &&
+            this.dateTime.equals(record.dateTime);
+    }
+
     public BMI Bmi() {
         return new BMI(height, weight);
     }
 
-    public final float height;
-    public final float weight;
-    public final float bodyTemp;
-    public final LocalDateTime dateTime;
+    public float height;
+    public float weight;
+    public float bodyTemp;
+    public LocalDateTime dateTime;
 
     public float getHeight() {
         return height;

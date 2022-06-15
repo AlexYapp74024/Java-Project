@@ -11,7 +11,12 @@ public class RecordDatastore {
 
     public static ArrayList<Record> Retrieve() {
         try {
-            return Json.ReadFromFile(RecordsFile, new TypeReference<ArrayList<Record>>() {});
+            var out = Json.ReadFromFile(RecordsFile, new TypeReference<ArrayList<Record>>() {});
+            for(var r: out)
+            {
+                r.dateTime = r.dateTime.withSecond(0).withNano(0);
+            }
+            return out;
         } catch (Exception e) {
             e.printStackTrace();
             return GenerateRandomRecords(100);

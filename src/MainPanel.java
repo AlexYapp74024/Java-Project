@@ -1,7 +1,3 @@
-// Graph 
-// Add, Delete, Edit Button
-// User edit info
-
 // Import statements.  
 import java.awt.*;
 import java.awt.event.*;
@@ -25,8 +21,10 @@ public class MainPanel extends JFrame {
         setTitle("Health Care - Health Diary Application");
         setSize(720, 640);
 
+        // Set CardLayout to the panel
         cPanel.setLayout(cardLayout);
 
+        // Add panels into mainPanel
         cPanel.add(new MainPagePanel(), "1");
         cPanel.add(new SummaryPanel(), "2");
         cPanel.add(new EditRecordsPanel(), "3");
@@ -37,10 +35,10 @@ public class MainPanel extends JFrame {
         btnPanel.setBackground(Color.LIGHT_GRAY);
 
         if (shouldFill) {
-            // natural height, maximum width
             gbc.fill = GridBagConstraints.HORIZONTAL;
         }
 
+        // Add panel's button
         addMainPageButton();
         addSummaryButton();
         addReportButton();
@@ -53,6 +51,7 @@ public class MainPanel extends JFrame {
         getContentPane().add(cPanel, BorderLayout.CENTER);
         getContentPane().add(btnPanel, BorderLayout.SOUTH);
     }
+    
 
     private void addMainPageButton() {
         JButton mainPageBttn = new JButton("Main Page");

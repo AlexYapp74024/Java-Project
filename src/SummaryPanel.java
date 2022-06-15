@@ -2,6 +2,7 @@ import java.awt.BorderLayout;
 import java.util.ArrayList;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
+import javax.swing.border.EmptyBorder;
 import javax.swing.table.TableModel;
 import javax.swing.JPanel;
 import javax.swing.table.TableCellRenderer;
@@ -17,6 +18,7 @@ public class SummaryPanel extends JPanel{
         setLayout(new BorderLayout());
         setBackground(Color.LIGHT_GRAY);
         setOpaque(true);
+        setBorder(new EmptyBorder(50, 50, 50, 50));
 
         JLabel jLabel2 = new JLabel("SUMMARY REPORT", SwingConstants.CENTER);
         jLabel2.setFont(new Font("Serif", Font.BOLD, 30));

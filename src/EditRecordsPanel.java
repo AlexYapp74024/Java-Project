@@ -1,5 +1,6 @@
 import javax.swing.*;
 import java.awt.*;
+import java.time.LocalDateTime;
 import java.time.format.*;
 import java.util.ArrayList;
 import javax.swing.table.DefaultTableModel;
@@ -50,53 +51,84 @@ public class EditRecordsPanel extends JPanel {
 
 
         addBttn.addActionListener(event -> {
-           new addRecord(null);
+            var addRecordDialog = new AddRecord(null);
             
-            // if (!addRecord.cancel) {
-            //     Records.list.add(new Record(
-            //         UserProfile.data.getHeight(),
-            //         ((Double) addRecord.weight.getValue()).floatValue(),
-            //         ((Double) addRecord.bodyTemp.getValue()).floatValue(),
-            //             addRecord.dateTime));
-            //             ResetTableModel();
-            // }
+            if (!addRecordDialog.cancel) {
+                Records.Add(new Record(
+                    UserProfile.profile.getHeight(),
+                    ((Double) AddRecord.weight.getValue()).floatValue(),
+                    ((Double) AddRecord.bodyTemp.getValue()).floatValue(),
+                        addRecordDialog.dateTime));
+                        ResetTableModel();
+            }
            
         });
 
         editBttn.addActionListener(e -> {
 
-            if(table.getSelectedRow() == -1){
+            int row = table.getSelectedRow();
+
+            if(row == -1){
                 JOptionPane.showMessageDialog(null, "No record is selected. Please select again.");
             }
             else
             {
-                new updateRecord(null);
+                var updateRecordDialog = new UpdateRecord(null);
+          
+                if(row != -1){
+                
+                if (!updateRecordDialog.cancel){  
+                    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy/MM/dd  hh:mm a");
+                    String text = table.getValueAt(row,0).toString();
+                    LocalDateTime datetime = LocalDateTime.parse(text, formatter);
+
+                       Records.Update( new Record( ((float)table.getValueAt(row,2)) , 
+                                        ( (float)table.getValueAt(row,1)),
+                                        ( (float)table.getValueAt(row,4)),
+                                        datetime), 
+                                     new Record(
+                                        (UserProfile.profile.getHeight()),
+                                        ((Double) UpdateRecord.weight.getValue()).floatValue(),
+                                        ((Double) UpdateRecord.bodyTemp.getValue()).floatValue(),
+                                        updateRecordDialog.dateTime));
+
+                              ResetTableModel();
+                    
+                }
             }
+        }
         });
 
 
         deleteBttn.addActionListener(e -> {
             
-            if(table.getSelectedRow() == -1){
+            int row = table.getSelectedRow();
+
+            if(row == -1){
                 JOptionPane.showMessageDialog(null, "No record is selected. Please select again.");
             }
             else
             {
-                new deleteRecord(null);
-                if(table.getSelectedRow() != -1){
-                    if (deleteRecord.cancel){
-                        int row = table.getSelectedRow();
-                        
-                        if(table.getRowCount()>0){
-                            DefaultTableModel model = (DefaultTableModel) table.getModel();
-                            model.removeRow(row);
+                
+                var deleteRecordDialog = new DeleteRecord(null);
+   
+                if(row != -1){
+                    if (!deleteRecordDialog.cancel){      
+                        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy/MM/dd  hh:mm a");
+                        String text = table.getValueAt(row,0).toString();
+                        LocalDateTime datetime = LocalDateTime.parse(text, formatter);
 
-                            //Records.list.remove(row);
-                            ResetTableModel();
+                            Records.Delete(new Record ( ((float)table.getValueAt(row,2)) , 
+                                        ( (float)table.getValueAt(row,1)),
+                                        ( (float)table.getValueAt(row,4)),
+                                         datetime));
+            
+                                         ResetTableModel();
+                            
                         }
                     }
+                    
                 }
-            }
         });
 
       
@@ -118,7 +150,7 @@ public class EditRecordsPanel extends JPanel {
 
 
     void ResetTableModel() {
-        //table.setModel(new DefaultTableModel(ConvertToTableDate(Records.list), tableHeader));
+        table.setModel(new DefaultTableModel(ConvertToTableDate(Records.CloneFullList()), tableHeader));
     }
 
     Object[][] ConvertToTableDate(ArrayList<Record> list) {

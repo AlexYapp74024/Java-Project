@@ -1,43 +1,31 @@
-import javax.swing.JFrame;
 import javax.swing.*;
-import java.awt.*;
-import java.time.*;
+import javax.swing.JFrame;
 
-public class deleteRecord extends JDialog {
+public class DeleteRecord extends JDialog {
 
-     GridBagConstraints gbc = new GridBagConstraints();
-     public static LocalDateTime dateTime = LocalDateTime.now();
+     boolean cancel = true;
 
-    static boolean cancel = true;
 
-    deleteRecord(JFrame parent){
+    DeleteRecord(JFrame parent){
 
+        // Option of the dialogBox
         Object[] options = { "Yes", "No" };
 
+        // Confirmation Message for user to DELETE records
         int choice = JOptionPane.showOptionDialog(null, "Do you want to DELETE data?", "Confirm to Delete?",
         JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.WARNING_MESSAGE, null, options,options[1]);
 
-            if (choice == 0) // Confirm Delete = Yes
+            // Confirm Delete = Yes
+            if (choice == 0) 
             {
                 cancel = false;
                             
                 JOptionPane.showMessageDialog(null,"Record deleted successfully.", "Delete successfully!",
                 JOptionPane.INFORMATION_MESSAGE);
 
-                dispose();
+                
             }
             
-            else
-            {
-                dispose();
-            }
-          //     // i = the index of the selected row
-          //     int i = table.getSelectedRow();
-          //     if(i >= 0){
-          //         // remove a row from jtable
-          //         model.removeRow(i);
-          //     }
-        
+            dispose();
         }
-                        
 }

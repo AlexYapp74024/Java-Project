@@ -1,501 +1,501 @@
 [ {
-  "height" : 167.10585,
-  "weight" : 61.568672,
-  "bodyTemp" : 36.871914,
-  "dateTime" : [ 2021, 12, 7, 1, 38, 33 ]
-}, {
-  "height" : 160.37804,
-  "weight" : 68.057465,
-  "bodyTemp" : 35.68561,
-  "dateTime" : [ 2021, 12, 8, 4, 49, 54 ]
-}, {
-  "height" : 162.3187,
-  "weight" : 62.782215,
-  "bodyTemp" : 35.678177,
-  "dateTime" : [ 2021, 12, 11, 5, 48, 19 ]
-}, {
-  "height" : 168.48016,
-  "weight" : 66.968925,
-  "bodyTemp" : 36.786255,
-  "dateTime" : [ 2021, 12, 13, 23, 16, 38 ]
-}, {
-  "height" : 164.48685,
-  "weight" : 62.17494,
-  "bodyTemp" : 35.99757,
-  "dateTime" : [ 2021, 12, 14, 7, 12, 2 ]
-}, {
-  "height" : 166.14667,
-  "weight" : 60.848938,
-  "bodyTemp" : 36.858917,
-  "dateTime" : [ 2021, 12, 15, 8, 29, 44 ]
-}, {
-  "height" : 164.3109,
-  "weight" : 66.36219,
-  "bodyTemp" : 35.735905,
-  "dateTime" : [ 2021, 12, 15, 12, 21, 5 ]
-}, {
-  "height" : 164.97014,
-  "weight" : 63.593464,
-  "bodyTemp" : 36.64473,
-  "dateTime" : [ 2021, 12, 17, 9, 3, 15 ]
-}, {
-  "height" : 163.53398,
-  "weight" : 66.66632,
-  "bodyTemp" : 36.196453,
-  "dateTime" : [ 2021, 12, 17, 17, 5, 35 ]
-}, {
-  "height" : 167.40549,
-  "weight" : 67.67448,
-  "bodyTemp" : 35.574696,
-  "dateTime" : [ 2021, 12, 19, 0, 48, 9 ]
-}, {
-  "height" : 163.0694,
-  "weight" : 67.351776,
-  "bodyTemp" : 35.788376,
-  "dateTime" : [ 2021, 12, 20, 18, 58, 30 ]
-}, {
-  "height" : 168.6702,
-  "weight" : 66.0932,
-  "bodyTemp" : 35.580376,
-  "dateTime" : [ 2021, 12, 21, 19, 36, 54 ]
-}, {
-  "height" : 163.55025,
-  "weight" : 65.12177,
-  "bodyTemp" : 35.838715,
-  "dateTime" : [ 2021, 12, 22, 17, 12, 30 ]
-}, {
-  "height" : 165.87703,
-  "weight" : 62.96364,
-  "bodyTemp" : 36.501846,
-  "dateTime" : [ 2021, 12, 26, 19, 53, 7 ]
-}, {
-  "height" : 169.33221,
-  "weight" : 67.064445,
-  "bodyTemp" : 36.933388,
-  "dateTime" : [ 2021, 12, 26, 20, 9, 53 ]
-}, {
-  "height" : 166.1857,
-  "weight" : 64.29045,
-  "bodyTemp" : 36.225204,
-  "dateTime" : [ 2021, 12, 29, 10, 12, 44 ]
-}, {
-  "height" : 165.48267,
-  "weight" : 66.87855,
-  "bodyTemp" : 36.039948,
-  "dateTime" : [ 2022, 1, 4, 1, 10, 53 ]
-}, {
-  "height" : 166.37798,
-  "weight" : 66.78602,
-  "bodyTemp" : 36.819317,
-  "dateTime" : [ 2022, 1, 5, 9, 13, 26 ]
-}, {
-  "height" : 168.44252,
-  "weight" : 67.56027,
-  "bodyTemp" : 36.135803,
-  "dateTime" : [ 2022, 1, 5, 10, 4, 3 ]
-}, {
-  "height" : 166.10957,
-  "weight" : 60.282448,
-  "bodyTemp" : 36.88641,
-  "dateTime" : [ 2022, 1, 7, 6, 25, 19 ]
-}, {
-  "height" : 163.26181,
-  "weight" : 67.74667,
-  "bodyTemp" : 36.393246,
-  "dateTime" : [ 2022, 1, 7, 10, 29, 1 ]
-}, {
-  "height" : 169.51242,
-  "weight" : 67.05078,
-  "bodyTemp" : 36.807125,
-  "dateTime" : [ 2022, 1, 15, 10, 42, 17 ]
-}, {
-  "height" : 167.35876,
-  "weight" : 67.50626,
-  "bodyTemp" : 36.46119,
-  "dateTime" : [ 2022, 1, 20, 14, 14, 1 ]
-}, {
-  "height" : 167.1903,
-  "weight" : 63.00554,
-  "bodyTemp" : 36.153446,
-  "dateTime" : [ 2022, 1, 23, 9, 1, 3 ]
-}, {
-  "height" : 169.63708,
-  "weight" : 60.31044,
-  "bodyTemp" : 36.8924,
-  "dateTime" : [ 2022, 1, 25, 8, 37, 6 ]
-}, {
-  "height" : 162.09215,
-  "weight" : 65.949196,
-  "bodyTemp" : 35.769478,
-  "dateTime" : [ 2022, 1, 26, 10, 21, 26 ]
-}, {
-  "height" : 165.99768,
-  "weight" : 67.99048,
-  "bodyTemp" : 35.7005,
-  "dateTime" : [ 2022, 1, 28, 14, 51, 18 ]
-}, {
-  "height" : 167.47244,
-  "weight" : 65.77776,
-  "bodyTemp" : 36.471405,
-  "dateTime" : [ 2022, 1, 28, 21, 32, 4 ]
-}, {
-  "height" : 163.82065,
-  "weight" : 67.11433,
-  "bodyTemp" : 35.72401,
-  "dateTime" : [ 2022, 1, 30, 21, 37, 58 ]
-}, {
-  "height" : 164.4508,
-  "weight" : 67.28655,
-  "bodyTemp" : 36.429756,
-  "dateTime" : [ 2022, 1, 31, 1, 51, 44 ]
-}, {
-  "height" : 160.88379,
-  "weight" : 64.03211,
-  "bodyTemp" : 36.00416,
-  "dateTime" : [ 2022, 2, 3, 5, 31, 12 ]
-}, {
-  "height" : 168.76614,
-  "weight" : 69.64725,
-  "bodyTemp" : 36.82723,
-  "dateTime" : [ 2022, 2, 3, 7, 8, 17 ]
-}, {
-  "height" : 162.12329,
-  "weight" : 62.41954,
-  "bodyTemp" : 36.205296,
-  "dateTime" : [ 2022, 2, 3, 14, 32, 20 ]
-}, {
-  "height" : 168.49742,
-  "weight" : 63.387455,
-  "bodyTemp" : 36.83089,
-  "dateTime" : [ 2022, 2, 4, 11, 50, 20 ]
-}, {
-  "height" : 161.4869,
-  "weight" : 60.059135,
-  "bodyTemp" : 36.980423,
-  "dateTime" : [ 2022, 2, 6, 2, 26, 39 ]
-}, {
-  "height" : 161.49866,
-  "weight" : 67.73051,
-  "bodyTemp" : 35.942463,
-  "dateTime" : [ 2022, 2, 6, 19, 5, 45 ]
-}, {
-  "height" : 164.4994,
-  "weight" : 69.220276,
-  "bodyTemp" : 35.83758,
-  "dateTime" : [ 2022, 2, 10, 5, 54, 49 ]
-}, {
-  "height" : 162.9659,
-  "weight" : 63.075516,
-  "bodyTemp" : 36.781544,
-  "dateTime" : [ 2022, 2, 10, 18, 27, 4 ]
-}, {
-  "height" : 169.57869,
-  "weight" : 62.20461,
-  "bodyTemp" : 36.410725,
-  "dateTime" : [ 2022, 2, 17, 2, 47, 6 ]
-}, {
-  "height" : 160.40399,
-  "weight" : 63.66196,
-  "bodyTemp" : 36.320927,
-  "dateTime" : [ 2022, 2, 17, 22, 3, 25 ]
-}, {
-  "height" : 162.32236,
-  "weight" : 66.538055,
-  "bodyTemp" : 36.68574,
-  "dateTime" : [ 2022, 2, 18, 7, 43, 48 ]
-}, {
-  "height" : 164.9507,
-  "weight" : 61.766197,
-  "bodyTemp" : 35.89373,
-  "dateTime" : [ 2022, 2, 23, 5, 39, 24 ]
-}, {
-  "height" : 161.00804,
-  "weight" : 69.726494,
-  "bodyTemp" : 36.227837,
-  "dateTime" : [ 2022, 2, 24, 21, 31, 30 ]
-}, {
-  "height" : 164.99721,
-  "weight" : 62.95984,
-  "bodyTemp" : 36.214905,
-  "dateTime" : [ 2022, 2, 26, 22, 2, 39 ]
-}, {
-  "height" : 169.82466,
-  "weight" : 61.839645,
-  "bodyTemp" : 36.619076,
-  "dateTime" : [ 2022, 2, 27, 18, 39, 7 ]
-}, {
-  "height" : 166.70128,
-  "weight" : 60.532772,
-  "bodyTemp" : 36.019318,
-  "dateTime" : [ 2022, 2, 28, 10, 9, 16 ]
-}, {
-  "height" : 166.19783,
-  "weight" : 66.8482,
-  "bodyTemp" : 35.574467,
-  "dateTime" : [ 2022, 2, 28, 13, 10, 29 ]
-}, {
-  "height" : 167.44243,
-  "weight" : 64.72124,
-  "bodyTemp" : 36.57949,
-  "dateTime" : [ 2022, 3, 1, 2, 2, 3 ]
-}, {
-  "height" : 163.39943,
-  "weight" : 68.84344,
-  "bodyTemp" : 36.72887,
-  "dateTime" : [ 2022, 3, 1, 4, 25, 22 ]
-}, {
-  "height" : 160.19519,
-  "weight" : 63.391243,
-  "bodyTemp" : 36.66368,
-  "dateTime" : [ 2022, 3, 1, 10, 7, 57 ]
-}, {
-  "height" : 167.8043,
-  "weight" : 65.50957,
-  "bodyTemp" : 36.36033,
-  "dateTime" : [ 2022, 3, 4, 15, 28, 4 ]
-}, {
-  "height" : 169.57664,
-  "weight" : 68.43024,
-  "bodyTemp" : 36.22972,
-  "dateTime" : [ 2022, 3, 6, 3, 42, 48 ]
-}, {
-  "height" : 168.53227,
-  "weight" : 62.898975,
-  "bodyTemp" : 36.354023,
-  "dateTime" : [ 2022, 3, 6, 18, 43, 47 ]
-}, {
-  "height" : 169.11911,
-  "weight" : 62.52712,
-  "bodyTemp" : 35.734837,
-  "dateTime" : [ 2022, 3, 10, 18, 35, 36 ]
-}, {
-  "height" : 161.70683,
-  "weight" : 64.27441,
-  "bodyTemp" : 36.862164,
-  "dateTime" : [ 2022, 3, 10, 22, 47, 29 ]
-}, {
-  "height" : 165.43434,
-  "weight" : 65.1473,
-  "bodyTemp" : 36.42552,
-  "dateTime" : [ 2022, 3, 11, 8, 53, 44 ]
-}, {
-  "height" : 162.48334,
-  "weight" : 66.82759,
-  "bodyTemp" : 36.131233,
-  "dateTime" : [ 2022, 3, 11, 17, 34, 53 ]
-}, {
-  "height" : 162.0088,
-  "weight" : 62.088387,
-  "bodyTemp" : 36.4562,
-  "dateTime" : [ 2022, 3, 12, 13, 36, 14 ]
-}, {
-  "height" : 160.58464,
-  "weight" : 61.02279,
-  "bodyTemp" : 36.53123,
-  "dateTime" : [ 2022, 3, 13, 17, 57, 47 ]
-}, {
-  "height" : 168.99095,
-  "weight" : 65.31449,
-  "bodyTemp" : 36.4339,
-  "dateTime" : [ 2022, 3, 13, 20, 0, 27 ]
-}, {
-  "height" : 166.20554,
-  "weight" : 65.957985,
-  "bodyTemp" : 36.088272,
-  "dateTime" : [ 2022, 3, 15, 12, 6, 30 ]
-}, {
-  "height" : 161.97592,
-  "weight" : 65.69511,
-  "bodyTemp" : 36.660423,
-  "dateTime" : [ 2022, 3, 15, 19, 4, 18 ]
-}, {
-  "height" : 166.70163,
-  "weight" : 63.658543,
-  "bodyTemp" : 36.609646,
-  "dateTime" : [ 2022, 3, 22, 9, 2, 25 ]
-}, {
-  "height" : 163.98355,
-  "weight" : 66.7309,
-  "bodyTemp" : 36.14647,
-  "dateTime" : [ 2022, 3, 29, 9, 49, 25 ]
-}, {
-  "height" : 168.04607,
-  "weight" : 64.09276,
-  "bodyTemp" : 36.94053,
-  "dateTime" : [ 2022, 3, 29, 17, 28, 37 ]
-}, {
-  "height" : 165.47633,
-  "weight" : 66.40283,
-  "bodyTemp" : 36.152103,
-  "dateTime" : [ 2022, 4, 1, 4, 42, 13 ]
-}, {
-  "height" : 163.22092,
-  "weight" : 64.4087,
-  "bodyTemp" : 36.65051,
-  "dateTime" : [ 2022, 4, 2, 13, 59, 3 ]
-}, {
-  "height" : 169.3264,
-  "weight" : 69.22002,
-  "bodyTemp" : 36.05209,
-  "dateTime" : [ 2022, 4, 5, 11, 33, 34 ]
-}, {
-  "height" : 167.70169,
-  "weight" : 65.59037,
-  "bodyTemp" : 35.81896,
-  "dateTime" : [ 2022, 4, 5, 17, 14, 7 ]
-}, {
-  "height" : 163.81482,
-  "weight" : 68.931526,
-  "bodyTemp" : 36.70945,
-  "dateTime" : [ 2022, 4, 6, 4, 41, 24 ]
-}, {
-  "height" : 167.54079,
-  "weight" : 67.51369,
-  "bodyTemp" : 35.9308,
-  "dateTime" : [ 2022, 4, 6, 13, 13, 11 ]
-}, {
-  "height" : 161.55693,
-  "weight" : 67.207535,
-  "bodyTemp" : 36.870197,
-  "dateTime" : [ 2022, 4, 8, 4, 0, 57 ]
-}, {
-  "height" : 166.6669,
-  "weight" : 62.436447,
-  "bodyTemp" : 36.02253,
-  "dateTime" : [ 2022, 4, 9, 17, 51, 14 ]
-}, {
-  "height" : 166.3857,
-  "weight" : 65.9945,
-  "bodyTemp" : 36.890167,
-  "dateTime" : [ 2022, 4, 17, 14, 13, 33 ]
-}, {
-  "height" : 161.8161,
-  "weight" : 68.020134,
-  "bodyTemp" : 36.77101,
-  "dateTime" : [ 2022, 4, 19, 15, 57, 35 ]
-}, {
-  "height" : 164.65459,
-  "weight" : 67.37372,
-  "bodyTemp" : 36.320374,
-  "dateTime" : [ 2022, 4, 23, 5, 40, 51 ]
-}, {
-  "height" : 161.8046,
-  "weight" : 60.308456,
-  "bodyTemp" : 35.73018,
-  "dateTime" : [ 2022, 4, 24, 15, 29, 55 ]
-}, {
-  "height" : 163.90309,
-  "weight" : 68.30047,
-  "bodyTemp" : 35.825817,
+  "height" : 167.1,
+  "weight" : 61.5,
+  "bodyTemp" : 36.8,
+  "dateTime" : [ 2021, 12, 7, 1, 38 ]
+}, {
+  "height" : 160.3,
+  "weight" : 68.0,
+  "bodyTemp" : 35.6,
+  "dateTime" : [ 2021, 12, 8, 4, 49 ]
+}, {
+  "height" : 162.3,
+  "weight" : 62.7,
+  "bodyTemp" : 35.6,
+  "dateTime" : [ 2021, 12, 11, 5, 48 ]
+}, {
+  "height" : 168.4,
+  "weight" : 66.9,
+  "bodyTemp" : 36.7,
+  "dateTime" : [ 2021, 12, 13, 23, 16 ]
+}, {
+  "height" : 164.4,
+  "weight" : 62.1,
+  "bodyTemp" : 35.9,
+  "dateTime" : [ 2021, 12, 14, 7, 12 ]
+}, {
+  "height" : 166.1,
+  "weight" : 60.8,
+  "bodyTemp" : 36.8,
+  "dateTime" : [ 2021, 12, 15, 8, 29 ]
+}, {
+  "height" : 164.3,
+  "weight" : 66.3,
+  "bodyTemp" : 35.7,
+  "dateTime" : [ 2021, 12, 15, 12, 21 ]
+}, {
+  "height" : 164.9,
+  "weight" : 63.5,
+  "bodyTemp" : 36.6,
+  "dateTime" : [ 2021, 12, 17, 9, 3 ]
+}, {
+  "height" : 163.5,
+  "weight" : 66.6,
+  "bodyTemp" : 36.1,
+  "dateTime" : [ 2021, 12, 17, 17, 5 ]
+}, {
+  "height" : 167.4,
+  "weight" : 67.6,
+  "bodyTemp" : 35.5,
+  "dateTime" : [ 2021, 12, 19, 0, 48 ]
+}, {
+  "height" : 163.0,
+  "weight" : 67.3,
+  "bodyTemp" : 35.7,
+  "dateTime" : [ 2021, 12, 20, 18, 58 ]
+}, {
+  "height" : 168.6,
+  "weight" : 66.0,
+  "bodyTemp" : 35.5,
+  "dateTime" : [ 2021, 12, 21, 19, 36 ]
+}, {
+  "height" : 163.5,
+  "weight" : 65.1,
+  "bodyTemp" : 35.8,
+  "dateTime" : [ 2021, 12, 22, 17, 12 ]
+}, {
+  "height" : 165.8,
+  "weight" : 62.9,
+  "bodyTemp" : 36.5,
+  "dateTime" : [ 2021, 12, 26, 19, 53 ]
+}, {
+  "height" : 169.3,
+  "weight" : 67.0,
+  "bodyTemp" : 36.9,
+  "dateTime" : [ 2021, 12, 26, 20, 9 ]
+}, {
+  "height" : 166.1,
+  "weight" : 64.2,
+  "bodyTemp" : 36.2,
+  "dateTime" : [ 2021, 12, 29, 10, 12 ]
+}, {
+  "height" : 165.4,
+  "weight" : 66.8,
+  "bodyTemp" : 36.0,
+  "dateTime" : [ 2022, 1, 4, 1, 10 ]
+}, {
+  "height" : 166.3,
+  "weight" : 66.7,
+  "bodyTemp" : 36.8,
+  "dateTime" : [ 2022, 1, 5, 9, 13 ]
+}, {
+  "height" : 168.4,
+  "weight" : 67.5,
+  "bodyTemp" : 36.1,
+  "dateTime" : [ 2022, 1, 5, 10, 4 ]
+}, {
+  "height" : 166.1,
+  "weight" : 60.2,
+  "bodyTemp" : 36.8,
+  "dateTime" : [ 2022, 1, 7, 6, 25 ]
+}, {
+  "height" : 163.2,
+  "weight" : 67.7,
+  "bodyTemp" : 36.3,
+  "dateTime" : [ 2022, 1, 7, 10, 29 ]
+}, {
+  "height" : 169.5,
+  "weight" : 67.0,
+  "bodyTemp" : 36.8,
+  "dateTime" : [ 2022, 1, 15, 10, 42 ]
+}, {
+  "height" : 167.3,
+  "weight" : 67.5,
+  "bodyTemp" : 36.4,
+  "dateTime" : [ 2022, 1, 20, 14, 14 ]
+}, {
+  "height" : 167.1,
+  "weight" : 63.0,
+  "bodyTemp" : 36.1,
+  "dateTime" : [ 2022, 1, 23, 9, 1 ]
+}, {
+  "height" : 169.6,
+  "weight" : 60.3,
+  "bodyTemp" : 36.8,
+  "dateTime" : [ 2022, 1, 25, 8, 37 ]
+}, {
+  "height" : 162.0,
+  "weight" : 65.9,
+  "bodyTemp" : 35.7,
+  "dateTime" : [ 2022, 1, 26, 10, 21 ]
+}, {
+  "height" : 165.9,
+  "weight" : 67.9,
+  "bodyTemp" : 35.7,
+  "dateTime" : [ 2022, 1, 28, 14, 51 ]
+}, {
+  "height" : 167.4,
+  "weight" : 65.7,
+  "bodyTemp" : 36.4,
+  "dateTime" : [ 2022, 1, 28, 21, 32 ]
+}, {
+  "height" : 163.8,
+  "weight" : 67.1,
+  "bodyTemp" : 35.7,
+  "dateTime" : [ 2022, 1, 30, 21, 37 ]
+}, {
+  "height" : 164.4,
+  "weight" : 67.2,
+  "bodyTemp" : 36.4,
+  "dateTime" : [ 2022, 1, 31, 1, 51 ]
+}, {
+  "height" : 160.8,
+  "weight" : 64.0,
+  "bodyTemp" : 36.0,
+  "dateTime" : [ 2022, 2, 3, 5, 31 ]
+}, {
+  "height" : 168.7,
+  "weight" : 69.6,
+  "bodyTemp" : 36.8,
+  "dateTime" : [ 2022, 2, 3, 7, 8 ]
+}, {
+  "height" : 162.1,
+  "weight" : 62.4,
+  "bodyTemp" : 36.2,
+  "dateTime" : [ 2022, 2, 3, 14, 32 ]
+}, {
+  "height" : 168.4,
+  "weight" : 63.3,
+  "bodyTemp" : 36.8,
+  "dateTime" : [ 2022, 2, 4, 11, 50 ]
+}, {
+  "height" : 161.4,
+  "weight" : 60.0,
+  "bodyTemp" : 36.9,
+  "dateTime" : [ 2022, 2, 6, 2, 26 ]
+}, {
+  "height" : 161.4,
+  "weight" : 67.7,
+  "bodyTemp" : 35.9,
+  "dateTime" : [ 2022, 2, 6, 19, 5 ]
+}, {
+  "height" : 164.4,
+  "weight" : 69.2,
+  "bodyTemp" : 35.8,
+  "dateTime" : [ 2022, 2, 10, 5, 54 ]
+}, {
+  "height" : 162.9,
+  "weight" : 63.0,
+  "bodyTemp" : 36.7,
+  "dateTime" : [ 2022, 2, 10, 18, 27 ]
+}, {
+  "height" : 169.5,
+  "weight" : 62.2,
+  "bodyTemp" : 36.4,
+  "dateTime" : [ 2022, 2, 17, 2, 47 ]
+}, {
+  "height" : 160.4,
+  "weight" : 63.6,
+  "bodyTemp" : 36.3,
+  "dateTime" : [ 2022, 2, 17, 22, 3 ]
+}, {
+  "height" : 162.3,
+  "weight" : 66.5,
+  "bodyTemp" : 36.6,
+  "dateTime" : [ 2022, 2, 18, 7, 43 ]
+}, {
+  "height" : 164.9,
+  "weight" : 61.7,
+  "bodyTemp" : 35.8,
+  "dateTime" : [ 2022, 2, 23, 5, 39 ]
+}, {
+  "height" : 161.0,
+  "weight" : 69.7,
+  "bodyTemp" : 36.2,
+  "dateTime" : [ 2022, 2, 24, 21, 31 ]
+}, {
+  "height" : 164.9,
+  "weight" : 62.9,
+  "bodyTemp" : 36.2,
+  "dateTime" : [ 2022, 2, 26, 22, 2 ]
+}, {
+  "height" : 169.8,
+  "weight" : 61.8,
+  "bodyTemp" : 36.6,
+  "dateTime" : [ 2022, 2, 27, 18, 39 ]
+}, {
+  "height" : 166.7,
+  "weight" : 60.5,
+  "bodyTemp" : 36.0,
+  "dateTime" : [ 2022, 2, 28, 10, 9 ]
+}, {
+  "height" : 166.1,
+  "weight" : 66.8,
+  "bodyTemp" : 35.5,
+  "dateTime" : [ 2022, 2, 28, 13, 10 ]
+}, {
+  "height" : 167.4,
+  "weight" : 64.7,
+  "bodyTemp" : 36.5,
+  "dateTime" : [ 2022, 3, 1, 2, 2 ]
+}, {
+  "height" : 163.3,
+  "weight" : 68.8,
+  "bodyTemp" : 36.7,
+  "dateTime" : [ 2022, 3, 1, 4, 25 ]
+}, {
+  "height" : 160.1,
+  "weight" : 63.3,
+  "bodyTemp" : 36.6,
+  "dateTime" : [ 2022, 3, 1, 10, 7 ]
+}, {
+  "height" : 167.8,
+  "weight" : 65.5,
+  "bodyTemp" : 36.3,
+  "dateTime" : [ 2022, 3, 4, 15, 28 ]
+}, {
+  "height" : 169.5,
+  "weight" : 68.4,
+  "bodyTemp" : 36.2,
+  "dateTime" : [ 2022, 3, 6, 3, 42 ]
+}, {
+  "height" : 168.5,
+  "weight" : 62.8,
+  "bodyTemp" : 36.3,
+  "dateTime" : [ 2022, 3, 6, 18, 43 ]
+}, {
+  "height" : 169.1,
+  "weight" : 62.5,
+  "bodyTemp" : 35.7,
+  "dateTime" : [ 2022, 3, 10, 18, 35 ]
+}, {
+  "height" : 161.7,
+  "weight" : 64.2,
+  "bodyTemp" : 36.8,
+  "dateTime" : [ 2022, 3, 10, 22, 47 ]
+}, {
+  "height" : 165.4,
+  "weight" : 65.1,
+  "bodyTemp" : 36.4,
+  "dateTime" : [ 2022, 3, 11, 8, 53 ]
+}, {
+  "height" : 162.4,
+  "weight" : 66.8,
+  "bodyTemp" : 36.1,
+  "dateTime" : [ 2022, 3, 11, 17, 34 ]
+}, {
+  "height" : 162.0,
+  "weight" : 62.0,
+  "bodyTemp" : 36.4,
+  "dateTime" : [ 2022, 3, 12, 13, 36 ]
+}, {
+  "height" : 160.5,
+  "weight" : 61.0,
+  "bodyTemp" : 36.5,
+  "dateTime" : [ 2022, 3, 13, 17, 57 ]
+}, {
+  "height" : 168.9,
+  "weight" : 65.3,
+  "bodyTemp" : 36.4,
+  "dateTime" : [ 2022, 3, 13, 20, 0 ]
+}, {
+  "height" : 166.2,
+  "weight" : 65.9,
+  "bodyTemp" : 36.0,
+  "dateTime" : [ 2022, 3, 15, 12, 6 ]
+}, {
+  "height" : 161.9,
+  "weight" : 65.6,
+  "bodyTemp" : 36.6,
+  "dateTime" : [ 2022, 3, 15, 19, 4 ]
+}, {
+  "height" : 166.7,
+  "weight" : 63.6,
+  "bodyTemp" : 36.6,
+  "dateTime" : [ 2022, 3, 22, 9, 2 ]
+}, {
+  "height" : 163.9,
+  "weight" : 66.7,
+  "bodyTemp" : 36.1,
+  "dateTime" : [ 2022, 3, 29, 9, 49 ]
+}, {
+  "height" : 168.0,
+  "weight" : 64.0,
+  "bodyTemp" : 36.9,
+  "dateTime" : [ 2022, 3, 29, 17, 28 ]
+}, {
+  "height" : 165.4,
+  "weight" : 66.4,
+  "bodyTemp" : 36.1,
+  "dateTime" : [ 2022, 4, 1, 4, 42 ]
+}, {
+  "height" : 163.2,
+  "weight" : 64.4,
+  "bodyTemp" : 36.6,
+  "dateTime" : [ 2022, 4, 2, 13, 59 ]
+}, {
+  "height" : 169.3,
+  "weight" : 69.2,
+  "bodyTemp" : 36.0,
+  "dateTime" : [ 2022, 4, 5, 11, 33 ]
+}, {
+  "height" : 167.7,
+  "weight" : 65.5,
+  "bodyTemp" : 35.8,
+  "dateTime" : [ 2022, 4, 5, 17, 14 ]
+}, {
+  "height" : 163.8,
+  "weight" : 68.9,
+  "bodyTemp" : 36.7,
+  "dateTime" : [ 2022, 4, 6, 4, 41 ]
+}, {
+  "height" : 167.5,
+  "weight" : 67.5,
+  "bodyTemp" : 35.9,
+  "dateTime" : [ 2022, 4, 6, 13, 13 ]
+}, {
+  "height" : 161.5,
+  "weight" : 67.2,
+  "bodyTemp" : 36.8,
+  "dateTime" : [ 2022, 4, 8, 4, 0 ]
+}, {
+  "height" : 166.6,
+  "weight" : 62.4,
+  "bodyTemp" : 36.0,
+  "dateTime" : [ 2022, 4, 9, 17, 51 ]
+}, {
+  "height" : 166.3,
+  "weight" : 65.9,
+  "bodyTemp" : 36.8,
+  "dateTime" : [ 2022, 4, 17, 14, 13 ]
+}, {
+  "height" : 161.8,
+  "weight" : 68.0,
+  "bodyTemp" : 36.7,
+  "dateTime" : [ 2022, 4, 19, 15, 57 ]
+}, {
+  "height" : 164.6,
+  "weight" : 67.3,
+  "bodyTemp" : 36.3,
+  "dateTime" : [ 2022, 4, 23, 5, 40 ]
+}, {
+  "height" : 161.8,
+  "weight" : 60.3,
+  "bodyTemp" : 35.7,
+  "dateTime" : [ 2022, 4, 24, 15, 29 ]
+}, {
+  "height" : 163.9,
+  "weight" : 68.3,
+  "bodyTemp" : 35.8,
   "dateTime" : [ 2022, 4, 26, 9, 15 ]
 }, {
-  "height" : 169.71155,
-  "weight" : 61.265934,
-  "bodyTemp" : 36.98603,
-  "dateTime" : [ 2022, 4, 27, 7, 56, 45 ]
+  "height" : 169.7,
+  "weight" : 61.2,
+  "bodyTemp" : 36.9,
+  "dateTime" : [ 2022, 4, 27, 7, 56 ]
 }, {
-  "height" : 160.58417,
-  "weight" : 66.933105,
-  "bodyTemp" : 36.481342,
-  "dateTime" : [ 2022, 5, 1, 23, 34, 52 ]
+  "height" : 160.5,
+  "weight" : 66.9,
+  "bodyTemp" : 36.4,
+  "dateTime" : [ 2022, 5, 1, 23, 34 ]
 }, {
-  "height" : 169.18651,
-  "weight" : 68.260704,
-  "bodyTemp" : 36.729362,
-  "dateTime" : [ 2022, 5, 3, 13, 50, 16 ]
+  "height" : 169.1,
+  "weight" : 68.2,
+  "bodyTemp" : 36.7,
+  "dateTime" : [ 2022, 5, 3, 13, 50 ]
 }, {
-  "height" : 162.72488,
-  "weight" : 63.125793,
-  "bodyTemp" : 36.984955,
-  "dateTime" : [ 2022, 5, 5, 0, 47, 55 ]
+  "height" : 162.7,
+  "weight" : 63.1,
+  "bodyTemp" : 36.9,
+  "dateTime" : [ 2022, 5, 5, 0, 47 ]
 }, {
-  "height" : 165.82477,
-  "weight" : 67.6725,
-  "bodyTemp" : 35.68355,
-  "dateTime" : [ 2022, 5, 5, 13, 6, 32 ]
+  "height" : 165.8,
+  "weight" : 67.6,
+  "bodyTemp" : 35.6,
+  "dateTime" : [ 2022, 5, 5, 13, 6 ]
 }, {
-  "height" : 169.39452,
-  "weight" : 68.4789,
-  "bodyTemp" : 36.033817,
-  "dateTime" : [ 2022, 5, 7, 14, 30, 18 ]
+  "height" : 169.3,
+  "weight" : 68.4,
+  "bodyTemp" : 36.0,
+  "dateTime" : [ 2022, 5, 7, 14, 30 ]
 }, {
-  "height" : 169.1594,
-  "weight" : 62.07733,
-  "bodyTemp" : 36.712006,
-  "dateTime" : [ 2022, 5, 7, 23, 46, 19 ]
+  "height" : 169.1,
+  "weight" : 62.0,
+  "bodyTemp" : 36.7,
+  "dateTime" : [ 2022, 5, 7, 23, 46 ]
 }, {
-  "height" : 163.99458,
-  "weight" : 60.29187,
-  "bodyTemp" : 36.44701,
-  "dateTime" : [ 2022, 5, 8, 6, 58, 50 ]
+  "height" : 163.9,
+  "weight" : 60.2,
+  "bodyTemp" : 36.4,
+  "dateTime" : [ 2022, 5, 8, 6, 58 ]
 }, {
-  "height" : 167.79674,
-  "weight" : 68.59851,
-  "bodyTemp" : 36.67282,
-  "dateTime" : [ 2022, 5, 9, 11, 43, 54 ]
+  "height" : 167.7,
+  "weight" : 68.5,
+  "bodyTemp" : 36.6,
+  "dateTime" : [ 2022, 5, 9, 11, 43 ]
 }, {
-  "height" : 166.21623,
-  "weight" : 66.02644,
-  "bodyTemp" : 36.752995,
-  "dateTime" : [ 2022, 5, 11, 18, 26, 17 ]
+  "height" : 166.2,
+  "weight" : 66.0,
+  "bodyTemp" : 36.7,
+  "dateTime" : [ 2022, 5, 11, 18, 26 ]
 }, {
-  "height" : 168.51482,
-  "weight" : 68.86294,
-  "bodyTemp" : 36.712646,
-  "dateTime" : [ 2022, 5, 14, 22, 57, 2 ]
+  "height" : 168.5,
+  "weight" : 68.8,
+  "bodyTemp" : 36.7,
+  "dateTime" : [ 2022, 5, 14, 22, 57 ]
 }, {
-  "height" : 169.62581,
-  "weight" : 66.85302,
-  "bodyTemp" : 36.065514,
-  "dateTime" : [ 2022, 5, 20, 20, 52, 44 ]
+  "height" : 169.6,
+  "weight" : 66.8,
+  "bodyTemp" : 36.0,
+  "dateTime" : [ 2022, 5, 20, 20, 52 ]
 }, {
-  "height" : 160.89275,
-  "weight" : 61.74397,
-  "bodyTemp" : 36.89412,
-  "dateTime" : [ 2022, 5, 21, 11, 20, 5 ]
+  "height" : 160.8,
+  "weight" : 61.7,
+  "bodyTemp" : 36.8,
+  "dateTime" : [ 2022, 5, 21, 11, 20 ]
 }, {
-  "height" : 167.6435,
-  "weight" : 66.0463,
-  "bodyTemp" : 35.747787,
-  "dateTime" : [ 2022, 5, 23, 19, 16, 9 ]
+  "height" : 167.6,
+  "weight" : 66.0,
+  "bodyTemp" : 35.7,
+  "dateTime" : [ 2022, 5, 23, 19, 16 ]
 }, {
-  "height" : 168.97308,
-  "weight" : 68.914894,
-  "bodyTemp" : 36.56704,
-  "dateTime" : [ 2022, 5, 23, 19, 27, 22 ]
+  "height" : 168.9,
+  "weight" : 68.9,
+  "bodyTemp" : 36.5,
+  "dateTime" : [ 2022, 5, 23, 19, 27 ]
 }, {
-  "height" : 167.7328,
-  "weight" : 64.15013,
-  "bodyTemp" : 35.507206,
-  "dateTime" : [ 2022, 5, 28, 9, 28, 24 ]
+  "height" : 167.7,
+  "weight" : 64.1,
+  "bodyTemp" : 35.5,
+  "dateTime" : [ 2022, 5, 28, 9, 28 ]
 }, {
-  "height" : 169.13794,
-  "weight" : 66.06585,
-  "bodyTemp" : 36.055458,
-  "dateTime" : [ 2022, 5, 30, 7, 7, 27 ]
+  "height" : 169.1,
+  "weight" : 66.0,
+  "bodyTemp" : 36.0,
+  "dateTime" : [ 2022, 5, 30, 7, 7 ]
 }, {
-  "height" : 167.9137,
-  "weight" : 61.137985,
-  "bodyTemp" : 35.668148,
-  "dateTime" : [ 2022, 6, 1, 2, 32, 21 ]
+  "height" : 167.9,
+  "weight" : 61.1,
+  "bodyTemp" : 35.6,
+  "dateTime" : [ 2022, 6, 1, 2, 32 ]
 }, {
-  "height" : 162.255,
-  "weight" : 68.25554,
-  "bodyTemp" : 36.1774,
-  "dateTime" : [ 2022, 6, 2, 10, 56, 45 ]
+  "height" : 162.2,
+  "weight" : 68.2,
+  "bodyTemp" : 36.1,
+  "dateTime" : [ 2022, 6, 2, 10, 56 ]
 }, {
-  "height" : 167.85493,
-  "weight" : 62.209812,
-  "bodyTemp" : 36.733154,
-  "dateTime" : [ 2022, 6, 2, 17, 39, 27 ]
+  "height" : 167.8,
+  "weight" : 62.2,
+  "bodyTemp" : 36.7,
+  "dateTime" : [ 2022, 6, 2, 17, 39 ]
 }, {
-  "height" : 162.30353,
-  "weight" : 63.889454,
-  "bodyTemp" : 36.371235,
-  "dateTime" : [ 2022, 6, 3, 20, 13, 17 ]
+  "height" : 162.3,
+  "weight" : 63.8,
+  "bodyTemp" : 36.3,
+  "dateTime" : [ 2022, 6, 3, 20, 13 ]
 }, {
-  "height" : 165.23586,
-  "weight" : 61.392006,
-  "bodyTemp" : 36.70075,
-  "dateTime" : [ 2022, 6, 5, 23, 57, 53 ]
+  "height" : 165.2,
+  "weight" : 61.3,
+  "bodyTemp" : 36.7,
+  "dateTime" : [ 2022, 6, 5, 23, 57 ]
 } ]

@@ -34,8 +34,7 @@ public class Records {
 
     // return true if r exists
     public static boolean Update(Record from, Record to) {
-        if (!HasRecord(to) && HasRecord(from)) {
-            fullList.remove(from);
+        if (fullList.remove(from)) {
             fullList.add(to);
             UpdateList();
             return true;
