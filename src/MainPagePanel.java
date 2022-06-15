@@ -158,7 +158,7 @@ public class MainPagePanel extends JPanel {
         bmiMain.setText("BMI " + averageBmi.value);
     }
 
-    MainPagePanel() {
+    public MainPagePanel() {
 
         setBorder(new EmptyBorder(10, 10, 10, 10));
         setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
