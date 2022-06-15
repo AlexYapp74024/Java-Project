@@ -82,36 +82,6 @@ public class MainPagePanel extends JPanel {
         });
     }
 
-    MainPagePanel() {
-
-        setBorder(new EmptyBorder(10, 10, 10, 10));
-        setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
-        setBackground(Color.LIGHT_GRAY);
-        setOpaque(true);
-
-        title.setFont(new Font("Serif", Font.BOLD, 15));
-        bmiMain.setFont(new Font("Serif", Font.BOLD, 30));
-        bmiStatus.setFont(new Font("Serif", Font.BOLD, 25));
-
-        title.setAlignmentX(Component.CENTER_ALIGNMENT);
-        bmiMain.setAlignmentX(Component.CENTER_ALIGNMENT);
-        bmiStatus.setAlignmentX(Component.CENTER_ALIGNMENT);
-
-        add(title);
-        add(Box.createRigidArea(new Dimension(20, 0)));
-        add(bmiMain);
-        add(bmiStatus);
-        add(AddInputPanel());
-
-        bmiStatus.setBorder(BorderFactory.createLineBorder(Color.black, 1));
-
-        graphPanel = new GraphPanel(Records.GetTimeList(), Records.GetHeightList());
-        add(graphPanel);
-
-        setThisMonth();
-        addlisteners();
-    }
-
     public void setThisMonth() {
         endTime = LocalDateTime.now();
         startTime = endTime.minusDays(30);
@@ -187,4 +157,35 @@ public class MainPagePanel extends JPanel {
         }
         bmiMain.setText("BMI " + averageBmi.value);
     }
+
+    MainPagePanel() {
+
+        setBorder(new EmptyBorder(10, 10, 10, 10));
+        setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
+        setBackground(Color.LIGHT_GRAY);
+        setOpaque(true);
+
+        title.setFont(new Font("Serif", Font.BOLD, 15));
+        bmiMain.setFont(new Font("Serif", Font.BOLD, 30));
+        bmiStatus.setFont(new Font("Serif", Font.BOLD, 25));
+
+        title.setAlignmentX(Component.CENTER_ALIGNMENT);
+        bmiMain.setAlignmentX(Component.CENTER_ALIGNMENT);
+        bmiStatus.setAlignmentX(Component.CENTER_ALIGNMENT);
+
+        add(title);
+        add(Box.createRigidArea(new Dimension(20, 0)));
+        add(bmiMain);
+        add(bmiStatus);
+        add(AddInputPanel());
+
+        bmiStatus.setBorder(BorderFactory.createLineBorder(Color.black, 1));
+
+        graphPanel = new GraphPanel(Records.GetTimeList(), Records.GetHeightList());
+        add(graphPanel);
+
+        setThisMonth();
+        addlisteners();
+    }
+
 }
