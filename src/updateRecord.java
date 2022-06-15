@@ -7,26 +7,11 @@ import java.time.*;
 
 public class UpdateRecord extends JDialog {
 
-    GridBagConstraints gbc = new GridBagConstraints();
+    public boolean cancel = true;
+
+    static public JSpinner weight = new JSpinner(new SpinnerNumberModel(45, 20, 300, 0.1));
+    static public JSpinner bodyTemp = new JSpinner(new SpinnerNumberModel(36, 25, 45, 0.1));
     public LocalDateTime dateTime = LocalDateTime.now().withSecond(0).withNano(0);
-
-    boolean cancel = true;
-
-    // initialize the value of JSpinner
-    private final static float initialWeight = 45;
-    private final static float initialBodyTemp = 36;
-
-    // create JLabel
-    JLabel weightLabel = new JLabel("Weight : ");
-    JLabel bodyTempLabel = new JLabel("Body Tempearture : ");
-
-    // create JSpinner
-    static JSpinner weight = new JSpinner(new SpinnerNumberModel(initialWeight, 20, 300, 0.1));
-    static JSpinner bodyTemp = new JSpinner(new SpinnerNumberModel(initialBodyTemp, 25, 45, 0.1));
-
-    // crreate JButton
-    JButton editButton = new JButton("Edit");
-    JButton cancelButton = new JButton("Cancel");
 
     UpdateRecord(JFrame parent) {
 
@@ -94,4 +79,12 @@ public class UpdateRecord extends JDialog {
 
         setVisible(true);
     }
+
+    // create JLabel
+    private JLabel weightLabel = new JLabel("Weight : ");
+    private JLabel bodyTempLabel = new JLabel("Body Tempearture : ");
+    private GridBagConstraints gbc = new GridBagConstraints();
+
+    private JButton editButton = new JButton("Edit");
+    private JButton cancelButton = new JButton("Cancel");
 }

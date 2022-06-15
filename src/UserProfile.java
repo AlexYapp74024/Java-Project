@@ -34,6 +34,7 @@ public class UserProfile {
         return height;
     }
 
+    // Setter
     public void setName(String name) {
         this.name = name;
     }

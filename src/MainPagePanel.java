@@ -127,8 +127,8 @@ public class MainPagePanel extends JPanel {
         endTime = startTime.withDayOfMonth(startTime.getMonth().length(startTime.getYear() % 4 == 0));
 
         // Revert if there is no data in the time span chosen
-        var minTime = Records.getMinDateTime();
-        var maxTime = Records.getMaxDateTime();
+        var minTime = Records.GetMinDateTime();
+        var maxTime = Records.GetMaxDateTime();
         if (endTime.isBefore(minTime)) {
             startTime = minTime.withDayOfMonth(1);
             endTime = minTime.withDayOfMonth(minTime.getMonth().length(minTime.getYear() % 4 == 0));

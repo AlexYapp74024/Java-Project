@@ -39,17 +39,8 @@ public class Records {
         return false;
     }
 
-    static LocalDateTime startTime = getMinDateTime();
-    static LocalDateTime endTime = getMaxDateTime();
-
-    public static void UpdateList() {
-        var out = fullList;
-        list.clear();
-        for (var record : out) {
-            if (record.dateTime.isAfter(startTime) && record.dateTime.isBefore(endTime))
-                list.add(record);
-        }
-    }
+    static LocalDateTime startTime = GetMinDateTime();
+    static LocalDateTime endTime = GetMaxDateTime();
 
     public static void SetByDateRange(LocalDateTime in_startTime, LocalDateTime in_endTime) {
         startTime = in_startTime;
@@ -57,12 +48,12 @@ public class Records {
         UpdateList();
     }
 
-    public static LocalDateTime getMinDateTime() {
+    public static LocalDateTime GetMinDateTime() {
         return fullList.stream().min((r1, r2) -> (int) (ChronoUnit.SECONDS.between(r2.dateTime, r1.dateTime)))
                 .get().dateTime;
     }
 
-    public static LocalDateTime getMaxDateTime() {
+    public static LocalDateTime GetMaxDateTime() {
         return fullList.stream().max((r1, r2) -> (int) (ChronoUnit.SECONDS.between(r2.dateTime, r1.dateTime)))
                 .get().dateTime;
     }
@@ -121,6 +112,15 @@ public class Records {
 
     public static void SaveData() {
         RecordDatastore.Save(Records.fullList);
+    }
+
+    private static void UpdateList() {
+        var out = fullList;
+        list.clear();
+        for (var record : out) {
+            if (record.dateTime.isAfter(startTime) && record.dateTime.isBefore(endTime))
+                list.add(record);
+        }
     }
 
     private static boolean HasRecord(Record r) {

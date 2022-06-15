@@ -4,22 +4,6 @@ import javax.swing.border.*;
 import java.awt.*;
 
 public class UserDataPanel extends JPanel {
-    private class SizedText extends JLabel {
-        SizedText(String s) {
-            super(s);
-            setFont(new Font("Serif", Font.BOLD, 20));
-        }
-    }
-
-    JLabel title = new JLabel("User Settings");
-
-    JPanel labelPanel = new JPanel();
-    JPanel inputPanel = new JPanel();
-
-    JTextField name = new JTextField(UserProfile.profile.getName());
-    JComboBox<String> bloodType = new JComboBox(BloodType.values().toArray());
-    JSpinner height = new JSpinner(new SpinnerNumberModel(0f, 0f, null, 0.01f));
-    JTextField healthHistory = new JTextField(UserProfile.profile.getMedicalHistory());
 
     UserDataPanel() {
         setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
@@ -74,4 +58,21 @@ public class UserDataPanel extends JPanel {
             UserProfile.profile.setMedicalHistory(healthHistory.getText());
         });
     }
+
+    private class SizedText extends JLabel {
+        SizedText(String s) {
+            super(s);
+            setFont(new Font("Serif", Font.BOLD, 20));
+        }
+    }
+
+    private JLabel title = new JLabel("User Settings");
+
+    private JPanel labelPanel = new JPanel();
+    private JPanel inputPanel = new JPanel();
+
+    private JTextField name = new JTextField(UserProfile.profile.getName());
+    private JComboBox<String> bloodType = new JComboBox(BloodType.values().toArray());
+    private JSpinner height = new JSpinner(new SpinnerNumberModel(0f, 0f, null, 0.01f));
+    private JTextField healthHistory = new JTextField(UserProfile.profile.getMedicalHistory());
 }

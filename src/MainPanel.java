@@ -23,9 +23,7 @@ public class MainPanel extends JFrame {
         btnPanel.setLayout(gridBagLayout);
         btnPanel.setBackground(Color.LIGHT_GRAY);
 
-        if (shouldFill) {
-            gbc.fill = GridBagConstraints.HORIZONTAL;
-        }
+        gbc.fill = GridBagConstraints.HORIZONTAL;
 
         // Add panel's button
         addMainPageButton();
@@ -55,10 +53,10 @@ public class MainPanel extends JFrame {
 
     private void addMainPageButton() {
         JButton mainPageBttn = new JButton("Main Page");
-        if (shouldWeightX) {
-            gbc.weightx = 2.0;
-            gbc.weighty = 2.0;
-        }
+
+        gbc.weightx = 2.0;
+        gbc.weighty = 2.0;
+
         gbc.fill = GridBagConstraints.HORIZONTAL;
         gbc.anchor = GridBagConstraints.PAGE_END;
         gbc.insets = new Insets(10, 10, 10, 0);
@@ -145,8 +143,4 @@ public class MainPanel extends JFrame {
     private GridBagConstraints gbc = new GridBagConstraints();
     private JPanel cPanel = new JPanel();
     private JPanel btnPanel = new JPanel();
-
-    final static boolean shouldFill = true;
-    final static boolean shouldWeightX = true;
-    final static boolean RIGHT_TO_LEFT = false;
 }
