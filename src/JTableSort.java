@@ -19,6 +19,7 @@ public class JTableSort extends AbstractTableModel {
         return columnNames.length;
     }
 
+    @Override
     public String getColumnName(int columnIndex) {
         return columnNames[columnIndex];
     }
@@ -41,16 +42,16 @@ public class JTableSort extends AbstractTableModel {
             returnValue = record.getDateTime();
             break;
         case COLUMN_WEIGHT:
-            returnValue = dfZero.format(record.getWeight());
+            returnValue = DFZERO.format(record.getWeight());
             break;
         case COLUMN_HEIGHT:
-            returnValue = dfZero.format(record.getHeight());
+            returnValue = DFZERO.format(record.getHeight());
             break;
         case COLUMN_BMI:
-            returnValue = dfZero.format(record.Bmi().value);
+            returnValue = DFZERO.format(record.Bmi().value);
             break;
         case COLUMN_BODYTEMP:
-            returnValue = dfZero.format(record.getBodyTemp());
+            returnValue = DFZERO.format(record.getBodyTemp());
             break;
         default:
             throw new IllegalArgumentException("Invalid column index");
@@ -62,7 +63,7 @@ public class JTableSort extends AbstractTableModel {
     private String[] columnNames = { "DATE", "WEIGHT (KG)", "HEIGHT (CM)", "BMI VALUE", "BODYTEMPERATURE (CELCIUS)" };
     private ArrayList<Record> list = Records.CloneFullList();
 
-    private static final DecimalFormat dfZero = new DecimalFormat("0.00");
+    private static final DecimalFormat DFZERO = new DecimalFormat("0.00");
     private static final int COLUMN_DATE = 0;
     private static final int COLUMN_WEIGHT = 1;
     private static final int COLUMN_HEIGHT = 2;
