@@ -138,8 +138,9 @@ public class EditRecordsPanel extends JPanel {
         for (int i = 0; i < list.size(); i++) {
             out[i] = new Object[] {
 
-                    list.get(i).dateTime.format(DateTimeFormatter.ofPattern("yyyy/MM/dd  hh:mm a")), list.get(i).weight,
-                    list.get(i).height, list.get(i).Bmi().value, list.get(i).bodyTemp, };
+                    list.get(i).dateTime.format(DateTimeFormatter.ofPattern("yyyy/MM/dd  hh:mm a")),
+                    list.get(i).weight.value, list.get(i).height.value, list.get(i).Bmi().value,
+                    list.get(i).bodyTemp.value, };
 
         }
         return out;

@@ -42,16 +42,16 @@ public class JTableSort extends AbstractTableModel {
             returnValue = record.getDateTime();
             break;
         case COLUMN_WEIGHT:
-            returnValue = DFZERO.format(record.getWeight());
+            returnValue = DFZERO.format(record.getWeight().value);
             break;
         case COLUMN_HEIGHT:
-            returnValue = DFZERO.format(record.getHeight());
+            returnValue = DFZERO.format(record.getHeight().value);
             break;
         case COLUMN_BMI:
             returnValue = DFZERO.format(record.Bmi().value);
             break;
         case COLUMN_BODYTEMP:
-            returnValue = DFZERO.format(record.getBodyTemp());
+            returnValue = DFZERO.format(record.getBodyTemp().value);
             break;
         default:
             throw new IllegalArgumentException("Invalid column index");

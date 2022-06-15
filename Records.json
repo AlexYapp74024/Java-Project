@@ -1,1101 +1,1101 @@
 [ {
   "height" : {
-    "value" : 162.77051
+    "value" : 162.7
   },
   "weight" : {
-    "value" : 65.99861
+    "value" : 65.9
   },
   "bodyTemp" : {
-    "value" : 36.544075
+    "value" : 36.5
   },
   "dateTime" : [ 2021, 12, 19, 3, 56 ]
 }, {
   "height" : {
-    "value" : 163.6347
+    "value" : 163.6
   },
   "weight" : {
-    "value" : 65.65383
+    "value" : 65.6
   },
   "bodyTemp" : {
-    "value" : 35.524033
+    "value" : 35.5
   },
   "dateTime" : [ 2021, 12, 20, 18, 50 ]
 }, {
   "height" : {
-    "value" : 160.67513
+    "value" : 160.6
   },
   "weight" : {
-    "value" : 65.55974
+    "value" : 65.5
   },
   "bodyTemp" : {
-    "value" : 35.677616
+    "value" : 35.6
   },
   "dateTime" : [ 2021, 12, 23, 18, 28 ]
 }, {
   "height" : {
-    "value" : 167.4133
+    "value" : 167.4
   },
   "weight" : {
-    "value" : 62.455
+    "value" : 62.4
   },
   "bodyTemp" : {
-    "value" : 35.687172
+    "value" : 35.6
   },
   "dateTime" : [ 2021, 12, 27, 13, 57 ]
 }, {
   "height" : {
-    "value" : 169.7616
+    "value" : 169.7
   },
   "weight" : {
-    "value" : 65.769455
+    "value" : 65.7
   },
   "bodyTemp" : {
-    "value" : 36.391838
+    "value" : 36.3
   },
   "dateTime" : [ 2021, 12, 28, 18, 42 ]
 }, {
   "height" : {
-    "value" : 163.10301
+    "value" : 163.1
   },
   "weight" : {
-    "value" : 68.53741
+    "value" : 68.5
   },
   "bodyTemp" : {
-    "value" : 35.762703
+    "value" : 35.7
   },
   "dateTime" : [ 2021, 12, 31, 0, 58 ]
 }, {
   "height" : {
-    "value" : 164.75235
+    "value" : 164.7
   },
   "weight" : {
-    "value" : 69.80527
+    "value" : 69.8
   },
   "bodyTemp" : {
-    "value" : 35.748074
+    "value" : 35.7
   },
   "dateTime" : [ 2021, 12, 31, 11, 20 ]
 }, {
   "height" : {
-    "value" : 161.91821
+    "value" : 161.9
   },
   "weight" : {
-    "value" : 67.48292
+    "value" : 67.4
   },
   "bodyTemp" : {
-    "value" : 36.231033
+    "value" : 36.2
   },
   "dateTime" : [ 2022, 1, 1, 16, 45 ]
 }, {
   "height" : {
-    "value" : 166.55754
+    "value" : 166.5
   },
   "weight" : {
-    "value" : 63.561455
+    "value" : 63.5
   },
   "bodyTemp" : {
-    "value" : 35.909344
+    "value" : 35.9
   },
   "dateTime" : [ 2022, 1, 1, 22, 30 ]
 }, {
   "height" : {
-    "value" : 169.49704
+    "value" : 169.4
   },
   "weight" : {
-    "value" : 63.310318
+    "value" : 63.3
   },
   "bodyTemp" : {
-    "value" : 36.80426
+    "value" : 36.8
   },
   "dateTime" : [ 2022, 1, 2, 14, 9 ]
 }, {
   "height" : {
-    "value" : 162.1456
+    "value" : 162.1
   },
   "weight" : {
-    "value" : 60.232708
+    "value" : 60.2
   },
   "bodyTemp" : {
-    "value" : 35.95941
+    "value" : 35.9
   },
   "dateTime" : [ 2022, 1, 3, 9, 11 ]
 }, {
   "height" : {
-    "value" : 161.50015
+    "value" : 161.5
   },
   "weight" : {
-    "value" : 61.74689
+    "value" : 61.7
   },
   "bodyTemp" : {
-    "value" : 36.64391
+    "value" : 36.6
   },
   "dateTime" : [ 2022, 1, 4, 6, 50 ]
 }, {
   "height" : {
-    "value" : 164.94887
+    "value" : 164.9
   },
   "weight" : {
-    "value" : 63.99007
+    "value" : 63.9
   },
   "bodyTemp" : {
-    "value" : 35.783073
+    "value" : 35.7
   },
   "dateTime" : [ 2022, 1, 4, 17, 59 ]
 }, {
   "height" : {
-    "value" : 166.42863
+    "value" : 166.4
   },
   "weight" : {
-    "value" : 62.144127
+    "value" : 62.1
   },
   "bodyTemp" : {
-    "value" : 36.713047
+    "value" : 36.7
   },
   "dateTime" : [ 2022, 1, 7, 19, 42 ]
 }, {
   "height" : {
-    "value" : 164.39606
+    "value" : 164.3
   },
   "weight" : {
-    "value" : 63.19778
+    "value" : 63.1
   },
   "bodyTemp" : {
-    "value" : 36.163315
+    "value" : 36.1
   },
   "dateTime" : [ 2022, 1, 11, 4, 38 ]
 }, {
   "height" : {
-    "value" : 169.65306
+    "value" : 169.6
   },
   "weight" : {
-    "value" : 69.91674
+    "value" : 69.9
   },
   "bodyTemp" : {
-    "value" : 35.705498
+    "value" : 35.7
   },
   "dateTime" : [ 2022, 1, 13, 19, 55 ]
 }, {
   "height" : {
-    "value" : 168.1774
+    "value" : 168.1
   },
   "weight" : {
-    "value" : 66.57011
+    "value" : 66.5
   },
   "bodyTemp" : {
-    "value" : 36.74387
+    "value" : 36.7
   },
   "dateTime" : [ 2022, 1, 15, 11, 52 ]
 }, {
   "height" : {
-    "value" : 163.42375
+    "value" : 163.4
   },
   "weight" : {
-    "value" : 63.213295
+    "value" : 63.2
   },
   "bodyTemp" : {
-    "value" : 36.875538
+    "value" : 36.8
   },
   "dateTime" : [ 2022, 1, 19, 6, 47 ]
 }, {
   "height" : {
-    "value" : 162.77274
+    "value" : 162.7
   },
   "weight" : {
-    "value" : 66.967415
+    "value" : 66.9
   },
   "bodyTemp" : {
-    "value" : 35.590176
+    "value" : 35.5
   },
   "dateTime" : [ 2022, 1, 21, 5, 40 ]
 }, {
   "height" : {
-    "value" : 167.12181
+    "value" : 167.1
   },
   "weight" : {
-    "value" : 68.468285
+    "value" : 68.4
   },
   "bodyTemp" : {
-    "value" : 36.3513
+    "value" : 36.3
   },
   "dateTime" : [ 2022, 1, 21, 12, 13 ]
 }, {
   "height" : {
-    "value" : 166.15862
+    "value" : 166.1
   },
   "weight" : {
-    "value" : 63.59683
+    "value" : 63.5
   },
   "bodyTemp" : {
-    "value" : 36.8909
+    "value" : 36.8
   },
   "dateTime" : [ 2022, 1, 23, 3, 40 ]
 }, {
   "height" : {
-    "value" : 166.69653
+    "value" : 166.6
   },
   "weight" : {
-    "value" : 65.03157
+    "value" : 65.0
   },
   "bodyTemp" : {
-    "value" : 35.843536
+    "value" : 35.8
   },
   "dateTime" : [ 2022, 1, 24, 11, 26 ]
 }, {
   "height" : {
-    "value" : 167.62392
+    "value" : 167.6
   },
   "weight" : {
-    "value" : 60.900333
+    "value" : 60.9
   },
   "bodyTemp" : {
-    "value" : 36.574177
+    "value" : 36.5
   },
   "dateTime" : [ 2022, 1, 24, 21, 43 ]
 }, {
   "height" : {
-    "value" : 162.50407
+    "value" : 162.5
   },
   "weight" : {
-    "value" : 62.299488
+    "value" : 62.2
   },
   "bodyTemp" : {
-    "value" : 36.603466
+    "value" : 36.6
   },
   "dateTime" : [ 2022, 1, 25, 9, 54 ]
 }, {
   "height" : {
-    "value" : 161.23915
+    "value" : 161.2
   },
   "weight" : {
-    "value" : 67.79187
+    "value" : 67.7
   },
   "bodyTemp" : {
-    "value" : 35.704483
+    "value" : 35.7
   },
   "dateTime" : [ 2022, 1, 26, 10, 43 ]
 }, {
   "height" : {
-    "value" : 166.8952
+    "value" : 166.8
   },
   "weight" : {
-    "value" : 65.65819
+    "value" : 65.6
   },
   "bodyTemp" : {
-    "value" : 35.793743
+    "value" : 35.7
   },
   "dateTime" : [ 2022, 1, 27, 21, 57 ]
 }, {
   "height" : {
-    "value" : 163.91724
+    "value" : 163.9
   },
   "weight" : {
-    "value" : 69.69555
+    "value" : 69.6
   },
   "bodyTemp" : {
-    "value" : 35.782322
+    "value" : 35.7
   },
   "dateTime" : [ 2022, 1, 29, 21, 34 ]
 }, {
   "height" : {
-    "value" : 168.41226
+    "value" : 168.4
   },
   "weight" : {
-    "value" : 69.88318
+    "value" : 69.8
   },
   "bodyTemp" : {
-    "value" : 35.975956
+    "value" : 35.9
   },
   "dateTime" : [ 2022, 1, 30, 6, 49 ]
 }, {
   "height" : {
-    "value" : 162.70877
+    "value" : 162.7
   },
   "weight" : {
-    "value" : 69.28853
+    "value" : 69.2
   },
   "bodyTemp" : {
-    "value" : 36.377083
+    "value" : 36.3
   },
   "dateTime" : [ 2022, 2, 1, 13, 26 ]
 }, {
   "height" : {
-    "value" : 168.52072
+    "value" : 168.5
   },
   "weight" : {
-    "value" : 66.33974
+    "value" : 66.3
   },
   "bodyTemp" : {
-    "value" : 35.537846
+    "value" : 35.5
   },
   "dateTime" : [ 2022, 2, 2, 15, 38 ]
 }, {
   "height" : {
-    "value" : 168.56754
+    "value" : 168.5
   },
   "weight" : {
-    "value" : 68.94476
+    "value" : 68.9
   },
   "bodyTemp" : {
-    "value" : 36.709366
+    "value" : 36.7
   },
   "dateTime" : [ 2022, 2, 2, 19, 39 ]
 }, {
   "height" : {
-    "value" : 167.36043
+    "value" : 167.3
   },
   "weight" : {
-    "value" : 61.059982
+    "value" : 61.0
   },
   "bodyTemp" : {
-    "value" : 36.028072
+    "value" : 36.0
   },
   "dateTime" : [ 2022, 2, 7, 9, 26 ]
 }, {
   "height" : {
-    "value" : 169.66122
+    "value" : 169.6
   },
   "weight" : {
-    "value" : 67.24426
+    "value" : 67.2
   },
   "bodyTemp" : {
-    "value" : 35.72219
+    "value" : 35.7
   },
   "dateTime" : [ 2022, 2, 9, 4, 16 ]
 }, {
   "height" : {
-    "value" : 169.25188
+    "value" : 169.2
   },
   "weight" : {
-    "value" : 61.193035
+    "value" : 61.1
   },
   "bodyTemp" : {
-    "value" : 36.74692
+    "value" : 36.7
   },
   "dateTime" : [ 2022, 2, 11, 11, 54 ]
 }, {
   "height" : {
-    "value" : 162.18546
+    "value" : 162.1
   },
   "weight" : {
-    "value" : 69.453384
+    "value" : 69.4
   },
   "bodyTemp" : {
-    "value" : 35.95951
+    "value" : 35.9
   },
   "dateTime" : [ 2022, 2, 15, 9, 24 ]
 }, {
   "height" : {
-    "value" : 166.30087
+    "value" : 166.3
   },
   "weight" : {
-    "value" : 64.95867
+    "value" : 64.9
   },
   "bodyTemp" : {
-    "value" : 36.834824
+    "value" : 36.8
   },
   "dateTime" : [ 2022, 2, 19, 17, 57 ]
 }, {
   "height" : {
-    "value" : 169.3127
+    "value" : 169.3
   },
   "weight" : {
-    "value" : 61.59967
+    "value" : 61.5
   },
   "bodyTemp" : {
-    "value" : 35.967247
+    "value" : 35.9
   },
   "dateTime" : [ 2022, 2, 20, 15, 54 ]
 }, {
   "height" : {
-    "value" : 167.43414
+    "value" : 167.4
   },
   "weight" : {
-    "value" : 61.4596
+    "value" : 61.4
   },
   "bodyTemp" : {
-    "value" : 36.22898
+    "value" : 36.2
   },
   "dateTime" : [ 2022, 2, 21, 0, 58 ]
 }, {
   "height" : {
-    "value" : 162.37473
+    "value" : 162.3
   },
   "weight" : {
-    "value" : 69.86748
+    "value" : 69.8
   },
   "bodyTemp" : {
-    "value" : 35.95092
+    "value" : 35.9
   },
   "dateTime" : [ 2022, 2, 22, 5, 1 ]
 }, {
   "height" : {
-    "value" : 168.01364
+    "value" : 168.0
   },
   "weight" : {
-    "value" : 61.822914
+    "value" : 61.8
   },
   "bodyTemp" : {
-    "value" : 36.897957
+    "value" : 36.8
   },
   "dateTime" : [ 2022, 2, 24, 14, 24 ]
 }, {
   "height" : {
-    "value" : 164.05595
+    "value" : 164.0
   },
   "weight" : {
-    "value" : 65.78937
+    "value" : 65.7
   },
   "bodyTemp" : {
-    "value" : 36.9507
+    "value" : 36.9
   },
   "dateTime" : [ 2022, 2, 28, 4, 34 ]
 }, {
   "height" : {
-    "value" : 165.01768
+    "value" : 165.0
   },
   "weight" : {
-    "value" : 66.586655
+    "value" : 66.5
   },
   "bodyTemp" : {
-    "value" : 36.478123
+    "value" : 36.4
   },
   "dateTime" : [ 2022, 2, 28, 10, 10 ]
 }, {
   "height" : {
-    "value" : 162.92342
+    "value" : 162.9
   },
   "weight" : {
-    "value" : 64.06201
+    "value" : 64.0
   },
   "bodyTemp" : {
-    "value" : 35.842884
+    "value" : 35.8
   },
   "dateTime" : [ 2022, 3, 2, 12, 43 ]
 }, {
   "height" : {
-    "value" : 161.10669
+    "value" : 161.1
   },
   "weight" : {
-    "value" : 65.64881
+    "value" : 65.6
   },
   "bodyTemp" : {
-    "value" : 36.74969
+    "value" : 36.7
   },
   "dateTime" : [ 2022, 3, 2, 14, 32 ]
 }, {
   "height" : {
-    "value" : 165.02177
+    "value" : 165.0
   },
   "weight" : {
-    "value" : 64.03914
+    "value" : 64.0
   },
   "bodyTemp" : {
-    "value" : 36.546593
+    "value" : 36.5
   },
   "dateTime" : [ 2022, 3, 2, 23, 43 ]
 }, {
   "height" : {
-    "value" : 164.67172
+    "value" : 164.6
   },
   "weight" : {
-    "value" : 68.30457
+    "value" : 68.3
   },
   "bodyTemp" : {
-    "value" : 36.789696
+    "value" : 36.7
   },
   "dateTime" : [ 2022, 3, 3, 22, 28 ]
 }, {
   "height" : {
-    "value" : 165.4664
+    "value" : 165.4
   },
   "weight" : {
-    "value" : 63.48755
+    "value" : 63.4
   },
   "bodyTemp" : {
-    "value" : 36.37736
+    "value" : 36.3
   },
   "dateTime" : [ 2022, 3, 4, 2, 26 ]
 }, {
   "height" : {
-    "value" : 161.99635
+    "value" : 161.9
   },
   "weight" : {
-    "value" : 61.621246
+    "value" : 61.6
   },
   "bodyTemp" : {
-    "value" : 36.766365
+    "value" : 36.7
   },
   "dateTime" : [ 2022, 3, 5, 20, 8 ]
 }, {
   "height" : {
-    "value" : 160.82051
+    "value" : 160.8
   },
   "weight" : {
-    "value" : 65.05171
+    "value" : 65.0
   },
   "bodyTemp" : {
-    "value" : 36.661697
+    "value" : 36.6
   },
   "dateTime" : [ 2022, 3, 7, 2, 0 ]
 }, {
   "height" : {
-    "value" : 164.28258
+    "value" : 164.2
   },
   "weight" : {
-    "value" : 64.23807
+    "value" : 64.2
   },
   "bodyTemp" : {
-    "value" : 35.74438
+    "value" : 35.7
   },
   "dateTime" : [ 2022, 3, 11, 22, 26 ]
 }, {
   "height" : {
-    "value" : 165.3888
+    "value" : 165.3
   },
   "weight" : {
-    "value" : 68.26894
+    "value" : 68.2
   },
   "bodyTemp" : {
-    "value" : 36.54511
+    "value" : 36.5
   },
   "dateTime" : [ 2022, 3, 12, 0, 28 ]
 }, {
   "height" : {
-    "value" : 164.30568
+    "value" : 164.3
   },
   "weight" : {
-    "value" : 67.61248
+    "value" : 67.6
   },
   "bodyTemp" : {
-    "value" : 36.59092
+    "value" : 36.5
   },
   "dateTime" : [ 2022, 3, 12, 2, 4 ]
 }, {
   "height" : {
-    "value" : 166.24277
+    "value" : 166.2
   },
   "weight" : {
-    "value" : 68.19955
+    "value" : 68.1
   },
   "bodyTemp" : {
-    "value" : 36.06972
+    "value" : 36.0
   },
   "dateTime" : [ 2022, 3, 12, 4, 23 ]
 }, {
   "height" : {
-    "value" : 164.24626
+    "value" : 164.2
   },
   "weight" : {
-    "value" : 60.818485
+    "value" : 60.8
   },
   "bodyTemp" : {
-    "value" : 36.198406
+    "value" : 36.1
   },
   "dateTime" : [ 2022, 3, 17, 22, 0 ]
 }, {
   "height" : {
-    "value" : 162.7122
+    "value" : 162.7
   },
   "weight" : {
-    "value" : 62.156273
+    "value" : 62.1
   },
   "bodyTemp" : {
-    "value" : 35.503487
+    "value" : 35.5
   },
   "dateTime" : [ 2022, 3, 19, 9, 36 ]
 }, {
   "height" : {
-    "value" : 168.06732
+    "value" : 168.0
   },
   "weight" : {
-    "value" : 68.84872
+    "value" : 68.8
   },
   "bodyTemp" : {
-    "value" : 35.96518
+    "value" : 35.9
   },
   "dateTime" : [ 2022, 3, 21, 3, 16 ]
 }, {
   "height" : {
-    "value" : 164.05228
+    "value" : 164.0
   },
   "weight" : {
-    "value" : 66.79909
+    "value" : 66.7
   },
   "bodyTemp" : {
-    "value" : 36.516026
+    "value" : 36.5
   },
   "dateTime" : [ 2022, 3, 23, 14, 15 ]
 }, {
   "height" : {
-    "value" : 161.94658
+    "value" : 161.9
   },
   "weight" : {
-    "value" : 60.1481
+    "value" : 60.1
   },
   "bodyTemp" : {
-    "value" : 36.30438
+    "value" : 36.3
   },
   "dateTime" : [ 2022, 3, 25, 6, 2 ]
 }, {
   "height" : {
-    "value" : 168.79852
+    "value" : 168.7
   },
   "weight" : {
-    "value" : 62.552814
+    "value" : 62.5
   },
   "bodyTemp" : {
-    "value" : 36.348694
+    "value" : 36.3
   },
   "dateTime" : [ 2022, 3, 28, 5, 33 ]
 }, {
   "height" : {
-    "value" : 162.53969
+    "value" : 162.5
   },
   "weight" : {
-    "value" : 60.781746
+    "value" : 60.7
   },
   "bodyTemp" : {
-    "value" : 35.54962
+    "value" : 35.5
   },
   "dateTime" : [ 2022, 4, 1, 5, 32 ]
 }, {
   "height" : {
-    "value" : 164.15158
+    "value" : 164.1
   },
   "weight" : {
-    "value" : 64.88894
+    "value" : 64.8
   },
   "bodyTemp" : {
-    "value" : 35.683975
+    "value" : 35.6
   },
   "dateTime" : [ 2022, 4, 2, 9, 30 ]
 }, {
   "height" : {
-    "value" : 161.15883
+    "value" : 161.1
   },
   "weight" : {
-    "value" : 68.60357
+    "value" : 68.6
   },
   "bodyTemp" : {
-    "value" : 36.659412
+    "value" : 36.6
   },
   "dateTime" : [ 2022, 4, 5, 12, 20 ]
 }, {
   "height" : {
-    "value" : 160.18163
+    "value" : 160.1
   },
   "weight" : {
-    "value" : 60.54755
+    "value" : 60.5
   },
   "bodyTemp" : {
-    "value" : 36.96904
+    "value" : 36.9
   },
   "dateTime" : [ 2022, 4, 8, 8, 58 ]
 }, {
   "height" : {
-    "value" : 163.21805
+    "value" : 163.2
   },
   "weight" : {
-    "value" : 64.185394
+    "value" : 64.1
   },
   "bodyTemp" : {
-    "value" : 36.76653
+    "value" : 36.7
   },
   "dateTime" : [ 2022, 4, 9, 0, 16 ]
 }, {
   "height" : {
-    "value" : 169.41315
+    "value" : 169.4
   },
   "weight" : {
-    "value" : 69.72207
+    "value" : 69.7
   },
   "bodyTemp" : {
-    "value" : 36.908947
+    "value" : 36.9
   },
   "dateTime" : [ 2022, 4, 9, 19, 39 ]
 }, {
   "height" : {
-    "value" : 161.21136
+    "value" : 161.2
   },
   "weight" : {
-    "value" : 61.920876
+    "value" : 61.9
   },
   "bodyTemp" : {
-    "value" : 36.183792
+    "value" : 36.1
   },
   "dateTime" : [ 2022, 4, 15, 0, 44 ]
 }, {
   "height" : {
-    "value" : 167.95624
+    "value" : 167.9
   },
   "weight" : {
-    "value" : 63.20908
+    "value" : 63.2
   },
   "bodyTemp" : {
-    "value" : 35.972565
+    "value" : 35.9
   },
   "dateTime" : [ 2022, 4, 15, 23, 21 ]
 }, {
   "height" : {
-    "value" : 167.14304
+    "value" : 167.1
   },
   "weight" : {
-    "value" : 65.56703
+    "value" : 65.5
   },
   "bodyTemp" : {
-    "value" : 35.75515
+    "value" : 35.7
   },
   "dateTime" : [ 2022, 4, 19, 20, 31 ]
 }, {
   "height" : {
-    "value" : 163.42592
+    "value" : 163.4
   },
   "weight" : {
-    "value" : 65.09457
+    "value" : 65.0
   },
   "bodyTemp" : {
-    "value" : 35.97735
+    "value" : 35.9
   },
   "dateTime" : [ 2022, 4, 22, 13, 58 ]
 }, {
   "height" : {
-    "value" : 164.4514
+    "value" : 164.4
   },
   "weight" : {
-    "value" : 67.21732
+    "value" : 67.2
   },
   "bodyTemp" : {
-    "value" : 36.74392
+    "value" : 36.7
   },
   "dateTime" : [ 2022, 4, 24, 3, 6 ]
 }, {
   "height" : {
-    "value" : 166.66069
+    "value" : 166.6
   },
   "weight" : {
-    "value" : 63.568436
+    "value" : 63.5
   },
   "bodyTemp" : {
-    "value" : 36.532223
+    "value" : 36.5
   },
   "dateTime" : [ 2022, 4, 29, 18, 8 ]
 }, {
   "height" : {
-    "value" : 164.21793
+    "value" : 164.2
   },
   "weight" : {
-    "value" : 61.14942
+    "value" : 61.1
   },
   "bodyTemp" : {
-    "value" : 36.108616
+    "value" : 36.1
   },
   "dateTime" : [ 2022, 4, 30, 15, 20 ]
 }, {
   "height" : {
-    "value" : 166.96376
+    "value" : 166.9
   },
   "weight" : {
-    "value" : 64.45969
+    "value" : 64.4
   },
   "bodyTemp" : {
-    "value" : 36.559402
+    "value" : 36.5
   },
   "dateTime" : [ 2022, 5, 3, 4, 7 ]
 }, {
   "height" : {
-    "value" : 161.96892
+    "value" : 161.9
   },
   "weight" : {
-    "value" : 64.31718
+    "value" : 64.3
   },
   "bodyTemp" : {
-    "value" : 36.756477
+    "value" : 36.7
   },
   "dateTime" : [ 2022, 5, 5, 1, 11 ]
 }, {
   "height" : {
-    "value" : 165.48466
+    "value" : 165.4
   },
   "weight" : {
-    "value" : 68.222626
+    "value" : 68.2
   },
   "bodyTemp" : {
-    "value" : 35.600536
+    "value" : 35.6
   },
   "dateTime" : [ 2022, 5, 16, 13, 22 ]
 }, {
   "height" : {
-    "value" : 161.90265
+    "value" : 161.9
   },
   "weight" : {
-    "value" : 61.079937
+    "value" : 61.0
   },
   "bodyTemp" : {
-    "value" : 36.44773
+    "value" : 36.4
   },
   "dateTime" : [ 2022, 5, 18, 12, 55 ]
 }, {
   "height" : {
-    "value" : 164.87666
+    "value" : 164.8
   },
   "weight" : {
-    "value" : 65.18055
+    "value" : 65.1
   },
   "bodyTemp" : {
-    "value" : 36.601524
+    "value" : 36.6
   },
   "dateTime" : [ 2022, 5, 21, 8, 10 ]
 }, {
   "height" : {
-    "value" : 168.65707
+    "value" : 168.6
   },
   "weight" : {
-    "value" : 62.919037
+    "value" : 62.9
   },
   "bodyTemp" : {
-    "value" : 35.57879
+    "value" : 35.5
   },
   "dateTime" : [ 2022, 5, 23, 11, 29 ]
 }, {
   "height" : {
-    "value" : 164.40703
+    "value" : 164.4
   },
   "weight" : {
-    "value" : 68.44469
+    "value" : 68.4
   },
   "bodyTemp" : {
-    "value" : 36.677288
+    "value" : 36.6
   },
   "dateTime" : [ 2022, 5, 24, 1, 48 ]
 }, {
   "height" : {
-    "value" : 167.66785
+    "value" : 167.6
   },
   "weight" : {
-    "value" : 66.963684
+    "value" : 66.9
   },
   "bodyTemp" : {
-    "value" : 36.011204
+    "value" : 36.0
   },
   "dateTime" : [ 2022, 5, 25, 7, 11 ]
 }, {
   "height" : {
-    "value" : 162.40938
+    "value" : 162.4
   },
   "weight" : {
-    "value" : 69.92685
+    "value" : 69.9
   },
   "bodyTemp" : {
-    "value" : 35.78395
+    "value" : 35.7
   },
   "dateTime" : [ 2022, 5, 26, 22, 17 ]
 }, {
   "height" : {
-    "value" : 168.7348
+    "value" : 168.7
   },
   "weight" : {
-    "value" : 69.65008
+    "value" : 69.6
   },
   "bodyTemp" : {
-    "value" : 36.21335
+    "value" : 36.2
   },
   "dateTime" : [ 2022, 5, 27, 11, 1 ]
 }, {
   "height" : {
-    "value" : 166.1772
+    "value" : 166.1
   },
   "weight" : {
-    "value" : 69.97197
+    "value" : 69.9
   },
   "bodyTemp" : {
-    "value" : 36.843487
+    "value" : 36.8
   },
   "dateTime" : [ 2022, 5, 28, 14, 29 ]
 }, {
   "height" : {
-    "value" : 160.47076
+    "value" : 160.4
   },
   "weight" : {
-    "value" : 62.700146
+    "value" : 62.7
   },
   "bodyTemp" : {
-    "value" : 36.62116
+    "value" : 36.6
   },
   "dateTime" : [ 2022, 5, 29, 17, 40 ]
 }, {
   "height" : {
-    "value" : 161.31587
+    "value" : 161.3
   },
   "weight" : {
-    "value" : 63.138863
+    "value" : 63.1
   },
   "bodyTemp" : {
-    "value" : 35.950462
+    "value" : 35.9
   },
   "dateTime" : [ 2022, 5, 30, 1, 57 ]
 }, {
   "height" : {
-    "value" : 162.51746
+    "value" : 162.5
   },
   "weight" : {
-    "value" : 64.096
+    "value" : 64.0
   },
   "bodyTemp" : {
-    "value" : 36.644558
+    "value" : 36.6
   },
   "dateTime" : [ 2022, 5, 30, 11, 25 ]
 }, {
   "height" : {
-    "value" : 169.6934
+    "value" : 169.6
   },
   "weight" : {
-    "value" : 65.520454
+    "value" : 65.5
   },
   "bodyTemp" : {
-    "value" : 35.587967
+    "value" : 35.5
   },
   "dateTime" : [ 2022, 6, 2, 10, 5 ]
 }, {
   "height" : {
-    "value" : 168.20667
+    "value" : 168.2
   },
   "weight" : {
-    "value" : 69.33863
+    "value" : 69.3
   },
   "bodyTemp" : {
-    "value" : 35.92818
+    "value" : 35.9
   },
   "dateTime" : [ 2022, 6, 3, 14, 51 ]
 }, {
   "height" : {
-    "value" : 169.83015
+    "value" : 169.8
   },
   "weight" : {
-    "value" : 67.53049
+    "value" : 67.5
   },
   "bodyTemp" : {
-    "value" : 35.530975
+    "value" : 35.5
   },
   "dateTime" : [ 2022, 6, 4, 8, 54 ]
 }, {
   "height" : {
-    "value" : 160.17311
+    "value" : 160.1
   },
   "weight" : {
-    "value" : 61.463108
+    "value" : 61.4
   },
   "bodyTemp" : {
-    "value" : 36.596436
+    "value" : 36.5
   },
   "dateTime" : [ 2022, 6, 4, 19, 3 ]
 }, {
   "height" : {
-    "value" : 168.92862
+    "value" : 168.9
   },
   "weight" : {
-    "value" : 64.84143
+    "value" : 64.8
   },
   "bodyTemp" : {
-    "value" : 36.946556
+    "value" : 36.9
   },
   "dateTime" : [ 2022, 6, 5, 1, 11 ]
 }, {
   "height" : {
-    "value" : 166.03282
+    "value" : 166.0
   },
   "weight" : {
-    "value" : 62.723885
+    "value" : 62.7
   },
   "bodyTemp" : {
-    "value" : 36.761497
+    "value" : 36.7
   },
   "dateTime" : [ 2022, 6, 5, 4, 53 ]
 }, {
   "height" : {
-    "value" : 166.06474
+    "value" : 166.0
   },
   "weight" : {
-    "value" : 62.74323
+    "value" : 62.7
   },
   "bodyTemp" : {
-    "value" : 36.249622
+    "value" : 36.2
   },
   "dateTime" : [ 2022, 6, 5, 18, 42 ]
 }, {
   "height" : {
-    "value" : 167.71034
+    "value" : 167.7
   },
   "weight" : {
-    "value" : 66.75139
+    "value" : 66.7
   },
   "bodyTemp" : {
-    "value" : 35.759983
+    "value" : 35.7
   },
   "dateTime" : [ 2022, 6, 6, 23, 5 ]
 }, {
   "height" : {
-    "value" : 165.34045
+    "value" : 165.3
   },
   "weight" : {
-    "value" : 60.597908
+    "value" : 60.5
   },
   "bodyTemp" : {
-    "value" : 36.581066
+    "value" : 36.5
   },
   "dateTime" : [ 2022, 6, 8, 18, 40 ]
 }, {
   "height" : {
-    "value" : 162.56012
+    "value" : 162.5
   },
   "weight" : {
-    "value" : 61.8791
+    "value" : 61.8
   },
   "bodyTemp" : {
-    "value" : 36.65577
+    "value" : 36.6
   },
   "dateTime" : [ 2022, 6, 9, 16, 26 ]
 }, {
   "height" : {
-    "value" : 168.9142
+    "value" : 168.9
   },
   "weight" : {
-    "value" : 68.97143
+    "value" : 68.9
   },
   "bodyTemp" : {
-    "value" : 35.813614
+    "value" : 35.8
   },
   "dateTime" : [ 2022, 6, 10, 22, 34 ]
 }, {
   "height" : {
-    "value" : 161.47935
+    "value" : 161.4
   },
   "weight" : {
-    "value" : 61.89781
+    "value" : 61.8
   },
   "bodyTemp" : {
-    "value" : 35.57773
+    "value" : 35.5
   },
   "dateTime" : [ 2022, 6, 13, 0, 17 ]
 }, {
   "height" : {
-    "value" : 166.4555
+    "value" : 166.4
   },
   "weight" : {
-    "value" : 61.87072
+    "value" : 61.8
   },
   "bodyTemp" : {
-    "value" : 36.009876
+    "value" : 36.0
   },
   "dateTime" : [ 2022, 6, 14, 12, 34 ]
 }, {
   "height" : {
-    "value" : 167.40385
+    "value" : 167.4
   },
   "weight" : {
-    "value" : 65.713264
+    "value" : 65.7
   },
   "bodyTemp" : {
-    "value" : 35.522854
+    "value" : 35.5
   },
   "dateTime" : [ 2022, 6, 15, 5, 12 ]
 } ]

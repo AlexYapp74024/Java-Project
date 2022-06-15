@@ -7,6 +7,7 @@ import javax.swing.table.TableModel;
 import javax.swing.JPanel;
 import javax.swing.table.TableCellRenderer;
 import java.awt.Component;
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -46,5 +47,4 @@ public class SummaryPanel extends JPanel {
         add(new JScrollPane(jt1), BorderLayout.CENTER);
 
     }
-
 }
