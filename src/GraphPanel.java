@@ -21,30 +21,30 @@ public class GraphPanel extends JPanel implements MouseMotionListener {
             this.y_value.add(y_value.get(0));
         }
 
-        this.XDivisions = this.x_value.size() < maxXDivisions ? this.x_value.size() : maxXDivisions;
-        this.YDivisions = this.y_value.size() < maxYDivisions ? this.y_value.size() : maxYDivisions;
+        this.X_DIVISIONS = this.x_value.size() < MAX_X_DIVISIONS ? this.x_value.size() : MAX_X_DIVISIONS;
+        this.Y_DIVISIONS = this.y_value.size() < MAX_Y_DIVISIONS ? this.y_value.size() : MAX_Y_DIVISIONS;
 
         addMouseMotionListener(this);
         add(hoverPanel);
     }
 
-    private static final int padding = 14;
-    private static final int labelPadding = 25;
-    private static final int hatchmarkLength = 4;
+    private static final int PADDING = 14;
+    private static final int LABEL_PADDING = 25;
+    private static final int HATCH_MARK_LENGTH = 4;
 
-    private static final Color lineColor = new Color(44, 102, 230, 180);
-    private static final Color pointColor = new Color(100, 100, 100, 180);
-    private static final Color gridColor = new Color(200, 200, 200, 200);
+    private static final Color LINE_COLOR = new Color(44, 102, 230, 180);
+    private static final Color POINT_COLOR = new Color(100, 100, 100, 180);
+    private static final Color GRID_COLOR = new Color(200, 200, 200, 200);
     private static final Stroke GRAPH_STROKE = new BasicStroke(2f);
 
-    private static final int minX = padding + labelPadding;
-    private static final int minY = padding;
+    private static final int MIN_X = PADDING + LABEL_PADDING;
+    private static final int MIN_Y = PADDING;
 
-    private static final int maxXDivisions = 10;
-    private static final int maxYDivisions = 10;
+    private static final int MAX_X_DIVISIONS = 10;
+    private static final int MAX_Y_DIVISIONS = 10;
 
-    private final int XDivisions;
-    private final int YDivisions;
+    private final int X_DIVISIONS;
+    private final int Y_DIVISIONS;
 
     private ArrayList<Point> graphPoints = new ArrayList<>();
     private HoverPanel hoverPanel = new HoverPanel();
@@ -53,28 +53,28 @@ public class GraphPanel extends JPanel implements MouseMotionListener {
     private List<Float> y_value;
     private Graphics2D g2;
 
-    private final int maxX() {
-        return minX + xAxisLength();
+    private final int MAX_X() {
+        return MIN_X + X_AXIS_LENGTH();
     };
 
-    private final int maxY() {
-        return minY + yAxisLength();
+    private final int MAX_Y() {
+        return MIN_Y + Y_AXIS_LENGTH();
     };
 
-    private final int xAxisLength() {
-        return getWidth() - 2 * padding - labelPadding;
+    private final int X_AXIS_LENGTH() {
+        return getWidth() - 2 * PADDING - LABEL_PADDING;
     };
 
-    private final int yAxisLength() {
-        return getHeight() - 2 * padding - labelPadding;
+    private final int Y_AXIS_LENGTH() {
+        return getHeight() - 2 * PADDING - LABEL_PADDING;
     };
 
     private double Y_value_division() {
-        return (getMax_Y_Value() - getMin_Y_Value()) / YDivisions;
+        return (getMax_Y_Value() - getMin_Y_Value()) / Y_DIVISIONS;
     }
 
     private long X_value_division() {
-        return TimeDifference(getMax_X_Value(), getMin_X_Value()) / XDivisions;
+        return TimeDifference(getMax_X_Value(), getMin_X_Value()) / X_DIVISIONS;
     }
 
     private long TimeDifference(Temporal t1, Temporal t2) {
@@ -99,7 +99,7 @@ public class GraphPanel extends JPanel implements MouseMotionListener {
 
     private void draw_white_background() {
         g2.setColor(Color.WHITE);
-        g2.fillRect(minX, minY, xAxisLength(), yAxisLength());
+        g2.fillRect(MIN_X, MIN_Y, X_AXIS_LENGTH(), Y_AXIS_LENGTH());
     }
 
     @Override
@@ -120,62 +120,62 @@ public class GraphPanel extends JPanel implements MouseMotionListener {
     private void Plot_X_Axis() {
         g2.setColor(Color.BLACK);
 
-        final int xSpacing = xAxisLength() / XDivisions;
+        final int xSpacing = X_AXIS_LENGTH() / X_DIVISIONS;
         final var dateFormat = DateTimeFormatter.ofPattern("dd/MM");
-        for (int i = 0; i <= XDivisions; i++) {
+        for (int i = 0; i <= X_DIVISIONS; i++) {
 
-            int x = i * xSpacing + minX;
+            int x = i * xSpacing + MIN_X;
 
             // draw vertical grid lines
-            g2.setColor(gridColor);
-            g2.drawLine(x, minY, x, maxY());
+            g2.setColor(GRID_COLOR);
+            g2.drawLine(x, MIN_Y, x, MAX_Y());
             g2.setColor(Color.BLACK);
 
             // draw grid label
             final String xLabel = getMin_X_Value().plusSeconds(X_value_division() * i).format(dateFormat);
             final FontMetrics metrics = g2.getFontMetrics();
             int labelWidth = metrics.stringWidth(xLabel);
-            g2.drawString(xLabel, x - labelWidth / 2, maxY() + metrics.getHeight() + 3);
+            g2.drawString(xLabel, x - labelWidth / 2, MAX_Y() + metrics.getHeight() + 3);
 
             // hatch marks
-            g2.drawLine(x, maxY(), x, maxY() - hatchmarkLength);
+            g2.drawLine(x, MAX_Y(), x, MAX_Y() - HATCH_MARK_LENGTH);
         }
 
         // Draw X Axis Line
-        g2.drawLine(minX, maxY(), maxX(), maxY());
+        g2.drawLine(MIN_X, MAX_Y(), MAX_X(), MAX_Y());
     }
 
     private void Plot_Y_Axis() {
         g2.setColor(Color.BLACK);
 
-        final int ySpacing = yAxisLength() / YDivisions;
+        final int ySpacing = Y_AXIS_LENGTH() / Y_DIVISIONS;
         final DecimalFormat df = new DecimalFormat("0.00");
 
-        for (int i = 0; i < YDivisions + 1; i++) {
-            int y = maxY() - i * ySpacing;
+        for (int i = 0; i < Y_DIVISIONS + 1; i++) {
+            int y = MAX_Y() - i * ySpacing;
 
             // draw grid lines
             if (y_value.size() > 0) {
-                g2.setColor(gridColor);
-                g2.drawLine(minX, y, maxX(), y);
+                g2.setColor(GRID_COLOR);
+                g2.drawLine(MIN_X, y, MAX_X(), y);
                 g2.setColor(Color.BLACK);
 
                 String yLabel = df.format(getMin_Y_Value() + Y_value_division() * i).toString();
                 FontMetrics metrics = g2.getFontMetrics();
                 int labelWidth = metrics.stringWidth(yLabel);
-                g2.drawString(yLabel, minX - labelWidth - 5, y + (metrics.getHeight() / 2) - 3);
+                g2.drawString(yLabel, MIN_X - labelWidth - 5, y + (metrics.getHeight() / 2) - 3);
             }
 
             // Draw hatch marks
-            g2.drawLine(minX, y, hatchmarkLength + minX, y);
+            g2.drawLine(MIN_X, y, HATCH_MARK_LENGTH + MIN_X, y);
         }
 
         // Draw Y Axis line
-        g2.drawLine(minX, maxY(), minX, minY);
+        g2.drawLine(MIN_X, MAX_Y(), MIN_X, MIN_Y);
     }
 
     private void CalculateGraphPoints() {
-        final double yScale = yAxisLength() / (getMax_Y_Value() - getMin_Y_Value());
+        final double yScale = Y_AXIS_LENGTH() / (getMax_Y_Value() - getMin_Y_Value());
 
         graphPoints = new ArrayList<>();
 
@@ -184,8 +184,8 @@ public class GraphPanel extends JPanel implements MouseMotionListener {
             var tspan = TimeDifference(getMax_X_Value(), getMin_X_Value());
             final var xDistance = (double) t / tspan;
 
-            final int x = (int) (xDistance * xAxisLength() + minX);
-            final int y = (int) ((getMax_Y_Value() - y_value.get(i)) * yScale + minY);
+            final int x = (int) (xDistance * X_AXIS_LENGTH() + MIN_X);
+            final int y = (int) ((getMax_Y_Value() - y_value.get(i)) * yScale + MIN_Y);
             graphPoints.add(new Point(x, y));
         }
 
@@ -202,7 +202,7 @@ public class GraphPanel extends JPanel implements MouseMotionListener {
         // cache old stroke to switch back later
         final Stroke oldStroke = g2.getStroke();
 
-        g2.setColor(lineColor);
+        g2.setColor(LINE_COLOR);
         g2.setStroke(GRAPH_STROKE);
         for (int i = 0; i < graphPoints.size() - 1; i++) {
             int x1 = graphPoints.get(i).x;
@@ -213,7 +213,7 @@ public class GraphPanel extends JPanel implements MouseMotionListener {
         }
 
         g2.setStroke(oldStroke);
-        g2.setColor(pointColor);
+        g2.setColor(POINT_COLOR);
         final int pointWidth = 4;
         for (int i = 0; i < graphPoints.size(); i++) {
             int x = graphPoints.get(i).x - pointWidth / 2;
