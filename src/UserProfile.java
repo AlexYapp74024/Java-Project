@@ -6,11 +6,6 @@ public class UserProfile {
         UserDatastore.Save(profile);
     }
 
-    private String name;
-    private String medical_hist;
-    private float height;
-    private BloodType bloodtype;
-
     // Default Constructor needed by Jackson library
     UserProfile() {};
 
@@ -54,4 +49,9 @@ public class UserProfile {
     public void setHeight(float height) {
         this.height = height;
     }
+
+    private String name;
+    private String medical_hist;
+    private float height;
+    private BloodType bloodtype;
 }

@@ -10,6 +10,24 @@ import javax.swing.*;
 
 public class GraphPanel extends JPanel implements MouseMotionListener {
 
+    public GraphPanel(List<LocalDateTime> X_value, List<Float> Y_value) {
+        this.x_value = X_value;
+        this.y_value = Y_value;
+
+        if (x_value.size() == 1) {
+            this.x_value.add(x_value.get(0));
+        }
+        if (y_value.size() == 1) {
+            this.y_value.add(y_value.get(0));
+        }
+
+        this.XDivisions = this.x_value.size() < maxXDivisions ? this.x_value.size() : maxXDivisions;
+        this.YDivisions = this.y_value.size() < maxYDivisions ? this.y_value.size() : maxYDivisions;
+
+        addMouseMotionListener(this);
+        add(hoverPanel);
+    }
+
     private static final int padding = 14;
     private static final int labelPadding = 25;
     private static final int hatchmarkLength = 4;
@@ -77,24 +95,6 @@ public class GraphPanel extends JPanel implements MouseMotionListener {
 
     private double getMax_Y_Value() {
         return Collections.max(y_value);
-    }
-
-    public GraphPanel(List<LocalDateTime> X_value, List<Float> Y_value) {
-        this.x_value = X_value;
-        this.y_value = Y_value;
-
-        if (x_value.size() == 1) {
-            this.x_value.add(x_value.get(0));
-        }
-        if (y_value.size() == 1) {
-            this.y_value.add(y_value.get(0));
-        }
-
-        this.XDivisions = this.x_value.size() < maxXDivisions ? this.x_value.size() : maxXDivisions;
-        this.YDivisions = this.y_value.size() < maxYDivisions ? this.y_value.size() : maxYDivisions;
-
-        addMouseMotionListener(this);
-        add(hoverPanel);
     }
 
     private void draw_white_background() {

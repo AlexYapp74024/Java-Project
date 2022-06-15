@@ -7,7 +7,7 @@ public class Record {
         this.height = 0.f;
         this.weight = 0.f;
         this.bodyTemp = 0.f;
-        this.dateTime = LocalDateTime.now();
+        this.dateTime = LocalDateTime.now().withSecond(0).withNano(0);
     }
 
     public Record(float height, float weight, float bodyTemp, LocalDateTime date) {
@@ -18,14 +18,11 @@ public class Record {
     }
 
     @Override
-    public boolean equals(Object r){
+    public boolean equals(Object r) {
         Record record = (Record) r;
 
-        return
-            this.height   == record.height &&
-            this.weight   == record.weight &&
-            this.bodyTemp == record.bodyTemp &&
-            this.dateTime.equals(record.dateTime);
+        return this.height == record.height && this.weight == record.weight && this.bodyTemp == record.bodyTemp
+                && this.dateTime.equals(record.dateTime);
     }
 
     public BMI Bmi() {
@@ -48,7 +45,7 @@ public class Record {
     public float getBodyTemp() {
         return bodyTemp;
     }
-    
+
     public LocalDateTime getDateTime() {
         return dateTime;
     }

@@ -1,21 +1,10 @@
+
 // Import statements.  
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
 public class MainPanel extends JFrame {
-
-    private int currCard = 1;
-    private CardLayout cardLayout = new CardLayout();
-    private GridBagLayout gridBagLayout = new GridBagLayout();
-
-    private GridBagConstraints gbc = new GridBagConstraints();
-    private JPanel cPanel = new JPanel();
-    private JPanel btnPanel = new JPanel();
-
-    final static boolean shouldFill = true;
-    final static boolean shouldWeightX = true;
-    final static boolean RIGHT_TO_LEFT = false;
 
     public MainPanel() {
         setTitle("Health Care - Health Diary Application");
@@ -50,8 +39,19 @@ public class MainPanel extends JFrame {
         // using to get the content pane
         getContentPane().add(cPanel, BorderLayout.CENTER);
         getContentPane().add(btnPanel, BorderLayout.SOUTH);
+
+        addWindowListener(new WindowAdapter() {
+            public void windowClosed(WindowEvent e) {
+                Records.SaveData();
+                UserProfile.SaveData();
+            }
+
+            public void windowClosing(WindowEvent e) {
+                Records.SaveData();
+                UserProfile.SaveData();
+            }
+        });
     }
-    
 
     private void addMainPageButton() {
         JButton mainPageBttn = new JButton("Main Page");
@@ -136,18 +136,17 @@ public class MainPanel extends JFrame {
         // using to get the content pane
         getContentPane().add(cPanel, BorderLayout.CENTER);
         getContentPane().add(btnPanel, BorderLayout.SOUTH);
+    }
 
-        addWindowListener(new WindowAdapter() {
-            public void windowClosed(WindowEvent e) {
-                Records.SaveData();
-                UserProfile.SaveData();
-            }
+    private int currCard = 1;
+    private CardLayout cardLayout = new CardLayout();
+    private GridBagLayout gridBagLayout = new GridBagLayout();
 
-            public void windowClosing(WindowEvent e) {
-                Records.SaveData();
-                UserProfile.SaveData();
-            }
-        });
+    private GridBagConstraints gbc = new GridBagConstraints();
+    private JPanel cPanel = new JPanel();
+    private JPanel btnPanel = new JPanel();
 
-    } // End of constructor appLayout()
+    final static boolean shouldFill = true;
+    final static boolean shouldWeightX = true;
+    final static boolean RIGHT_TO_LEFT = false;
 }

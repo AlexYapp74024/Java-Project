@@ -12,13 +12,10 @@ public class Records {
         return out;
     }
 
-    private static boolean HasRecord(Record r) {
-        return fullList.contains(r);
-    }
-
     // return false if r already exists
     public static boolean Add(Record r) {
-        if (HasRecord(r)) return false;
+        if (HasRecord(r))
+            return false;
 
         fullList.add(r);
         UpdateList();
@@ -118,19 +115,15 @@ public class Records {
         return out;
     }
 
-    public static ArrayList<Record> GetRecordList() {
-        ArrayList<Record> out = new ArrayList<>();
-        for (var r : list) {
-            out.add(r);
-        }
-        return out;
-    }
-
     public static int size() {
         return list.size();
     }
 
     public static void SaveData() {
         RecordDatastore.Save(Records.fullList);
+    }
+
+    private static boolean HasRecord(Record r) {
+        return fullList.contains(r);
     }
 }

@@ -36,6 +36,25 @@ public class MainPagePanel extends JPanel {
         monthSpinner.setValue(1);
         yearSpinner.setValue(2022);
 
+        final int sizePadding = 50;
+        panel.add(Box.createRigidArea(new Dimension(sizePadding, 0)));
+
+        final int sizeSpacing = 5;
+        panel.add(new JLabel("Month : "));
+        panel.add(monthSpinner);
+        panel.add(Box.createRigidArea(new Dimension(sizeSpacing, 0)));
+        panel.add(new JLabel("Year : "));
+        panel.add(yearSpinner);
+        panel.add(Box.createRigidArea(new Dimension(sizeSpacing, 0)));
+        panel.add(typeComboBox);
+
+        panel.add(Box.createRigidArea(new Dimension(sizePadding, 0)));
+
+        panel.setMaximumSize(new Dimension(10000, 500));
+        return panel;
+    }
+
+    public void addlisteners() {
         monthSpinner.addChangeListener(e -> {
             if (changing)
                 return;
@@ -64,23 +83,6 @@ public class MainPagePanel extends JPanel {
         typeComboBox.addActionListener(e -> {
             UpdateData();
         });
-
-        final int sizePadding = 50;
-        panel.add(Box.createRigidArea(new Dimension(sizePadding, 0)));
-
-        final int sizeSpacing = 5;
-        panel.add(new JLabel("Month : "));
-        panel.add(monthSpinner);
-        panel.add(Box.createRigidArea(new Dimension(sizeSpacing, 0)));
-        panel.add(new JLabel("Year : "));
-        panel.add(yearSpinner);
-        panel.add(Box.createRigidArea(new Dimension(sizeSpacing, 0)));
-        panel.add(typeComboBox);
-
-        panel.add(Box.createRigidArea(new Dimension(sizePadding, 0)));
-
-        panel.setMaximumSize(new Dimension(10000, 500));
-        return panel;
     }
 
     MainPagePanel() {
@@ -110,6 +112,7 @@ public class MainPagePanel extends JPanel {
         add(graphPanel);
 
         setThisMonth();
+        addlisteners();
     }
 
     public void setThisMonth() {
@@ -154,7 +157,6 @@ public class MainPagePanel extends JPanel {
         SetStatus();
         changing = false;
 
-        // repaint() doesn't work here
         revalidate();
     }
 
