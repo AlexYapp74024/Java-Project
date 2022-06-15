@@ -12,8 +12,7 @@ public class RecordDatastore {
     public static ArrayList<Record> Retrieve() {
         try {
             var out = Json.ReadFromFile(RecordsFile, new TypeReference<ArrayList<Record>>() {});
-            for(var r: out)
-            {
+            for (var r : out) {
                 r.dateTime = r.dateTime.withSecond(0).withNano(0);
             }
             return out;
@@ -41,7 +40,9 @@ public class RecordDatastore {
                     RandDateTime(random)));
         }
 
-        Collections.sort(out, new DateComparator());
+        Collections.sort(out, (r1, r2) -> {
+            return r1.dateTime.compareTo(r2.dateTime);
+        });
         return out;
     }
 
@@ -66,11 +67,5 @@ public class RecordDatastore {
 
         long epochSecond = random.nextLong(minEpochSecond, maxEpochSecond);
         return LocalDateTime.ofInstant(Instant.ofEpochSecond(epochSecond), ZoneId.systemDefault());
-    }
-
-    private static class DateComparator implements Comparator<Record> {
-        public int compare(Record c1, Record c2) {
-            return c1.dateTime.compareTo(c2.dateTime);
-        }
     }
 }
