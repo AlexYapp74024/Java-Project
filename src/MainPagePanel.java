@@ -7,27 +7,27 @@ import java.time.format.*;
 import java.util.ArrayList;
 
 public class MainPagePanel extends JPanel {
-    DateTimeFormatter dateTimeFormat = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+    private DateTimeFormatter dateTimeFormat = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 
-    LocalDateTime startTime;
-    LocalDateTime endTime;
+    private LocalDateTime startTime;
+    private LocalDateTime endTime;
 
-    JLabel title = new JLabel();
-    JLabel bmiMain = new JLabel();
-    JLabel bmiStatus = new JLabel();
+    private JLabel title = new JLabel();
+    private JLabel bmiMain = new JLabel();
+    private JLabel bmiStatus = new JLabel();
 
-    GraphPanel graphPanel;
+    private GraphPanel graphPanel;
 
-    ArrayList<LocalDateTime> timeList;
-    ArrayList<Float> valueList;
+    private ArrayList<LocalDateTime> timeList;
+    private ArrayList<Float> valueList;
 
-    String types[] = { "BMI", "Height", "Weight", "Body Temp" };
+    private String types[] = { "BMI", "Height", "Weight", "Body Temp" };
 
-    JSpinner monthSpinner = new JSpinner();
-    JSpinner yearSpinner = new JSpinner();
-    JComboBox<String> typeComboBox = new JComboBox<>(types);
+    private JSpinner monthSpinner = new JSpinner();
+    private JSpinner yearSpinner = new JSpinner();
+    private JComboBox<String> typeComboBox = new JComboBox<>(types);
 
-    boolean changing = false;
+    private boolean changing = false;
 
     public JPanel AddInputPanel() {
         JPanel panel = new JPanel();
