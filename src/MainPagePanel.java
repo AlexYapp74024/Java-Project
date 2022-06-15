@@ -18,9 +18,6 @@ public class MainPagePanel extends JPanel {
 
     private GraphPanel graphPanel;
 
-    private ArrayList<LocalDateTime> timeList;
-    private ArrayList<Float> valueList;
-
     private String types[] = { "BMI", "Height", "Weight", "Body Temp" };
 
     private JSpinner monthSpinner = new JSpinner();
