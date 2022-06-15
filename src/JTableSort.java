@@ -19,6 +19,7 @@ public class JTableSort extends AbstractTableModel {
         return columnNames.length;
     }
 
+    @Override
     public String getColumnName(int columnIndex) {
         return columnNames[columnIndex];
     }
