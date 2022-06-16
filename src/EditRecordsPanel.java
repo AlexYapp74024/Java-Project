@@ -3,6 +3,7 @@ import java.awt.*;
 import java.time.LocalDateTime;
 import java.time.format.*;
 import java.util.ArrayList;
+import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
 
 public class EditRecordsPanel extends JPanel {
@@ -17,6 +18,10 @@ public class EditRecordsPanel extends JPanel {
         setLayout(new GridLayout(3, 1));
         setBackground(Color.LIGHT_GRAY);
         setOpaque(true);
+
+        //Center values in JTable cells
+        DefaultTableCellRenderer renderer = (DefaultTableCellRenderer)table.getDefaultRenderer(Object.class);
+        renderer.setHorizontalAlignment( SwingConstants.CENTER );
 
         JLabel jLabel3 = new JLabel("RECORDS", SwingConstants.CENTER);
         jLabel3.setFont(new Font("Serif", Font.BOLD, 35));
