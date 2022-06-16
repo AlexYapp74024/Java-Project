@@ -12,12 +12,6 @@ public abstract class Measurement implements Comparable<Measurement>, Unit_measu
         this.value = value;
     }
 
-    public float value;
-
-    public float value() {
-        return value;
-    }
-
     @Override
     public int compareTo(Measurement o) {
         return Float.valueOf(value).compareTo(o.value);
@@ -25,6 +19,7 @@ public abstract class Measurement implements Comparable<Measurement>, Unit_measu
 
     public abstract String withUnit();
 
+    public float value;
     protected DecimalFormat df = new DecimalFormat("0.00");
 }
 

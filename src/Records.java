@@ -99,14 +99,6 @@ public class Records {
         return out;
     }
 
-    public static ArrayList<Float> GetBMIValueList() {
-        ArrayList<Float> out = new ArrayList<>();
-        for (var r : list) {
-            out.add(r.Bmi().value);
-        }
-        return out;
-    }
-
     public static int size() {
         return list.size();
     }
