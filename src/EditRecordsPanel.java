@@ -50,7 +50,7 @@ public class EditRecordsPanel extends JPanel {
         addBttn.addActionListener(event -> {
             var addRecordDialog = new AddRecord(null);
 
-            if (!addRecordDialog.cancel) {
+            if (!addRecordDialog.CancelBttn()) {
                 Records.Add(new Record(new Height(UserProfile.profile.getHeight()),
                         new Weight(((Double) AddRecord.weight.getValue()).floatValue()),
                         new Temperature(((Double) AddRecord.bodyTemp.getValue()).floatValue()),
@@ -71,7 +71,7 @@ public class EditRecordsPanel extends JPanel {
 
             var updateRecordDialog = new UpdateRecord(null);
 
-            if (row != -1 && !updateRecordDialog.cancel) {
+            if (row != -1 && !updateRecordDialog.CancelBttn()) {
                 DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy/MM/dd  hh:mm a");
                 String text = table.getValueAt(row, 0).toString();
                 LocalDateTime datetime = LocalDateTime.parse(text, formatter);
@@ -100,7 +100,7 @@ public class EditRecordsPanel extends JPanel {
             }
 
             var deleteRecordDialog = new DeleteRecord(null);
-            if (row != -1 && !deleteRecordDialog.cancel) {
+            if (row != -1 && !deleteRecordDialog.CancelBttn()) {
                 DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy/MM/dd  hh:mm a");
                 String text = table.getValueAt(row, 0).toString();
                 LocalDateTime datetime = LocalDateTime.parse(text, formatter);

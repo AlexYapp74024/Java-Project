@@ -1,9 +1,15 @@
 import javax.swing.*;
 import javax.swing.JFrame;
 
-public class DeleteRecord extends JDialog {
+public class DeleteRecord extends JDialog implements CancelInterface{
 
-    boolean cancel = true;
+    private boolean cancel = true;
+
+    @Override
+    public boolean CancelBttn()
+    {
+        return cancel;
+    }
 
     DeleteRecord(JFrame parent) {
 
