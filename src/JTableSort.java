@@ -1,4 +1,5 @@
 import java.text.DecimalFormat;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import javax.swing.table.AbstractTableModel;
 
@@ -39,7 +40,7 @@ public class JTableSort extends AbstractTableModel {
 
         switch (columnIndex) {
         case COLUMN_DATE:
-            returnValue = record.getDateTime();
+            returnValue = record.getDateTime().format(DateTimeFormatter.ofPattern("yyyy/MM/dd  hh:mm a"));
             break;
         case COLUMN_WEIGHT:
             returnValue = DFZERO.format(record.getWeight().value);
