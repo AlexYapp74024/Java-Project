@@ -3,11 +3,12 @@ import java.io.File;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 
-public class UserDatastore {
+public class UserDatastore implements Datastore<UserProfile>{
 
     private static File RecordsFile = new File("User.json");
 
-    public static UserProfile Retrieve() {
+    @Override
+    public UserProfile Retrieve() {
         try {
             return Json.ReadFromFile(RecordsFile, new TypeReference<UserProfile>() {});
         } catch (Exception e) {
@@ -16,12 +17,14 @@ public class UserDatastore {
         }
     }
 
-    public static void Save(UserProfile records) {
+    @Override
+    public void Save(UserProfile records) {
         try {
             Json.SaveToFile(RecordsFile, records);
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
+
 
 }

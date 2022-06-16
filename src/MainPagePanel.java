@@ -16,7 +16,7 @@ public class MainPagePanel extends JPanel {
     private JLabel bmiMain = new JLabel();
     private JLabel bmiStatus = new JLabel();
 
-    private GraphPanel graphPanel;
+    private GraphPanel<?> graphPanel;
 
     private String types[] = { "BMI", "Height", "Weight", "Body Temp" };
 

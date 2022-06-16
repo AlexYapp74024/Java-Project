@@ -3,7 +3,8 @@ import java.time.temporal.ChronoUnit;
 import java.util.*;
 
 public class Records {
-    private static ArrayList<Record> fullList = RecordDatastore.Retrieve();
+    private static RecordDatastore datastore  = new RecordDatastore();
+    private static ArrayList<Record> fullList = datastore.Retrieve();
     private static ArrayList<Record> list = CloneFullList();
 
     public static ArrayList<Record> CloneFullList() {
@@ -111,7 +112,7 @@ public class Records {
     }
 
     public static void SaveData() {
-        RecordDatastore.Save(Records.fullList);
+        datastore.Save(Records.fullList);
     }
 
     private static void UpdateList() {

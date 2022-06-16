@@ -1,6 +1,6 @@
 {
   "name" : "Andrew Chicken",
   "height" : 150.0,
-  "medicalHistory" : "",
-  "bloodType" : "O+"
+  "bloodType" : "O+",
+  "medicalHistory" : ""
 }
