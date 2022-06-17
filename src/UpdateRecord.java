@@ -5,9 +5,13 @@ import javax.swing.*;
 import java.awt.*;
 import java.time.*;
 
-public class UpdateRecord extends JDialog {
+public class UpdateRecord extends JDialog implements CancelInterface {
 
-    public boolean cancel = true;
+    @Override
+    public boolean CancelBttn()
+    {
+        return cancel;
+    }
 
     static public JSpinner weight = new JSpinner(new SpinnerNumberModel(45, 20, 300, 0.1));
     static public JSpinner bodyTemp = new JSpinner(new SpinnerNumberModel(36, 25, 45, 0.1));
@@ -79,6 +83,8 @@ public class UpdateRecord extends JDialog {
 
         setVisible(true);
     }
+
+    private boolean cancel = true;
 
     // create JLabel
     private JLabel weightLabel = new JLabel("Weight : ");

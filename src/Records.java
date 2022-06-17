@@ -3,7 +3,8 @@ import java.time.temporal.ChronoUnit;
 import java.util.*;
 
 public class Records {
-    private static ArrayList<Record> fullList = RecordDatastore.Retrieve();
+    private static RecordDatastore datastore  = new RecordDatastore();
+    private static ArrayList<Record> fullList = datastore.Retrieve();
     private static ArrayList<Record> list = CloneFullList();
 
     public static ArrayList<Record> CloneFullList() {
@@ -98,20 +99,12 @@ public class Records {
         return out;
     }
 
-    public static ArrayList<Float> GetBMIValueList() {
-        ArrayList<Float> out = new ArrayList<>();
-        for (var r : list) {
-            out.add(r.Bmi().value);
-        }
-        return out;
-    }
-
     public static int size() {
         return list.size();
     }
 
     public static void SaveData() {
-        RecordDatastore.Save(Records.fullList);
+        datastore.Save(Records.fullList);
     }
 
     private static void UpdateList() {

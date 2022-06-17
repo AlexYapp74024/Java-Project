@@ -5,6 +5,7 @@ import javax.swing.JTable;
 import javax.swing.border.EmptyBorder;
 import javax.swing.table.TableModel;
 import javax.swing.JPanel;
+import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.TableCellRenderer;
 import java.awt.Component;
 
@@ -41,6 +42,10 @@ public class SummaryPanel extends JPanel {
                 return comp;
             }
         };
+
+        //Center values in JTable cells
+        DefaultTableCellRenderer renderer = (DefaultTableCellRenderer)jt1.getDefaultRenderer(Object.class);
+        renderer.setHorizontalAlignment( SwingConstants.CENTER );
 
         jt1.setAutoCreateRowSorter(true);
 

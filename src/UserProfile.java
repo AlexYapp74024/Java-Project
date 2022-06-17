@@ -1,9 +1,10 @@
 
-public class UserProfile {
-    public static UserProfile profile = UserDatastore.Retrieve();
+public class UserProfile{
+    private static UserDatastore datastore = new UserDatastore();
+    public static UserProfile profile = datastore.Retrieve();
 
     public static void SaveData() {
-        UserDatastore.Save(profile);
+        datastore.Save(profile);
     }
 
     // Default Constructor needed by Jackson library

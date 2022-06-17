@@ -3,7 +3,9 @@ import java.awt.*;
 import java.time.LocalDateTime;
 import java.time.format.*;
 import java.util.ArrayList;
+import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
+import java.text.DecimalFormat;
 
 public class EditRecordsPanel extends JPanel {
 
@@ -17,6 +19,10 @@ public class EditRecordsPanel extends JPanel {
         setLayout(new GridLayout(3, 1));
         setBackground(Color.LIGHT_GRAY);
         setOpaque(true);
+
+        //Center values in JTable cells
+        DefaultTableCellRenderer renderer = (DefaultTableCellRenderer)table.getDefaultRenderer(Object.class);
+        renderer.setHorizontalAlignment( SwingConstants.CENTER );
 
         JLabel jLabel3 = new JLabel("RECORDS", SwingConstants.CENTER);
         jLabel3.setFont(new Font("Serif", Font.BOLD, 35));
@@ -50,7 +56,7 @@ public class EditRecordsPanel extends JPanel {
         addBttn.addActionListener(event -> {
             var addRecordDialog = new AddRecord(null);
 
-            if (!addRecordDialog.cancel) {
+            if (!addRecordDialog.CancelBttn()) {
                 Records.Add(new Record(new Height(UserProfile.profile.getHeight()),
                         new Weight(((Double) AddRecord.weight.getValue()).floatValue()),
                         new Temperature(((Double) AddRecord.bodyTemp.getValue()).floatValue()),
@@ -71,7 +77,7 @@ public class EditRecordsPanel extends JPanel {
 
             var updateRecordDialog = new UpdateRecord(null);
 
-            if (row != -1 && !updateRecordDialog.cancel) {
+            if (row != -1 && !updateRecordDialog.CancelBttn()) {
                 DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy/MM/dd  hh:mm a");
                 String text = table.getValueAt(row, 0).toString();
                 LocalDateTime datetime = LocalDateTime.parse(text, formatter);
@@ -100,7 +106,7 @@ public class EditRecordsPanel extends JPanel {
             }
 
             var deleteRecordDialog = new DeleteRecord(null);
-            if (row != -1 && !deleteRecordDialog.cancel) {
+            if (row != -1 && !deleteRecordDialog.CancelBttn()) {
                 DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy/MM/dd  hh:mm a");
                 String text = table.getValueAt(row, 0).toString();
                 LocalDateTime datetime = LocalDateTime.parse(text, formatter);
@@ -139,10 +145,15 @@ public class EditRecordsPanel extends JPanel {
             out[i] = new Object[] {
 
                     list.get(i).dateTime.format(DateTimeFormatter.ofPattern("yyyy/MM/dd  hh:mm a")),
-                    list.get(i).weight.value, list.get(i).height.value, list.get(i).Bmi().value,
+                    list.get(i).weight.value, 
+                    list.get(i).height.value, 
+                    DFZERO.format(list.get(i).Bmi().value),
                     list.get(i).bodyTemp.value, };
 
         }
         return out;
     }
+
+    private static final DecimalFormat DFZERO = new DecimalFormat("0.0");
 }
+  

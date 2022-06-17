@@ -5,14 +5,20 @@ import javax.swing.JLabel;
 import javax.swing.JFrame;
 import javax.swing.JButton;
 
-public class AddRecord extends JDialog {
+public class AddRecord extends JDialog implements CancelInterface {
 
     GridBagConstraints gbc = new GridBagConstraints();
     public LocalDateTime dateTime = LocalDateTime.now().withSecond(0).withNano(0);
-
-    boolean cancel = true;
+    
+    private boolean cancel = true;
     JLabel weightLabel = new JLabel("Weight : ");
     JLabel bodyTempLabel = new JLabel("Body Tempearture : ");
+
+    @Override
+    public boolean CancelBttn()
+    {
+        return cancel;
+    }
 
     // initialize the value of JSpinner
     private final static float initialWeight = 45f;
@@ -24,6 +30,7 @@ public class AddRecord extends JDialog {
     JButton addButton = new JButton("Add");
     JButton cancelButton = new JButton("Cancel");
 
+    
     AddRecord(JFrame parent) {
 
         super(parent, "Add New Record", true);
