@@ -5,6 +5,7 @@ import java.time.format.*;
 import java.util.ArrayList;
 import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
+import java.text.DecimalFormat;
 
 public class EditRecordsPanel extends JPanel {
 
@@ -144,10 +145,15 @@ public class EditRecordsPanel extends JPanel {
             out[i] = new Object[] {
 
                     list.get(i).dateTime.format(DateTimeFormatter.ofPattern("yyyy/MM/dd  hh:mm a")),
-                    list.get(i).weight.value, list.get(i).height.value, list.get(i).Bmi().value,
+                    list.get(i).weight.value, 
+                    list.get(i).height.value, 
+                    DFZERO.format(list.get(i).Bmi().value),
                     list.get(i).bodyTemp.value, };
 
         }
         return out;
     }
+
+    private static final DecimalFormat DFZERO = new DecimalFormat("0.0");
 }
+  

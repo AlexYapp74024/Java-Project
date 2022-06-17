@@ -64,7 +64,7 @@ public class JTableSort extends AbstractTableModel {
     private String[] columnNames = { "DATE", "WEIGHT (KG)", "HEIGHT (CM)", "BMI VALUE", "BODYTEMPERATURE (CELCIUS)" };
     private ArrayList<Record> list = Records.CloneFullList();
 
-    private static final DecimalFormat DFZERO = new DecimalFormat("0.00");
+    private static final DecimalFormat DFZERO = new DecimalFormat("0.0");
     private static final int COLUMN_DATE = 0;
     private static final int COLUMN_WEIGHT = 1;
     private static final int COLUMN_HEIGHT = 2;
