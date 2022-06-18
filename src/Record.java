@@ -16,8 +16,8 @@ public class Record {
     public boolean equals(Object r) {
         Record record = (Record) r;
 
-        return this.height == record.height && this.weight == record.weight && this.bodyTemp == record.bodyTemp
-                && this.dateTime.equals(record.dateTime);
+        return this.height.value == record.height.value && this.weight.value == record.weight.value
+                && this.bodyTemp.value == record.bodyTemp.value && this.dateTime.equals(record.dateTime);
     }
 
     public BMI Bmi() {
