@@ -3,7 +3,7 @@ import java.time.temporal.ChronoUnit;
 import java.util.*;
 
 public class Records {
-    private static RecordDatastore datastore  = new RecordDatastore();
+    private static RecordDatastore datastore = new RecordDatastore();
     private static ArrayList<Record> fullList = datastore.Retrieve();
     private static ArrayList<Record> list = CloneFullList();
 
@@ -108,6 +108,9 @@ public class Records {
     }
 
     private static void UpdateList() {
+        Collections.sort(fullList, (r1, r2) -> {
+            return r1.dateTime.compareTo(r2.dateTime);
+        });
         var out = fullList;
         list.clear();
         for (var record : out) {

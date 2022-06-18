@@ -20,9 +20,9 @@ public class EditRecordsPanel extends JPanel {
         setBackground(Color.LIGHT_GRAY);
         setOpaque(true);
 
-        //Center values in JTable cells
-        DefaultTableCellRenderer renderer = (DefaultTableCellRenderer)table.getDefaultRenderer(Object.class);
-        renderer.setHorizontalAlignment( SwingConstants.CENTER );
+        // Center values in JTable cells
+        DefaultTableCellRenderer renderer = (DefaultTableCellRenderer) table.getDefaultRenderer(Object.class);
+        renderer.setHorizontalAlignment(SwingConstants.CENTER);
 
         JLabel jLabel3 = new JLabel("RECORDS", SwingConstants.CENTER);
         jLabel3.setFont(new Font("Serif", Font.BOLD, 35));
@@ -87,9 +87,8 @@ public class EditRecordsPanel extends JPanel {
                                 new Weight((float) table.getValueAt(row, 1)),
                                 new Temperature((float) table.getValueAt(row, 4)), datetime),
                         new Record(new Height(UserProfile.profile.getHeight()),
-                                new Weight((Float) UpdateRecord.weight.getValue()),
-                                new Temperature((Float) UpdateRecord.bodyTemp.getValue()),
-                                updateRecordDialog.dateTime));
+                                new Weight(((Double) UpdateRecord.weight.getValue()).floatValue()),
+                                new Temperature(((Double) UpdateRecord.bodyTemp.getValue()).floatValue()), datetime));
 
                 ResetTableModel();
 
@@ -145,9 +144,7 @@ public class EditRecordsPanel extends JPanel {
             out[i] = new Object[] {
 
                     list.get(i).dateTime.format(DateTimeFormatter.ofPattern("yyyy/MM/dd  hh:mm a")),
-                    list.get(i).weight.value, 
-                    list.get(i).height.value, 
-                    DFZERO.format(list.get(i).Bmi().value),
+                    list.get(i).weight.value, list.get(i).height.value, DFZERO.format(list.get(i).Bmi().value),
                     list.get(i).bodyTemp.value, };
 
         }
@@ -156,4 +153,3 @@ public class EditRecordsPanel extends JPanel {
 
     private static final DecimalFormat DFZERO = new DecimalFormat("0.0");
 }
-  
