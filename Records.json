@@ -55,6 +55,17 @@
   "dateTime" : [ 2021, 12, 31, 0, 58 ]
 }, {
   "height" : {
+    "value" : 150.0
+  },
+  "weight" : {
+    "value" : 45.0
+  },
+  "bodyTemp" : {
+    "value" : 36.0
+  },
+  "dateTime" : [ 2021, 12, 31, 11, 20 ]
+}, {
+  "height" : {
     "value" : 161.9
   },
   "weight" : {
@@ -1087,15 +1098,4 @@
     "value" : 36.4
   },
   "dateTime" : [ 2022, 6, 18, 9, 35 ]
-}, {
-  "height" : {
-    "value" : 150.0
-  },
-  "weight" : {
-    "value" : 45.0
-  },
-  "bodyTemp" : {
-    "value" : 36.0
-  },
-  "dateTime" : [ 2021, 12, 31, 11, 20 ]
 } ]
