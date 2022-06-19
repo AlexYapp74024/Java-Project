@@ -149,7 +149,7 @@ public class MainPagePanel extends JPanel {
         if (averageBmi.IsUnderWeight()) {
             bmiStatus.setText("Underweight");
         } else if (averageBmi.IsHealthy()) {
-            bmiStatus.setText("Helthy");
+            bmiStatus.setText("Healthy");
         } else if (averageBmi.IsOverweight()) {
             bmiStatus.setText("Overweight");
         } else {
